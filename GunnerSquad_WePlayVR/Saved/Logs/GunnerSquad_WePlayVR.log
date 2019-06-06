@@ -1955,3 +1955,566 @@ Exception rethrown at [0]:
 [2019.06.06-09.07.52:425][324]LogPlayLevel: Display: Destroying online subsystem :Context_19
 [2019.06.06-09.07.54:148][530]LogSlate: FSceneViewport::OnFocusLost() reason 0
 [2019.06.06-09.08.07:804][147]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManager4ED04B934C0A494AF01E68ADFE2255FE.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Blueprints/BP_GameManager.uasset'
+[2019.06.06-09.10.19:736][997]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.10.53:128][885]BlueprintLog: New page: Compile BP_GameManager
+[2019.06.06-09.10.53:279][885]LogUObjectHash: Compacting FUObjectHashTables data took   2.63ms
+[2019.06.06-09.10.54:164][974]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerF5C481C34BA271D1421D30A6743BE80A.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Blueprints/BP_GameManager.uasset'
+[2019.06.06-09.10.55:503][121]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.10.55:589][131]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.06-09.10.55:617][131]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.10.55:617][131]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.06-09.10.55:617][131]LogHMD: Initializing OVRPlugin session
+[2019.06.06-09.10.55:683][131]PIE: New page: PIE session: 0_Prototype_Intro (06-Jun-2019 8:10:55 pm)
+[2019.06.06-09.10.55:683][131]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro
+[2019.06.06-09.10.55:685][131]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001943s)
+[2019.06.06-09.10.55:686][131]LogAIModule: Creating AISystem for world 0_Prototype_Intro
+[2019.06.06-09.10.55:686][131]LogPlayLevel: PIE: World Init took: (0.000568s)
+[2019.06.06-09.10.55:686][131]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro to /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro (0.002638s)
+[2019.06.06-09.10.55:716][131]LogUObjectHash: Compacting FUObjectHashTables data took   2.77ms
+[2019.06.06-09.10.55:745][131]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-09.10.55:754][131]LogInit: FAudioDevice initialized.
+[2019.06.06-09.10.55:783][131]LogLoad: Game class is 'GameModeBase'
+[2019.06.06-09.10.55:784][131]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro up for play (max tick rate 0) at 2019.06.06-14.40.55
+[2019.06.06-09.10.55:784][131]LogWorld: Bringing up level for play took: 0.000769
+[2019.06.06-09.10.55:797][131]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro -0.363
+[2019.06.06-09.10.55:797][131]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.12.44:788][192]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.12.44:791][192]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.12.44:824][192]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.06-09.12.44:824][192]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.12.44:860][192]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.12.44:864][192]LogUObjectHash: Compacting FUObjectHashTables data took   2.02ms
+[2019.06.06-09.12.44:908][193]LogPlayLevel: Display: Destroying online subsystem :Context_20
+[2019.06.06-09.12.48:711][648]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.13.17:938][  0]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2019.06.06-09.13.18:822][ 95]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.13.31:099][  6]LogSlate: Window 'Pick Parent Class' being destroyed
+[2019.06.06-09.14.13:891][994]Cmd: DELETE
+[2019.06.06-09.14.13:891][994]Cmd: ACTOR DELETE
+[2019.06.06-09.14.13:892][994]LogEditorActor: Deleted Actor: BP_GameManager_C
+[2019.06.06-09.14.13:927][994]LogUObjectHash: Compacting FUObjectHashTables data took   2.34ms
+[2019.06.06-09.14.13:927][994]LogEditorActor: Deleted 1 Actors (0.036 secs)
+[2019.06.06-09.14.18:965][576]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.14.21:260][832]LogUObjectHash: Compacting FUObjectHashTables data took   1.66ms
+[2019.06.06-09.14.21:386][832]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro54BB9B1A4A09EC37756B24B0892848A5.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro.umap'
+[2019.06.06-09.14.21:424][832]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro_BuiltData29ECCBA740AB2CB3CEC53C84B449CA08.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro_BuiltData.uasset'
+[2019.06.06-09.16.04:672][ 63]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput
+[2019.06.06-09.16.05:034][ 64]LogRenderer: Reallocating scene render targets to support 1008x692 Format 10 NumSamples 1 (Frame:1).
+[2019.06.06-09.16.36:621][802]LogEditorTransaction: Undo Move Nodes
+[2019.06.06-09.16.36:924][833]LogEditorTransaction: Undo Paste clipboard contents
+[2019.06.06-09.16.54:311][885]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "IntroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get IntroLevel
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "OutroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get OutroLevel
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "StreamLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set StreamLevelName
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "IntroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get IntroLevel
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.16.54:331][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "StreamLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set StreamLevelName
+[2019.06.06-09.16.54:332][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:332][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:333][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Intro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:333][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:333][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Stream Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:333][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:333][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Outro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:333][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Stream Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:333][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Intro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:333][885]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.16.54:508][885]LogUObjectHash: Compacting FUObjectHashTables data took   3.13ms
+[2019.06.06-09.16.54:516][885]LogBlueprint: Warning: [Compiler BP_GameManagerInput] [2332.52] Compile of BP_GameManagerInput failed. 10 Fatal Issue(s) 10 Warning(s) [in 204 ms] (/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput)
+[2019.06.06-09.17.30:039][ 60]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "IntroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get IntroLevel
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "OutroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get OutroLevel
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "StreamLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set StreamLevelName
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "IntroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get IntroLevel
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.17.30:042][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "StreamLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set StreamLevelName
+[2019.06.06-09.17.30:043][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:043][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:043][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Intro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:043][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:043][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Stream Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:044][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:044][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Outro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:044][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Stream Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:044][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Intro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:044][ 60]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.17.30:185][ 60]LogUObjectHash: Compacting FUObjectHashTables data took   3.11ms
+[2019.06.06-09.17.30:194][ 60]LogBlueprint: Warning: [Compiler BP_GameManagerInput] [2368.19] Compile of BP_GameManagerInput failed. 10 Fatal Issue(s) 10 Warning(s) [in 154 ms] (/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput)
+[2019.06.06-09.18.16:019][448]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.18.16:021][448]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.18.16:021][448]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "StreamLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set StreamLevelName
+[2019.06.06-09.18.16:021][448]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.18.16:022][448]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "StreamLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set StreamLevelName
+[2019.06.06-09.18.16:022][448]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.18.16:023][448]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Stream Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.18.16:023][448]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Stream Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.18.16:023][448]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.18.16:172][448]LogUObjectHash: Compacting FUObjectHashTables data took   3.14ms
+[2019.06.06-09.18.16:180][448]LogBlueprint: Warning: [Compiler BP_GameManagerInput] [2414.18] Compile of BP_GameManagerInput failed. 4 Fatal Issue(s) 4 Warning(s) [in 161 ms] (/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput)
+[2019.06.06-09.18.34:830][621]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.18.34:833][621]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.18.34:834][621]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.18.34:834][621]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.18.34:835][621]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.18.34:976][621]LogUObjectHash: Compacting FUObjectHashTables data took   2.83ms
+[2019.06.06-09.18.34:985][621]LogBlueprint: Warning: [Compiler BP_GameManagerInput] [2432.99] Compile of BP_GameManagerInput failed. 2 Fatal Issue(s) 2 Warning(s) [in 154 ms] (/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput)
+[2019.06.06-09.18.38:945][ 52]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.18.38:948][ 52]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.18.38:948][ 52]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.18.38:949][ 52]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.18.38:949][ 52]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.18.39:089][ 52]LogUObjectHash: Compacting FUObjectHashTables data took   3.09ms
+[2019.06.06-09.18.39:098][ 52]LogBlueprint: Warning: [Compiler BP_GameManagerInput] [2437.10] Compile of BP_GameManagerInput failed. 2 Fatal Issue(s) 2 Warning(s) [in 152 ms] (/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput)
+[2019.06.06-09.18.53:940][784]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.18.54:086][784]LogUObjectHash: Compacting FUObjectHashTables data took   3.00ms
+[2019.06.06-09.18.56:002][  5]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.18.56:148][  5]LogUObjectHash: Compacting FUObjectHashTables data took   2.87ms
+[2019.06.06-09.18.57:343][134]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerInput9369BA6C4319CAE0AAAB969C17AA1BCE.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Blueprints/BP_GameManagerInput.uasset'
+[2019.06.06-09.19.07:478][327]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.06-09.19.07:497][327]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.19.07:497][327]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.06-09.19.07:497][327]LogHMD: Initializing OVRPlugin session
+[2019.06.06-09.19.07:559][327]PIE: New page: PIE session: 0_Prototype_Intro (06-Jun-2019 8:19:07 pm)
+[2019.06.06-09.19.07:559][327]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro
+[2019.06.06-09.19.07:561][327]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001847s)
+[2019.06.06-09.19.07:561][327]LogAIModule: Creating AISystem for world 0_Prototype_Intro
+[2019.06.06-09.19.07:561][327]LogPlayLevel: PIE: World Init took: (0.000588s)
+[2019.06.06-09.19.07:561][327]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro to /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro (0.002557s)
+[2019.06.06-09.19.07:597][327]LogUObjectHash: Compacting FUObjectHashTables data took   2.90ms
+[2019.06.06-09.19.07:627][327]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-09.19.07:636][327]LogInit: FAudioDevice initialized.
+[2019.06.06-09.19.07:663][327]LogLoad: Game class is 'GameModeBase'
+[2019.06.06-09.19.07:664][327]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro up for play (max tick rate 0) at 2019.06.06-14.49.07
+[2019.06.06-09.19.07:741][327]LogWorld: Bringing up level for play took: 0.077872
+[2019.06.06-09.19.07:754][327]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro -0.405
+[2019.06.06-09.19.07:754][327]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.19.17:164][449]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.19.17:167][449]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.19.17:202][449]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.06-09.19.17:202][449]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.19.17:240][449]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.19.17:244][449]LogUObjectHash: Compacting FUObjectHashTables data took   2.02ms
+[2019.06.06-09.19.17:286][450]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2019.06.06-09.19.17:975][532]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.19.49:380][250]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.19.49:524][250]LogUObjectHash: Compacting FUObjectHashTables data took   2.68ms
+[2019.06.06-09.19.51:012][418]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerInput2229C38244485BF2F5EDE9BC61354F52.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Blueprints/BP_GameManagerInput.uasset'
+[2019.06.06-09.19.54:020][777]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.19.58:166][268]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.19.58:311][268]LogUObjectHash: Compacting FUObjectHashTables data took   2.85ms
+[2019.06.06-09.19.58:814][318]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerInputC521B7464E30A1E886130B979AFD11A4.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Blueprints/BP_GameManagerInput.uasset'
+[2019.06.06-09.20.03:595][885]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.06-09.20.03:614][885]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.20.03:614][885]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.06-09.20.03:614][885]LogHMD: Initializing OVRPlugin session
+[2019.06.06-09.20.03:672][885]PIE: New page: PIE session: 0_Prototype_Intro (06-Jun-2019 8:20:03 pm)
+[2019.06.06-09.20.03:672][885]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro
+[2019.06.06-09.20.03:674][885]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001773s)
+[2019.06.06-09.20.03:674][885]LogAIModule: Creating AISystem for world 0_Prototype_Intro
+[2019.06.06-09.20.03:675][885]LogPlayLevel: PIE: World Init took: (0.000453s)
+[2019.06.06-09.20.03:675][885]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro to /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro (0.002342s)
+[2019.06.06-09.20.03:707][885]LogUObjectHash: Compacting FUObjectHashTables data took   2.59ms
+[2019.06.06-09.20.03:737][885]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-09.20.03:745][885]LogInit: FAudioDevice initialized.
+[2019.06.06-09.20.03:774][885]LogLoad: Game class is 'GameModeBase'
+[2019.06.06-09.20.03:775][885]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro up for play (max tick rate 0) at 2019.06.06-14.50.03
+[2019.06.06-09.20.03:775][885]LogWorld: Bringing up level for play took: 0.000536
+[2019.06.06-09.20.03:788][885]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro -0.372
+[2019.06.06-09.20.03:788][885]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.20.13:571][ 53]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.20.13:575][ 53]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.20.13:610][ 53]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.06-09.20.13:610][ 53]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.20.13:643][ 53]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.20.13:647][ 53]LogUObjectHash: Compacting FUObjectHashTables data took   1.75ms
+[2019.06.06-09.20.13:688][ 54]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2019.06.06-09.20.17:320][487]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.20.23:274][197]Cmd: DELETE
+[2019.06.06-09.20.23:275][197]Cmd: ACTOR DELETE
+[2019.06.06-09.20.23:276][197]LogEditorActor: Deleted Actor: BP_GameManagerInput_C
+[2019.06.06-09.20.23:304][197]LogUObjectHash: Compacting FUObjectHashTables data took   1.57ms
+[2019.06.06-09.20.23:305][197]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2019.06.06-09.20.38:462][994]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2019.06.06-09.20.38:606][994]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_IntroA1F809FE4DFF76CC60B45AA0C87C1BBA.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro.umap'
+[2019.06.06-09.20.38:647][994]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro_BuiltData8239468948B8454EAFD77CB5F50B9094.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro_BuiltData.uasset'
+[2019.06.06-09.20.54:610][784]LogSlate: Only BGRA pngs, bmps or icos are supported in by External Image Picker
+[2019.06.06-09.21.43:318][552]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.21.43:463][552]LogUObjectHash: Compacting FUObjectHashTables data took   2.83ms
+[2019.06.06-09.21.46:097][864]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.06-09.21.46:112][864]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.21.46:112][864]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.06-09.21.46:112][864]LogHMD: Initializing OVRPlugin session
+[2019.06.06-09.21.46:172][864]PIE: New page: PIE session: 0_Prototype_Intro (06-Jun-2019 8:21:46 pm)
+[2019.06.06-09.21.46:172][864]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro
+[2019.06.06-09.21.46:174][864]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001811s)
+[2019.06.06-09.21.46:175][864]LogAIModule: Creating AISystem for world 0_Prototype_Intro
+[2019.06.06-09.21.46:175][864]LogPlayLevel: PIE: World Init took: (0.000522s)
+[2019.06.06-09.21.46:175][864]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro to /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro (0.002453s)
+[2019.06.06-09.21.46:213][864]LogUObjectHash: Compacting FUObjectHashTables data took   2.86ms
+[2019.06.06-09.21.46:246][864]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-09.21.46:255][864]LogInit: FAudioDevice initialized.
+[2019.06.06-09.21.46:288][864]LogLoad: Game class is 'GameModeBase'
+[2019.06.06-09.21.46:290][864]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro up for play (max tick rate 0) at 2019.06.06-14.51.46
+[2019.06.06-09.21.46:290][864]LogWorld: Bringing up level for play took: 0.000829
+[2019.06.06-09.21.46:303][864]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro 0.143
+[2019.06.06-09.21.46:303][864]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.22.07:853][432]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.22.07:857][432]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.22.07:887][432]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.06-09.22.07:888][432]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.22.07:925][432]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.22.07:929][432]LogUObjectHash: Compacting FUObjectHashTables data took   2.21ms
+[2019.06.06-09.22.07:960][435]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2019.06.06-09.22.28:118][821]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2019.06.06-09.22.29:633][821]LogSlate: Window 'Delete Assets' being destroyed
+[2019.06.06-09.22.30:026][821]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2019.06.06-09.22.30:110][821]LogSlate: Window 'BP_GameManagerInput' being destroyed
+[2019.06.06-09.22.30:118][821]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2019.06.06-09.22.30:175][821]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput
+[2019.06.06-09.22.33:626][821]LogUObjectHash: Compacting FUObjectHashTables data took   3.25ms
+[2019.06.06-09.22.33:664][821]LogUObjectHash: Compacting FUObjectHashTables data took   2.45ms
+[2019.06.06-09.22.33:689][821]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2019.06.06-09.22.54:543][ 47]LogSlate: Window 'Pick Parent Class' being destroyed
+[2019.06.06-09.23.11:090][ 30]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput
+[2019.06.06-09.23.34:334][731]LogEditorTransaction: Undo Move Nodes
+[2019.06.06-09.23.34:817][781]LogEditorTransaction: Undo Paste clipboard contents
+[2019.06.06-09.23.44:079][885]LogEditorTransaction: Undo Move Nodes
+[2019.06.06-09.24.40:241][579]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.24.40:243][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.24.40:243][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "IntroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get IntroLevel
+[2019.06.06-09.24.40:243][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "OutroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get OutroLevel
+[2019.06.06-09.24.40:243][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.24.40:243][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.24.40:243][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "StreamLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set StreamLevelName
+[2019.06.06-09.24.40:244][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "GameLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get GameLevel
+[2019.06.06-09.24.40:244][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "IntroLevel" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Get IntroLevel
+[2019.06.06-09.24.40:244][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "UnloadLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set UnloadLevelName
+[2019.06.06-09.24.40:244][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] Could not find a variable named "StreamLevelName" in 'BP_GameManagerInput_C'.
+Make sure 'BP_GameManagerInput_C' has been compiled for  Set StreamLevelName
+[2019.06.06-09.24.40:244][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Intro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:244][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:244][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Stream Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:245][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:245][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Outro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:245][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Stream Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:245][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Intro Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:245][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:245][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Game Level  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:245][579]LogBlueprint: Error: [Compiler BP_GameManagerInput] The property associated with  Unload Level Name  could not be found in '/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput_C'
+[2019.06.06-09.24.40:371][579]LogUObjectHash: Compacting FUObjectHashTables data took   2.51ms
+[2019.06.06-09.24.40:380][579]LogBlueprint: Warning: [Compiler BP_GameManagerInput] [2798.38] Compile of BP_GameManagerInput failed. 10 Fatal Issue(s) 10 Warning(s) [in 138 ms] (/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput)
+[2019.06.06-09.25.59:252][950]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.25.59:270][950]LogBlueprint: Error: [Compiler BP_GameManagerInput] COMPILER ERROR: failed building connection with 'Boolean is not compatible with Name.' at  Set UnloadLevelName
+[2019.06.06-09.25.59:270][950]LogBlueprint: Error: [Compiler BP_GameManagerInput] COMPILER ERROR: failed building connection with 'Boolean is not compatible with Name.' at  Set StreamLevelName
+[2019.06.06-09.25.59:270][950]LogBlueprint: Error: [Compiler BP_GameManagerInput] COMPILER ERROR: failed building connection with 'Boolean is not compatible with Name.' at  Set UnloadLevelName
+[2019.06.06-09.25.59:271][950]LogBlueprint: Error: [Compiler BP_GameManagerInput] COMPILER ERROR: failed building connection with 'Boolean is not compatible with Name.' at  Set StreamLevelName
+[2019.06.06-09.25.59:394][950]LogUObjectHash: Compacting FUObjectHashTables data took   2.61ms
+[2019.06.06-09.25.59:403][950]LogBlueprint: Warning: [Compiler BP_GameManagerInput] [2877.40] Compile of BP_GameManagerInput failed. 4 Fatal Issue(s) 0 Warning(s) [in 150 ms] (/Game/GunnerSquad/Blueprints/BP_GameManagerInput.BP_GameManagerInput)
+[2019.06.06-09.26.17:120][896]LogSlate: Window 'Change Variable Type' being destroyed
+[2019.06.06-09.26.24:081][519]LogSlate: Window 'Change Variable Type' being destroyed
+[2019.06.06-09.26.26:943][851]LogSlate: Window 'Find in Blueprints' being destroyed
+[2019.06.06-09.26.26:946][851]LogSlate: Window 'Find in Blueprints' being destroyed
+[2019.06.06-09.26.32:483][323]LogSlate: Window 'Change Variable Type' being destroyed
+[2019.06.06-09.26.34:461][550]LogSlate: Window 'Find in Blueprints' being destroyed
+[2019.06.06-09.26.34:466][550]LogSlate: Window 'Find in Blueprints' being destroyed
+[2019.06.06-09.26.37:433][900]LogDialogs: Warning: Suppressed: This could break connections, do you want to search all Variable 'StreamLevelName' instances, change its type, and recompile?
+[2019.06.06-09.26.40:820][289]LogDialogs: Warning: Suppressed: This could break connections, do you want to search all Variable 'UnloadLevelName' instances, change its type, and recompile?
+[2019.06.06-09.26.43:439][593]LogSlate: Window 'Find in Blueprints' being destroyed
+[2019.06.06-09.26.43:443][593]LogSlate: Window 'Find in Blueprints' being destroyed
+[2019.06.06-09.26.45:448][832]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.26.45:469][832]LogClass: Warning: Type mismatch in IntroLevel of BP_GameManagerInput_C - Previous (BoolProperty) Current(NameProperty) for package:  FObjectReader
+[2019.06.06-09.26.45:469][832]LogClass: Warning: Type mismatch in GameLevel of BP_GameManagerInput_C - Previous (BoolProperty) Current(NameProperty) for package:  FObjectReader
+[2019.06.06-09.26.45:469][832]LogClass: Warning: Type mismatch in OutroLevel of BP_GameManagerInput_C - Previous (BoolProperty) Current(NameProperty) for package:  FObjectReader
+[2019.06.06-09.26.45:469][832]LogClass: Warning: Type mismatch in StreamLevelName of BP_GameManagerInput_C - Previous (BoolProperty) Current(NameProperty) for package:  FObjectReader
+[2019.06.06-09.26.45:469][832]LogClass: Warning: Type mismatch in UnloadLevelName of BP_GameManagerInput_C - Previous (BoolProperty) Current(NameProperty) for package:  FObjectReader
+[2019.06.06-09.26.45:585][832]LogUObjectHash: Compacting FUObjectHashTables data took   2.52ms
+[2019.06.06-09.26.58:112][321]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.26.58:229][321]LogUObjectHash: Compacting FUObjectHashTables data took   2.50ms
+[2019.06.06-09.26.58:982][398]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerInputC3320A404ACA5FD7E37DF98128BFF839.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Blueprints/BP_GameManagerInput.uasset'
+[2019.06.06-09.27.01:692][719]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.06-09.27.01:710][719]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.27.01:710][719]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.06-09.27.01:710][719]LogHMD: Initializing OVRPlugin session
+[2019.06.06-09.27.01:773][719]PIE: New page: PIE session: 0_Prototype_Intro (06-Jun-2019 8:27:01 pm)
+[2019.06.06-09.27.01:773][719]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro
+[2019.06.06-09.27.01:776][719]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002604s)
+[2019.06.06-09.27.01:776][719]LogAIModule: Creating AISystem for world 0_Prototype_Intro
+[2019.06.06-09.27.01:776][719]LogPlayLevel: PIE: World Init took: (0.000535s)
+[2019.06.06-09.27.01:776][719]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro to /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro (0.003261s)
+[2019.06.06-09.27.01:805][719]LogUObjectHash: Compacting FUObjectHashTables data took   2.25ms
+[2019.06.06-09.27.01:835][719]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-09.27.01:844][719]LogInit: FAudioDevice initialized.
+[2019.06.06-09.27.01:870][719]LogLoad: Game class is 'GameModeBase'
+[2019.06.06-09.27.01:871][719]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro up for play (max tick rate 0) at 2019.06.06-14.57.01
+[2019.06.06-09.27.01:871][719]LogWorld: Bringing up level for play took: 0.000431
+[2019.06.06-09.27.01:885][719]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro -0.275
+[2019.06.06-09.27.01:885][719]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.27.07:071][335]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.27.07:075][335]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.27.07:104][335]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.06-09.27.07:104][335]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.27.07:134][335]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.27.07:137][335]LogUObjectHash: Compacting FUObjectHashTables data took   1.84ms
+[2019.06.06-09.27.07:179][339]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2019.06.06-09.27.18:925][720]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2019.06.06-09.27.19:066][720]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro67B611574904C62CBB5BB49A612E3B3F.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro.umap'
+[2019.06.06-09.27.19:107][720]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro_BuiltDataA197624242586CB0CA97878BAD8E2741.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro_BuiltData.uasset'
+[2019.06.06-09.27.28:273][787]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2019.06.06-09.27.28:382][787]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro8DFA5CBC4DEEF3384CB7E18162C1616F.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro.umap'
+[2019.06.06-09.27.28:416][787]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro_BuiltDataD73FAC6E42AAC17F98CF9C8D6BA2B6D3.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro_BuiltData.uasset'
+[2019.06.06-09.27.29:577][914]LogAIModule: Creating AISystem for world 0_Prototype_Game
+[2019.06.06-09.27.36:162][671]LogAIModule: Creating AISystem for world 0_Prototype_Outro
+[2019.06.06-09.27.40:585][177]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.06-09.27.40:598][177]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.27.40:598][177]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game'
+[2019.06.06-09.27.40:598][177]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro'
+[2019.06.06-09.27.40:598][177]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.06-09.27.40:598][177]LogHMD: Initializing OVRPlugin session
+[2019.06.06-09.27.40:657][177]PIE: New page: PIE session: 0_Prototype_Intro (06-Jun-2019 8:27:40 pm)
+[2019.06.06-09.27.40:657][177]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro
+[2019.06.06-09.27.40:659][177]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001773s)
+[2019.06.06-09.27.40:659][177]LogAIModule: Creating AISystem for world 0_Prototype_Intro
+[2019.06.06-09.27.40:659][177]LogPlayLevel: PIE: World Init took: (0.000472s)
+[2019.06.06-09.27.40:660][177]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro to /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro (0.002364s)
+[2019.06.06-09.27.40:686][177]LogUObjectHash: Compacting FUObjectHashTables data took   1.95ms
+[2019.06.06-09.27.40:716][177]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-09.27.40:724][177]LogInit: FAudioDevice initialized.
+[2019.06.06-09.27.40:755][177]LogLoad: Game class is 'GameModeBase'
+[2019.06.06-09.27.40:756][177]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro up for play (max tick rate 0) at 2019.06.06-14.57.40
+[2019.06.06-09.27.40:756][177]LogWorld: Bringing up level for play took: 0.000405
+[2019.06.06-09.27.40:769][177]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro 0.61
+[2019.06.06-09.27.40:769][177]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.27.40:769][177]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game'
+[2019.06.06-09.27.40:769][177]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro'
+[2019.06.06-09.27.44:957][674]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.27.44:957][674]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game'
+[2019.06.06-09.27.44:957][674]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro'
+[2019.06.06-09.27.44:961][674]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.27.44:987][674]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.06-09.27.44:987][674]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.27.44:988][674]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game'
+[2019.06.06-09.27.44:988][674]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro'
+[2019.06.06-09.27.45:016][674]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.27.45:019][674]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2019.06.06-09.27.45:058][677]LogPlayLevel: Display: Destroying online subsystem :Context_27
+[2019.06.06-09.27.46:864][889]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.27.50:427][ 64]LogSlate: Window 'Remove Level' being destroyed
+[2019.06.06-09.27.50:471][ 64]LogUObjectHash: Compacting FUObjectHashTables data took   2.10ms
+[2019.06.06-09.27.50:502][ 64]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2019.06.06-09.27.50:502][ 64]MapCheck: New page: Map Check
+[2019.06.06-09.27.50:502][ 64]LightingResults: New page: Lighting Build
+[2019.06.06-09.27.50:529][ 64]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2019.06.06-09.27.50:554][ 64]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2019.06.06-09.27.52:412][170]LogSlate: Window 'Remove Level' being destroyed
+[2019.06.06-09.27.52:472][170]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2019.06.06-09.27.52:502][170]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2019.06.06-09.27.52:503][170]MapCheck: New page: Map Check
+[2019.06.06-09.27.52:503][170]LightingResults: New page: Lighting Build
+[2019.06.06-09.27.52:526][170]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2019.06.06-09.27.52:548][170]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2019.06.06-09.28.28:512][512]LogStreaming: Display: ULevelStreaming::RequestLevel(/Game/GunnerSquad/Maps/0_Prototype_Game) is flushing async loading
+[2019.06.06-09.28.28:512][512]LogStreaming: Display: Flushing async loaders.
+[2019.06.06-09.28.28:551][512]LogSlate: Window 'Open Level' being destroyed
+[2019.06.06-09.28.35:730][321]LogStreaming: Display: ULevelStreaming::RequestLevel(/Game/GunnerSquad/Maps/0_Prototype_Outro) is flushing async loading
+[2019.06.06-09.28.35:730][321]LogStreaming: Display: Flushing async loaders.
+[2019.06.06-09.28.35:761][321]LogSlate: Window 'Open Level' being destroyed
+[2019.06.06-09.28.39:284][729]LogUObjectHash: Compacting FUObjectHashTables data took   1.69ms
+[2019.06.06-09.28.39:291][729]LogSpawn: Warning: UWorld::DestroyActor: World has no context! World: 0_Prototype_Outro, Actor: /Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.REINST_0_Prototype_Outro_C_0
+[2019.06.06-09.28.39:399][729]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Outro64BDA32344FCA73CDC794E9F16821682.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Outro.umap'
+[2019.06.06-09.28.39:419][729]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Outro_BuiltData0F8774224DE874668245C3BA4BD992A4.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Outro_BuiltData.uasset'
+[2019.06.06-09.28.40:861][889]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.06-09.28.40:873][889]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.28.40:873][889]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game'
+[2019.06.06-09.28.40:873][889]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro'
+[2019.06.06-09.28.40:873][889]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.06-09.28.40:874][889]LogHMD: Initializing OVRPlugin session
+[2019.06.06-09.28.40:933][889]PIE: New page: PIE session: 0_Prototype_Intro (06-Jun-2019 8:28:40 pm)
+[2019.06.06-09.28.40:933][889]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro
+[2019.06.06-09.28.40:936][889]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003353s)
+[2019.06.06-09.28.40:937][889]LogAIModule: Creating AISystem for world 0_Prototype_Intro
+[2019.06.06-09.28.40:937][889]LogPlayLevel: PIE: World Init took: (0.000465s)
+[2019.06.06-09.28.40:937][889]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro to /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro (0.003950s)
+[2019.06.06-09.28.40:964][889]LogUObjectHash: Compacting FUObjectHashTables data took   1.94ms
+[2019.06.06-09.28.40:993][889]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-09.28.41:002][889]LogInit: FAudioDevice initialized.
+[2019.06.06-09.28.41:032][889]LogLoad: Game class is 'GameModeBase'
+[2019.06.06-09.28.41:033][889]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro up for play (max tick rate 0) at 2019.06.06-14.58.41
+[2019.06.06-09.28.41:033][889]LogWorld: Bringing up level for play took: 0.000405
+[2019.06.06-09.28.41:046][889]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro 0.886
+[2019.06.06-09.28.41:046][889]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.28.41:046][889]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game'
+[2019.06.06-09.28.41:046][889]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro'
+[2019.06.06-09.29.14:256][860]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.29.14:256][860]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game'
+[2019.06.06-09.29.14:256][860]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro'
+[2019.06.06-09.29.14:259][860]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.29.14:288][860]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.06-09.29.14:289][860]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.29.14:289][860]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Game.0_Prototype_Game:PersistentLevel.0_Prototype_Game'
+[2019.06.06-09.29.14:289][860]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Outro.0_Prototype_Outro:PersistentLevel.0_Prototype_Outro'
+[2019.06.06-09.29.14:320][860]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.29.14:323][860]LogUObjectHash: Compacting FUObjectHashTables data took   1.90ms
+[2019.06.06-09.29.14:365][862]LogPlayLevel: Display: Destroying online subsystem :Context_28
+[2019.06.06-09.29.35:166][ 38]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.06.06-09.39.12:789][  3]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2019.06.06-09.39.12:924][  3]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro_Auto548D5D3894E416774E762C0B36A62949E.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Autosaves/Game/GunnerSquad/Maps/0_Prototype_Intro_Auto5.umap'
+[2019.06.06-09.39.12:927][  3]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/GunnerSquad/Maps/0_Prototype_Intro' took 0.166
+[2019.06.06-09.39.12:927][  3]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.166
+[2019.06.06-09.50.19:855][629]LogSlate: Window 'Remove Level' being destroyed
+[2019.06.06-09.50.19:900][629]LogUObjectHash: Compacting FUObjectHashTables data took   2.41ms
+[2019.06.06-09.50.19:932][629]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2019.06.06-09.50.19:932][629]MapCheck: New page: Map Check
+[2019.06.06-09.50.19:932][629]LightingResults: New page: Lighting Build
+[2019.06.06-09.50.19:959][629]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2019.06.06-09.50.19:986][629]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2019.06.06-09.50.21:718][707]LogSlate: Window 'Remove Level' being destroyed
+[2019.06.06-09.50.21:776][707]LogUObjectHash: Compacting FUObjectHashTables data took   1.72ms
+[2019.06.06-09.50.21:807][707]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
+[2019.06.06-09.50.21:807][707]MapCheck: New page: Map Check
+[2019.06.06-09.50.21:807][707]LightingResults: New page: Lighting Build
+[2019.06.06-09.50.21:833][707]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2019.06.06-09.50.21:856][707]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2019.06.06-09.51.20:417][599]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-09.51.20:537][608]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2019.06.06-09.51.20:678][608]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro59FECD4141E646F85DC210BB4D26BCC8.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro.umap'
+[2019.06.06-09.51.20:717][608]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro_BuiltDataDDA621F84A710587E6BF68B8F4660A5A.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro_BuiltData.uasset'
+[2019.06.06-09.51.43:580][324]LogBlueprintActionDatabase: DeferredRemoveEntry - Object: NULL (ObjectIndex = 114541, ObjectSerialNumber = 47027)
+[2019.06.06-09.51.43:580][324]LogBlueprintActionDatabase: DeferredRemoveEntry - Object: NULL (ObjectIndex = 81656, ObjectSerialNumber = 47060)
+[2019.06.06-09.53.00:396][357]LogEditorTransaction: Undo Move Node
+[2019.06.06-09.53.04:054][782]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-09.53.04:185][782]LogUObjectHash: Compacting FUObjectHashTables data took   2.72ms
+[2019.06.06-09.53.05:049][875]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerInput416E851840E5B0F04A3DDEA6C570CCB6.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Blueprints/BP_GameManagerInput.uasset'
+[2019.06.06-09.53.11:134][592]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerInput46269BDA4D1319A9F11FDA888D46E6DB.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Blueprints/BP_GameManagerInput.uasset'
+[2019.06.06-09.53.12:572][757]LogUObjectHash: Compacting FUObjectHashTables data took   2.34ms
+[2019.06.06-09.53.12:681][757]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro0269281045E52F5B296FD08E557D37E3.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro.umap'
+[2019.06.06-09.53.12:717][757]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro_BuiltDataF3D454EB454E0C3C5FB30B882549CD25.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/0_Prototype_Intro_BuiltData.uasset'
+[2019.06.06-09.53.20:106][630]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.06-09.53.20:123][630]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.53.20:123][630]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.06-09.53.20:123][630]LogHMD: Initializing OVRPlugin session
+[2019.06.06-09.53.20:208][630]PIE: New page: PIE session: 0_Prototype_Intro (06-Jun-2019 8:53:20 pm)
+[2019.06.06-09.53.20:208][630]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro
+[2019.06.06-09.53.20:210][630]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001943s)
+[2019.06.06-09.53.20:211][630]LogAIModule: Creating AISystem for world 0_Prototype_Intro
+[2019.06.06-09.53.20:211][630]LogPlayLevel: PIE: World Init took: (0.000561s)
+[2019.06.06-09.53.20:211][630]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro to /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro (0.002647s)
+[2019.06.06-09.53.20:238][630]LogUObjectHash: Compacting FUObjectHashTables data took   2.20ms
+[2019.06.06-09.53.20:269][630]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-09.53.20:278][630]LogInit: FAudioDevice initialized.
+[2019.06.06-09.53.20:304][630]LogLoad: Game class is 'GameModeBase'
+[2019.06.06-09.53.20:305][630]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro.0_Prototype_Intro up for play (max tick rate 0) at 2019.06.06-15.23.20
+[2019.06.06-09.53.20:305][630]LogWorld: Bringing up level for play took: 0.000551
+[2019.06.06-09.53.20:318][630]LogBlueprintUserMessages: [BP_GameManagerInput_4] Change Level: START RECEIVED
+[2019.06.06-09.53.20:339][630]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_0_Prototype_Intro 0.18
+[2019.06.06-09.53.20:340][630]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.53.27:284][456]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.53.27:287][456]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.53.27:322][456]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.06-09.53.27:323][456]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro' with GeneratedClass '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/0_Prototype_Intro.0_Prototype_Intro:PersistentLevel.0_Prototype_Intro'
+[2019.06.06-09.53.27:353][456]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.06-09.53.27:357][456]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
+[2019.06.06-09.53.27:416][457]LogPlayLevel: Display: Destroying online subsystem :Context_29
+[2019.06.06-09.55.01:842][833]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.06.06-09.57.15:290][542]LogSlate: Window 'Color Picker' being destroyed
+[2019.06.06-10.03.20:053][904]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2019.06.06-10.03.20:053][904]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/GunnerSquad/Maps/0_Prototype_Intro' took 0.027
+[2019.06.06-10.03.20:054][904]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/GunnerSquad/Blueprints/BP_GameManagerInput] ([1] browsable assets)...
+[2019.06.06-10.03.20:054][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/GunnerSquad/Blueprints/BP_GameManagerInput]
+[2019.06.06-10.03.20:088][904]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerInput_Auto65F3C353443DA6FC14AE125B969EE47B7.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Autosaves/Game/GunnerSquad/Blueprints/BP_GameManagerInput_Auto6.uasset'
+[2019.06.06-10.03.20:088][904]LogFileHelpers: Auto-saving content packages took 0.035
+[2019.06.06-10.16.22:665][ 80]BlueprintLog: New page: Compile BP_GameManagerInput
+[2019.06.06-10.16.22:806][ 80]LogUObjectHash: Compacting FUObjectHashTables data took   2.57ms
+[2019.06.06-10.17.23:533][480]LogUObjectHash: Compacting FUObjectHashTables data took   2.35ms
+[2019.06.06-10.17.23:661][480]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/0_Prototype_Intro_Auto71E3FF95043DDC095707FA1A6DEB66BE3.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Autosaves/Game/GunnerSquad/Maps/0_Prototype_Intro_Auto7.umap'
+[2019.06.06-10.17.23:665][480]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/GunnerSquad/Maps/0_Prototype_Intro' took 0.158
+[2019.06.06-10.17.23:665][480]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.158
+[2019.06.06-10.24.42:961][788]LogInit: XAudio2 using 'Digital Audio (S/PDIF) (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-10.24.45:615][796]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-10.24.49:955][809]LogInit: XAudio2 using 'Digital Audio (S/PDIF) (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-10.25.12:095][875]LogInit: XAudio2 using 'BenQ GW2406Z (NVIDIA High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-10.25.18:117][893]LogInit: XAudio2 using 'BenQ GW2406Z (NVIDIA High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-10.25.18:759][895]LogInit: XAudio2 using 'BenQ GW2406Z (NVIDIA High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-10.25.19:133][896]LogInit: XAudio2 using 'BenQ GW2406Z (NVIDIA High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: request failed, libcurl error: 56 (Failure when receiving data from the peer)
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x26e96a73f70 [can pipeline])
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: libcurl info message cache 1 (Re-using existing connection! (#142) with host datarouter.ol.epicgames.com)
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (54.242.143.72) port 443 (#142))
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: libcurl info message cache 3 (We are completely uploaded and fine)
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: libcurl info message cache 4 (OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054)
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2019.06.06-11.51.29:904][606]LogHttp: Warning: 0000026E8F30C900: libcurl info message cache 7 (Closing connection 142)
+[2019.06.06-11.51.30:225][607]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE0B654B7-401F-34B1-6BD9-B9B0A09EFE3E%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.22.1-6063286%2B%2B%2BUE4%2BRelease-4.22&UserID=ac5557204c2f0df90d8a8ab9d7575a65%7Caab271d5583b4f989f60f3c65c06fc24%7Caa5cf9d0-d86f-4de7-9b9d-b6794db387ad&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2019.06.06-11.51.33:615][964]LogUObjectHash: Compacting FUObjectHashTables data took   8.59ms
+[2019.06.06-11.51.33:615][964]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/GunnerSquad/Maps/0_Prototype_Intro' took 0.064
+[2019.06.06-11.51.33:617][964]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/GunnerSquad/Blueprints/BP_GameManagerInput] ([1] browsable assets)...
+[2019.06.06-11.51.33:617][964]OBJ SavePackage: Finished generating thumbnails for package [/Game/GunnerSquad/Blueprints/BP_GameManagerInput]
+[2019.06.06-11.51.33:673][964]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/BP_GameManagerInput_Auto8B8B937154CD2350FBE7E109BFCE9C740.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Autosaves/Game/GunnerSquad/Blueprints/BP_GameManagerInput_Auto8.uasset'
+[2019.06.06-11.51.33:674][964]LogFileHelpers: Auto-saving content packages took 0.057
+[2019.06.06-11.53.47:048][146]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.06-12.31.29:785][648]LogHttp: Warning: 0000026EBC5F5300: request failed, libcurl error: 56 (Failure when receiving data from the peer)
+[2019.06.06-12.31.29:785][648]LogHttp: Warning: 0000026EBC5F5300: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x26e96a73f70 [can pipeline])
+[2019.06.06-12.31.29:785][648]LogHttp: Warning: 0000026EBC5F5300: libcurl info message cache 1 (Re-using existing connection! (#158) with host datarouter.ol.epicgames.com)
+[2019.06.06-12.31.29:786][648]LogHttp: Warning: 0000026EBC5F5300: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (52.1.97.25) port 443 (#158))
+[2019.06.06-12.31.29:786][648]LogHttp: Warning: 0000026EBC5F5300: libcurl info message cache 3 (We are completely uploaded and fine)
+[2019.06.06-12.31.29:786][648]LogHttp: Warning: 0000026EBC5F5300: libcurl info message cache 4 (OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054)
+[2019.06.06-12.31.29:786][648]LogHttp: Warning: 0000026EBC5F5300: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2019.06.06-12.31.29:786][648]LogHttp: Warning: 0000026EBC5F5300: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2019.06.06-12.31.29:786][648]LogHttp: Warning: 0000026EBC5F5300: libcurl info message cache 7 (Closing connection 158)
+[2019.06.06-12.31.30:123][649]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE0B654B7-401F-34B1-6BD9-B9B0A09EFE3E%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.22.1-6063286%2B%2B%2BUE4%2BRelease-4.22&UserID=ac5557204c2f0df90d8a8ab9d7575a65%7Caab271d5583b4f989f60f3c65c06fc24%7Caa5cf9d0-d86f-4de7-9b9d-b6794db387ad&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2019.06.06-13.18.29:839][ 23]LogHttp: Warning: 0000026ECC82A200: request failed, libcurl error: 56 (Failure when receiving data from the peer)
+[2019.06.06-13.18.29:839][ 23]LogHttp: Warning: 0000026ECC82A200: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x26e96a73f70 [can pipeline])
+[2019.06.06-13.18.29:839][ 23]LogHttp: Warning: 0000026ECC82A200: libcurl info message cache 1 (Re-using existing connection! (#177) with host datarouter.ol.epicgames.com)
+[2019.06.06-13.18.29:839][ 23]LogHttp: Warning: 0000026ECC82A200: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (52.71.186.206) port 443 (#177))
+[2019.06.06-13.18.29:839][ 23]LogHttp: Warning: 0000026ECC82A200: libcurl info message cache 3 (We are completely uploaded and fine)
+[2019.06.06-13.18.29:839][ 23]LogHttp: Warning: 0000026ECC82A200: libcurl info message cache 4 (OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054)
+[2019.06.06-13.18.29:839][ 23]LogHttp: Warning: 0000026ECC82A200: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2019.06.06-13.18.29:839][ 23]LogHttp: Warning: 0000026ECC82A200: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2019.06.06-13.18.29:840][ 23]LogHttp: Warning: 0000026ECC82A200: libcurl info message cache 7 (Closing connection 177)
+[2019.06.06-13.18.29:840][ 23]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE0B654B7-401F-34B1-6BD9-B9B0A09EFE3E%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.22.1-6063286%2B%2B%2BUE4%2BRelease-4.22&UserID=ac5557204c2f0df90d8a8ab9d7575a65%7Caab271d5583b4f989f60f3c65c06fc24%7Caa5cf9d0-d86f-4de7-9b9d-b6794db387ad&AppEnvironment=datacollector-binary&UploadType=eteventstream
