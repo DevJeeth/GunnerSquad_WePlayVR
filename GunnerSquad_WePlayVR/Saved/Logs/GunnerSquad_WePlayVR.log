@@ -891,3 +891,6 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2019.06.06-01.50.41:415][198]LogSlate: Window 'Project Settings' being destroyed
 [2019.06.06-01.50.41:424][198]LogSlate: Window 'Project Settings' being destroyed
 [2019.06.06-01.52.09:087][518]LogSlate: Took 0.013724 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2019.06.06-01.56.42:578][996]LogSlate: Window 'BP_Intro' being destroyed
+[2019.06.06-01.56.42:581][996]LogSlate: Window 'BP_Intro' being destroyed
+[2019.06.06-01.56.42:877][996]LogUObjectHash: Compacting FUObjectHashTables data took   4.72ms
