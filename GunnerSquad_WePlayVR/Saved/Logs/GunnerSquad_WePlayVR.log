@@ -1,4 +1,4 @@
-﻿Log file open, 06/18/19 19:08:43
+﻿Log file open, 06/20/19 11:33:45
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -10,7 +10,7 @@ LogInit: Display: Running engine for game: GunnerSquad_WePlayVR
 LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.403776
+LogStats: Stats thread started at 0.669585
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +5:30, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -116,7 +116,6 @@ LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connecti
 LogInit:  - LocalHostAddr = Default
 LogInit:  - BufferSize = 65536
 LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
-LogHMD: Failed initializing OVRPlugin 1.32.0
 LogInit: Build: ++UE4+Release-4.22-CL-6063286
 LogInit: Engine Version: 4.22.1-6063286+++UE4+Release-4.22
 LogInit: Compatible Engine Version: 4.22.0-5660361+++UE4+Release-4.22
@@ -126,7 +125,7 @@ LogInit: Compiled (64-bit): Apr 24 2019 04:36:48
 LogInit: Compiled with Visual C++: 19.16.27025.01
 LogInit: Build Configuration: Development
 LogInit: Branch Name: ++UE4+Release-4.22
-LogInit: Command Line: 
+LogInit: Command Line:  -skipcompile
 LogInit: Base Directory: D:/UnrealEngine/UE_4.22/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
 LogDevObjectVersion: Number of dev versions registered: 23
@@ -157,424 +156,715 @@ LogInit: Presizing for max 16777216 objects, including 0 objects not considered 
 LogInit: Object subsystem initialized
 LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
 LogConfig: Setting CVar [[r.setres:1280x720]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[r.VSync:0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:1]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
-[2019.06.18-13.38.44:306][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
-[2019.06.18-13.38.44:306][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
-[2019.06.18-13.38.44:307][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
-[2019.06.18-13.38.44:307][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
-[2019.06.18-13.38.44:307][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
-[2019.06.18-13.38.44:307][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
-[2019.06.18-13.38.44:307][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
-[2019.06.18-13.38.44:307][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
-[2019.06.18-13.38.44:311][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.06.18-13.38.44:311][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.06.18-13.38.44:312][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.06.18-13.38.44:312][  0]LogInit: Selected Device Profile: [Windows]
-[2019.06.18-13.38.44:312][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2019.06.18-13.38.44:321][  0]LogHAL: Display: Platform has ~ 16 GB [17128714240 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:0		; Required until we fix HLR fall-out]]
-[2019.06.18-13.38.44:321][  0]LogInit: Going up to parent DeviceProfile []
-[2019.06.18-13.38.44:321][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.06.18-13.38.44:321][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:321][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
-[2019.06.18-13.38.44:322][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
-[2019.06.18-13.38.44:322][  0]LogInit: Computer: JEET
-[2019.06.18-13.38.44:322][  0]LogInit: User: Jeet
-[2019.06.18-13.38.44:322][  0]LogInit: CPU Page size=4096, Cores=6
-[2019.06.18-13.38.44:322][  0]LogInit: High frequency timer resolution =3.117188 MHz
-[2019.06.18-13.38.44:322][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
-[2019.06.18-13.38.44:322][  0]LogMemory: Platform Memory Stats for Windows
-[2019.06.18-13.38.44:322][  0]LogMemory: Process Physical Memory: 101.96 MB used, 101.96 MB peak
-[2019.06.18-13.38.44:322][  0]LogMemory: Process Virtual Memory: 93.81 MB used, 93.81 MB peak
-[2019.06.18-13.38.44:322][  0]LogMemory: Physical Memory: 4671.14 MB used,  11664.07 MB free, 16335.21 MB total
-[2019.06.18-13.38.44:322][  0]LogMemory: Virtual Memory: 4691.52 MB used,  134213040.00 MB free, 134217728.00 MB total
-[2019.06.18-13.38.44:344][  0]LogInit: Using OS detected language (en-GB).
-[2019.06.18-13.38.44:344][  0]LogInit: Using OS detected locale (en-IN).
-[2019.06.18-13.38.44:345][  0]LogTextLocalizationManager: No specific localization for 'en-GB' exists, so the 'en' localization will be used.
-[2019.06.18-13.38.44:464][  0]LogInit: Setting process to per monitor DPI aware
-[2019.06.18-13.38.44:488][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2019.06.18-13.38.44:488][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2019.06.18-13.38.44:670][  0]LogHMD: Failed to initialize OpenVR with code 126
-[2019.06.18-13.38.44:670][  0]LogD3D11RHI: D3D11 adapters:
-[2019.06.18-13.38.44:723][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1070' (Feature Level 11_0)
-[2019.06.18-13.38.44:723][  0]LogD3D11RHI:       8088/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
-[2019.06.18-13.38.44:725][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2019.06.18-13.38.44:725][  0]LogD3D11RHI:       0/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2019.06.18-13.38.44:725][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2019.06.18-13.38.44:730][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2019.06.18-13.38.44:730][  0]LogD3D11RHI:     GPU DeviceId: 0x1b81 (for the marketing name, search the web for "GPU Device Id")
-[2019.06.18-13.38.44:730][  0]LogWindows: EnumDisplayDevices:
-[2019.06.18-13.38.44:730][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1070' (P:0 D:1)
-[2019.06.18-13.38.44:730][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1070' (P:1 D:1)
-[2019.06.18-13.38.44:730][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1070' (P:0 D:0)
-[2019.06.18-13.38.44:730][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1070' (P:0 D:0)
-[2019.06.18-13.38.44:730][  0]LogWindows: DebugString: FoundDriverCount:4 
-[2019.06.18-13.38.44:730][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1070
-[2019.06.18-13.38.44:730][  0]LogD3D11RHI:   Driver Version: 430.86 (internal:26.21.14.3086, unified:430.86)
-[2019.06.18-13.38.44:730][  0]LogD3D11RHI:      Driver Date: 5-22-2019
-[2019.06.18-13.38.44:730][  0]LogRHI: Texture pool is 5661 MB (70% of 8088 MB)
-[2019.06.18-13.38.44:763][  0]LogD3D11RHI: Async texture creation enabled
-[2019.06.18-13.38.44:770][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.06.18-13.38.44:771][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.06.18-13.38.44:771][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.06.18-13.38.44:778][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
-[2019.06.18-13.38.45:128][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
-[2019.06.18-13.38.45:138][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
-[2019.06.18-13.38.45:148][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
-[2019.06.18-13.38.45:165][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
-[2019.06.18-13.38.45:177][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
-[2019.06.18-13.38.45:187][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
-[2019.06.18-13.38.45:197][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
-[2019.06.18-13.38.45:207][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
-[2019.06.18-13.38.45:211][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
-[2019.06.18-13.38.45:274][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
-[2019.06.18-13.38.45:275][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
-[2019.06.18-13.38.45:275][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
-[2019.06.18-13.38.45:275][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
-[2019.06.18-13.38.45:275][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
-[2019.06.18-13.38.45:275][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
-[2019.06.18-13.38.45:277][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
-[2019.06.18-13.38.45:326][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
-[2019.06.18-13.38.45:326][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
-[2019.06.18-13.38.45:347][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
-[2019.06.18-13.38.45:347][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
-[2019.06.18-13.38.45:357][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
-[2019.06.18-13.38.45:366][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
-[2019.06.18-13.38.45:380][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
-[2019.06.18-13.38.45:394][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
-[2019.06.18-13.38.45:428][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
-[2019.06.18-13.38.45:428][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
-[2019.06.18-13.38.45:428][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2019.06.18-13.38.45:434][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
-[2019.06.18-13.38.45:466][  0]LogShaderCompilers: Guid format shader working directory is -48 characters bigger than the processId version (../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Intermediate/Shaders/WorkingDirectory/9748/).
-[2019.06.18-13.38.45:467][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Jeet/AppData/Local/Temp/UnrealShaderWorkingDir/703135584154CD2B0E6394ACE74F724C/'.
-[2019.06.18-13.38.45:468][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2019.06.18-13.38.45:468][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2019.06.18-13.38.45:468][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2019.06.18-13.38.45:919][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2019.06.18-13.38.45:962][  0]LogDerivedDataCache: Loaded boot cache 0.04s 71MB C:/Users/Jeet/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
-[2019.06.18-13.38.45:962][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Jeet/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc
-[2019.06.18-13.38.45:962][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2019.06.18-13.38.45:962][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2019.06.18-13.38.45:962][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.06.18-13.38.45:962][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2019.06.18-13.38.45:972][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2019.06.18-13.38.45:972][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.06.18-13.38.45:972][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
-[2019.06.18-13.38.45:984][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Jeet/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2019.06.18-13.38.45:984][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2019.06.18-13.38.45:984][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2019.06.18-13.38.46:000][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2019.06.18-13.38.46:001][  0]LogSlate: Using FreeType 2.6.0
-[2019.06.18-13.38.46:001][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.06.18-13.38.46:078][  0]LogAssetRegistry: FAssetRegistry took 0.0306 seconds to start up
-[2019.06.18-13.38.46:335][  0]LogInit: Selected Device Profile: [Windows]
-[2019.06.18-13.38.46:452][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2019.06.18-13.38.46:452][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
-[2019.06.18-13.38.46:452][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2019.06.18-13.38.46:452][  0]LogMeshReduction: No distributed automatic mesh merging module available
-[2019.06.18-13.38.46:452][  0]LogMeshMerging: No distributed automatic mesh merging module available
-[2019.06.18-13.38.46:459][  0]LogNetVersion: GunnerSquad_WePlayVR 1.0.0, NetCL: 5660361, EngineNetVer: 10, GameNetVer: 0 (Checksum: 2745710943)
-[2019.06.18-13.38.46:757][  0]LogPackageLocalizationCache: Processed 10 localized package path(s) for 1 prioritized culture(s) in 0.033761 seconds
-[2019.06.18-13.38.46:763][  0]LogUObjectArray: 42205 objects as part of root set at end of initial load.
-[2019.06.18-13.38.46:763][  0]LogUObjectAllocator: 7325032 out of 0 bytes used by permanent object pool.
-[2019.06.18-13.38.46:763][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2019.06.18-13.38.47:452][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2019.06.18-13.38.47:464][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2019.06.18-13.38.47:557][  0]SourceControl: Source control is disabled
-[2019.06.18-13.38.47:557][  0]SourceControl: Source control is disabled
-[2019.06.18-13.38.47:559][  0]SourceControl: Source control is disabled
-[2019.06.18-13.38.47:560][  0]SourceControl: Source control is disabled
-[2019.06.18-13.38.47:620][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2019.06.18-13.38.47:706][  0]LogOcInput: OculusInput pre-init called
-[2019.06.18-13.38.48:351][  0]LogEngine: Initializing Engine...
-[2019.06.18-13.38.48:383][  0]LogHMD: Failed to initialize OpenVR with code 126
-[2019.06.18-13.38.48:384][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
-[2019.06.18-13.38.48:541][  0]LogInit: Initializing FReadOnlyCVARCache
-[2019.06.18-13.38.48:550][  0]LogAIModule: Creating AISystem for world Untitled
-[2019.06.18-13.38.48:586][  0]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.06.18-13.38.48:606][  0]LogInit: FAudioDevice initialized.
-[2019.06.18-13.38.48:606][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2019.06.18-13.38.48:774][  0]LogDerivedDataCache: Saved boot cache 0.17s 71MB C:/Users/Jeet/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
-[2019.06.18-13.38.48:784][  0]LogInit: Texture streaming: Enabled
-[2019.06.18-13.38.48:794][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2019.06.18-13.38.48:808][  0]LogInit: Transaction tracking system initialized
-[2019.06.18-13.38.48:822][  0]BlueprintLog: New page: Editor Load
-[2019.06.18-13.38.48:873][  0]LocalizationService: Localization service is disabled
-[2019.06.18-13.38.49:094][  0]LogFileCache: Scanning file cache for directory 'D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/' took 0.01s
-[2019.06.18-13.38.49:094][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2019.06.18-13.38.49:094][  0]LogCook: Display: Mobile HDR setting 1
-[2019.06.18-13.38.49:225][  0]SourceControl: Source control is disabled
-[2019.06.18-13.38.49:225][  0]Cmd: MAP LOAD FILE="../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.06.18-13.38.49:225][  0]LightingResults: New page: Lighting Build
-[2019.06.18-13.38.49:226][  0]MapCheck: New page: Map Check
-[2019.06.18-13.38.49:226][  0]LightingResults: New page: Lighting Build
-[2019.06.18-13.38.49:250][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
-[2019.06.18-13.38.49:389][  0]LogAIModule: Creating AISystem for world Minimal_Default
-[2019.06.18-13.38.49:393][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.06.18-13.38.49:416][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
-[2019.06.18-13.38.49:416][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.06.18-13.38.49:416][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.078ms to complete.
-[2019.06.18-13.38.49:416][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.192
-[2019.06.18-13.38.49:519][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.06.18-13.38.49:524][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.06.18-13.38.49:531][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.06.18-13.38.49:537][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.06.18-13.38.49:540][  0]LogCollectionManager: Loaded 0 collections in 0.000699 seconds
-[2019.06.18-13.38.49:566][  0]LogFileCache: Scanning file cache for directory 'D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Collections/' took 0.01s
-[2019.06.18-13.38.49:566][  0]LogFileCache: Scanning file cache for directory 'D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/Developers/Jeet/Collections/' took 0.00s
-[2019.06.18-13.38.49:566][  0]LogFileCache: Scanning file cache for directory 'D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/Collections/' took 0.01s
-[2019.06.18-13.38.49:566][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
-[2019.06.18-13.38.49:573][  0]LogContentBrowser: Native class hierarchy populated in 0.0067 seconds. Added 2733 classes and 661 folders.
-[2019.06.18-13.38.49:577][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0002 seconds. Added 0 classes and 0 folders.
-[2019.06.18-13.38.49:578][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:579][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:579][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:579][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:580][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:580][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:580][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:581][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:581][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:582][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:582][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:582][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:583][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:583][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:583][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:584][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:584][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:585][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:585][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:585][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:586][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:586][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:587][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:587][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:587][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:588][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.06.18-13.38.49:610][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0002 seconds. Added 0 classes and 0 folders.
-[2019.06.18-13.38.49:615][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
-[2019.06.18-13.38.49:618][  0]LogConsoleManager: Warning: Console object named 'ActorComponents.Enable' already exists but is being registered again, but we weren't expected it to be! (FConsoleManager::AddConsoleObject)
-[2019.06.18-13.38.49:658][  0]LogContentBrowser: Native class hierarchy updated for 'WorldBrowser' in 0.0003 seconds. Added 2 classes and 3 folders.
-[2019.06.18-13.38.49:664][  0]LogSlate: Took 0.000204 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2019.06.18-13.38.49:665][  0]LogSlate: Took 0.000175 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2019.06.18-13.38.49:669][  0]LogSlate: Took 0.000145 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2019.06.18-13.38.49:716][  0]LogRenderer: Reallocating scene render targets to support 1008x572 Format 10 NumSamples 1 (Frame:1).
-[2019.06.18-13.38.49:801][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2019.06.18-13.38.49:801][  0]LogLoad: (Engine Initialization) Total time: 7.60 seconds
-[2019.06.18-13.38.49:801][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2019.06.18-13.38.49:810][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
-[2019.06.18-13.38.49:830][  0]LogAssetRegistry: Asset discovery search completed in 3.7741 seconds
-[2019.06.18-13.38.49:832][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
-[2019.06.18-13.38.49:832][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000054 seconds (updated 0 objects)
-[2019.06.18-13.38.49:834][  0]LogContentStreaming: Texture pool size now 1000 MB
-[2019.06.18-13.38.49:848][  0]LogSlate: Took 0.000153 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.06.18-13.38.53:970][486]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2019.06.18-13.38.57:676][930]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2019.06.18-13.39.03:502][627]LogSlate: Took 0.000197 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.06.18-13.39.03:503][627]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2019.06.18-13.39.03:506][627]Running D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" -game -rocket -progress
-[2019.06.18-13.39.03:833][627]Discovering modules, targets and source code for project...
-[2019.06.18-13.39.05:141][627]Binding IntelliSense data...
-[2019.06.18-13.39.06:655][627]Binding IntelliSense data... 100%
-[2019.06.18-13.39.06:655][627]Writing project files...
-[2019.06.18-13.39.08:266][627]Writing project files... 100%
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange:1]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
+[2019.06.20-06.03.47:393][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2019.06.20-06.03.47:393][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2019.06.20-06.03.47:394][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
+[2019.06.20-06.03.47:394][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
+[2019.06.20-06.03.47:420][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:420][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.06.20-06.03.47:420][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.06.20-06.03.47:420][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:420][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.06.20-06.03.47:420][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:420][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.06.20-06.03.47:421][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.06.20-06.03.47:422][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.06.20-06.03.47:423][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.06.20-06.03.47:424][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.06.20-06.03.47:424][  0]LogInit: Selected Device Profile: [Windows]
+[2019.06.20-06.03.47:425][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.06.20-06.03.47:462][  0]LogHAL: Display: Platform has ~ 16 GB [17128714240 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.06.20-06.03.47:462][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:0		; Required until we fix HLR fall-out]]
+[2019.06.20-06.03.47:462][  0]LogInit: Going up to parent DeviceProfile []
+[2019.06.20-06.03.47:462][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:462][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.06.20-06.03.47:462][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.06.20-06.03.47:462][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:462][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.06.20-06.03.47:463][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.06.20-06.03.47:464][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.06.20-06.03.47:465][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Scalability.ini]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2019.06.20-06.03.47:466][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Config/Windows/Engine.ini]
+[2019.06.20-06.03.47:466][  0]LogInit: Computer: JEET
+[2019.06.20-06.03.47:466][  0]LogInit: User: Jeet
+[2019.06.20-06.03.47:466][  0]LogInit: CPU Page size=4096, Cores=6
+[2019.06.20-06.03.47:467][  0]LogInit: High frequency timer resolution =3.117188 MHz
+[2019.06.20-06.03.47:467][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2019.06.20-06.03.47:467][  0]LogMemory: Platform Memory Stats for Windows
+[2019.06.20-06.03.47:467][  0]LogMemory: Process Physical Memory: 98.38 MB used, 98.38 MB peak
+[2019.06.20-06.03.47:467][  0]LogMemory: Process Virtual Memory: 93.56 MB used, 93.56 MB peak
+[2019.06.20-06.03.47:467][  0]LogMemory: Physical Memory: 6306.01 MB used,  10029.20 MB free, 16335.21 MB total
+[2019.06.20-06.03.47:467][  0]LogMemory: Virtual Memory: 4680.90 MB used,  134213048.00 MB free, 134217728.00 MB total
+[2019.06.20-06.03.48:310][  0]LogInit: Using OS detected language (en-GB).
+[2019.06.20-06.03.48:310][  0]LogInit: Using OS detected locale (en-IN).
+[2019.06.20-06.03.48:310][  0]LogTextLocalizationManager: No specific localization for 'en-GB' exists, so the 'en' localization will be used.
+[2019.06.20-06.03.48:909][  0]LogInit: Setting process to per monitor DPI aware
+[2019.06.20-06.03.49:336][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.06.20-06.03.49:336][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.06.20-06.03.51:232][  0]LogHMD: Failed to initialize OpenVR with code 126
+[2019.06.20-06.03.51:232][  0]LogD3D11RHI: D3D11 adapters:
+[2019.06.20-06.03.51:492][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1070' (Feature Level 11_0)
+[2019.06.20-06.03.51:492][  0]LogD3D11RHI:       8088/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2019.06.20-06.03.51:726][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.06.20-06.03.51:726][  0]LogD3D11RHI:       0/0/8167 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.06.20-06.03.51:726][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.06.20-06.03.51:732][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.06.20-06.03.51:732][  0]LogD3D11RHI:     GPU DeviceId: 0x1b81 (for the marketing name, search the web for "GPU Device Id")
+[2019.06.20-06.03.51:732][  0]LogWindows: EnumDisplayDevices:
+[2019.06.20-06.03.51:732][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1070' (P:0 D:1)
+[2019.06.20-06.03.51:733][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1070' (P:1 D:1)
+[2019.06.20-06.03.51:733][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1070' (P:0 D:0)
+[2019.06.20-06.03.51:733][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1070' (P:0 D:0)
+[2019.06.20-06.03.51:733][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2019.06.20-06.03.51:733][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1070
+[2019.06.20-06.03.51:733][  0]LogD3D11RHI:   Driver Version: 430.86 (internal:26.21.14.3086, unified:430.86)
+[2019.06.20-06.03.51:733][  0]LogD3D11RHI:      Driver Date: 5-22-2019
+[2019.06.20-06.03.51:734][  0]LogRHI: Texture pool is 5661 MB (70% of 8088 MB)
+[2019.06.20-06.03.51:777][  0]LogD3D11RHI: Async texture creation enabled
+[2019.06.20-06.03.51:865][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.06.20-06.03.51:866][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.06.20-06.03.51:866][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.06.20-06.03.51:873][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2019.06.20-06.03.52:443][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
+[2019.06.20-06.03.52:455][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
+[2019.06.20-06.03.52:467][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
+[2019.06.20-06.03.52:479][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
+[2019.06.20-06.03.52:515][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
+[2019.06.20-06.03.52:528][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
+[2019.06.20-06.03.52:541][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
+[2019.06.20-06.03.52:554][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
+[2019.06.20-06.03.52:561][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
+[2019.06.20-06.03.52:688][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
+[2019.06.20-06.03.52:689][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
+[2019.06.20-06.03.52:693][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
+[2019.06.20-06.03.52:749][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
+[2019.06.20-06.03.52:749][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
+[2019.06.20-06.03.52:770][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
+[2019.06.20-06.03.52:771][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
+[2019.06.20-06.03.52:783][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
+[2019.06.20-06.03.52:795][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
+[2019.06.20-06.03.52:807][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
+[2019.06.20-06.03.52:869][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
+[2019.06.20-06.03.52:909][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
+[2019.06.20-06.03.52:909][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
+[2019.06.20-06.03.52:909][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.06.20-06.03.52:956][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2019.06.20-06.03.53:096][  0]LogShaderCompilers: Guid format shader working directory is -49 characters bigger than the processId version (../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Intermediate/Shaders/WorkingDirectory/23412/).
+[2019.06.20-06.03.53:096][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Jeet/AppData/Local/Temp/UnrealShaderWorkingDir/8FB2DAF04D4195BD13BEED9DDD0F14B7/'.
+[2019.06.20-06.03.53:098][  0]LogXGEController: Cleaning working directory: C:/Users/Jeet/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.06.20-06.03.53:098][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.06.20-06.03.53:098][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.06.20-06.03.53:098][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.06.20-06.03.57:595][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.06.20-06.03.57:638][  0]LogDerivedDataCache: Loaded boot cache 0.04s 71MB C:/Users/Jeet/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
+[2019.06.20-06.03.57:638][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Jeet/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc
+[2019.06.20-06.03.57:638][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.06.20-06.03.57:638][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.06.20-06.03.57:638][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.06.20-06.03.57:638][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.06.20-06.03.57:648][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.06.20-06.03.57:648][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.06.20-06.03.57:649][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2019.06.20-06.03.57:662][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Jeet/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.06.20-06.03.57:662][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.06.20-06.03.57:662][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.06.20-06.03.57:679][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.06.20-06.03.57:698][  0]LogSlate: Using FreeType 2.6.0
+[2019.06.20-06.03.57:780][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.06.20-06.03.58:496][  0]LogAssetRegistry: FAssetRegistry took 0.0349 seconds to start up
+[2019.06.20-06.03.58:737][  0]LogInit: Selected Device Profile: [Windows]
+[2019.06.20-06.03.59:146][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.06.20-06.03.59:147][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2019.06.20-06.03.59:147][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.06.20-06.03.59:147][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2019.06.20-06.03.59:147][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2019.06.20-06.03.59:195][  0]LogNetVersion: GunnerSquad_WePlayVR 1.0.0, NetCL: 5660361, EngineNetVer: 10, GameNetVer: 0 (Checksum: 2745710943)
+[2019.06.20-06.03.59:526][  0]LogPackageLocalizationCache: Processed 10 localized package path(s) for 1 prioritized culture(s) in 0.036717 seconds
+[2019.06.20-06.03.59:530][  0]LogUObjectArray: 42205 objects as part of root set at end of initial load.
+[2019.06.20-06.03.59:530][  0]LogUObjectAllocator: 7325032 out of 0 bytes used by permanent object pool.
+[2019.06.20-06.03.59:530][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.06.20-06.04.08:789][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.06.20-06.04.08:806][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.06.20-06.04.09:026][  0]SourceControl: Source control is disabled
+[2019.06.20-06.04.09:026][  0]SourceControl: Source control is disabled
+[2019.06.20-06.04.09:086][  0]SourceControl: Source control is disabled
+[2019.06.20-06.04.09:090][  0]SourceControl: Source control is disabled
+[2019.06.20-06.04.09:345][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.06.20-06.04.09:843][  0]LogOcInput: OculusInput pre-init called
+[2019.06.20-06.04.10:542][  0]LogEngine: Initializing Engine...
+[2019.06.20-06.04.10:570][  0]LogHMD: Failed to initialize OpenVR with code 126
+[2019.06.20-06.04.10:571][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2019.06.20-06.04.10:730][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.06.20-06.04.10:741][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.06.20-06.04.10:821][  0]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.20-06.04.10:869][  0]LogInit: FAudioDevice initialized.
+[2019.06.20-06.04.10:870][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.06.20-06.04.11:019][  0]LogDerivedDataCache: Saved boot cache 0.15s 71MB C:/Users/Jeet/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
+[2019.06.20-06.04.11:022][  0]LogInit: Texture streaming: Enabled
+[2019.06.20-06.04.11:056][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.06.20-06.04.11:072][  0]LogInit: Transaction tracking system initialized
+[2019.06.20-06.04.11:100][  0]BlueprintLog: New page: Editor Load
+[2019.06.20-06.04.11:266][  0]LocalizationService: Localization service is disabled
+[2019.06.20-06.04.11:588][  0]LogFileCache: Scanning file cache for directory 'D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/' took 0.02s
+[2019.06.20-06.04.11:588][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.06.20-06.04.11:589][  0]LogCook: Display: Mobile HDR setting 1
+[2019.06.20-06.04.12:419][  0]SourceControl: Source control is disabled
+[2019.06.20-06.04.12:420][  0]Cmd: MAP LOAD FILE="../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.06.20-06.04.12:420][  0]LightingResults: New page: Lighting Build
+[2019.06.20-06.04.12:422][  0]MapCheck: New page: Map Check
+[2019.06.20-06.04.12:422][  0]LightingResults: New page: Lighting Build
+[2019.06.20-06.04.12:447][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2019.06.20-06.04.12:494][  0]LogBlueprint: Warning: [Compiler BP_GameManager] InputAction Event references unknown Action 'ChangeLevel_0' for  InputAction ChangeLevel_0
+[2019.06.20-06.04.12:494][  0]LogBlueprint: Warning: [Compiler BP_GameManager] InputAction Event references unknown Action 'ChangeLevel_0' for  InputAction ChangeLevel_0
+[2019.06.20-06.04.12:496][  0]LogBlueprint: Warning: [Compiler BP_GameManager] [0029.49] Compile of BP_GameManager successful, but with 2 Warning(s) [in 4 ms] (/Game/GunnerSquad/Blueprints/BP_GameManager.BP_GameManager)
+[2019.06.20-06.04.12:557][  0]LogAIModule: Creating AISystem for world Lobby
+[2019.06.20-06.04.12:560][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.06.20-06.04.12:594][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2019.06.20-06.04.12:594][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.06.20-06.04.12:595][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.09ms to complete.
+[2019.06.20-06.04.12:595][  0]LogFileHelpers: Loading map 'Lobby' took 0.176
+[2019.06.20-06.04.12:885][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.20-06.04.12:891][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.20-06.04.12:897][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.20-06.04.12:903][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.20-06.04.12:912][  0]LogCollectionManager: Loaded 0 collections in 0.000748 seconds
+[2019.06.20-06.04.12:957][  0]LogFileCache: Scanning file cache for directory 'D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Collections/' took 0.01s
+[2019.06.20-06.04.12:958][  0]LogFileCache: Scanning file cache for directory 'D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/Developers/Jeet/Collections/' took 0.01s
+[2019.06.20-06.04.12:958][  0]LogFileCache: Scanning file cache for directory 'D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/Collections/' took 0.01s
+[2019.06.20-06.04.12:958][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2019.06.20-06.04.12:965][  0]LogContentBrowser: Native class hierarchy populated in 0.0066 seconds. Added 2733 classes and 661 folders.
+[2019.06.20-06.04.12:968][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.06.20-06.04.12:983][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:983][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:984][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:984][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:985][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:985][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:986][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:986][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:986][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:987][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:987][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:987][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:988][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:988][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:989][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:989][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:990][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:990][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:991][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:991][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:992][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:992][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:993][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:993][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:994][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.12:994][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.06.20-06.04.13:411][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.06.20-06.04.13:419][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
+[2019.06.20-06.04.13:424][  0]LogConsoleManager: Warning: Console object named 'ActorComponents.Enable' already exists but is being registered again, but we weren't expected it to be! (FConsoleManager::AddConsoleObject)
+[2019.06.20-06.04.13:473][  0]LogContentBrowser: Native class hierarchy updated for 'WorldBrowser' in 0.0003 seconds. Added 2 classes and 3 folders.
+[2019.06.20-06.04.13:479][  0]LogSlate: Took 0.000229 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.06.20-06.04.13:481][  0]LogSlate: Took 0.000223 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.06.20-06.04.13:496][  0]LogSlate: Took 0.012242 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.06.20-06.04.13:563][  0]LogRenderer: Reallocating scene render targets to support 1008x572 Format 10 NumSamples 1 (Frame:1).
+[2019.06.20-06.04.13:684][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.06.20-06.04.13:684][  0]LogLoad: (Engine Initialization) Total time: 30.68 seconds
+[2019.06.20-06.04.13:684][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.06.20-06.04.13:694][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.06.20-06.04.13:712][  0]LogAssetRegistry: Asset discovery search completed in 15.2421 seconds
+[2019.06.20-06.04.13:714][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2019.06.20-06.04.13:714][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000085 seconds (updated 0 objects)
+[2019.06.20-06.04.13:715][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2019.06.20-06.04.13:731][  0]LogSlate: Took 0.000155 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.06.20-06.04.52:311][383]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.20-06.05.02:504][548]LogSlate: Took 0.000232 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.06.20-06.05.02:670][548]LogSlate: Took 0.021200 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2019.06.20-06.05.37:755][665]Candidate modules for hot reload:
+[2019.06.20-06.05.37:755][665]  GunnerSquad_WePlayVR
+[2019.06.20-06.05.37:755][665]Launching UnrealBuildTool... [D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GunnerSquad_WePlayVR,8263 Win64 Development -TargetType=Editor -Project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" "D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject"  -IgnoreJunk]
+[2019.06.20-06.05.48:048][665]CompilerResultsLog: New page: Compilation - 20-Jun-2019 5:05:48 pm
+[2019.06.20-06.05.48:048][665]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad).
+[2019.06.20-06.05.48:048][665]CompilerResultsLog: Creating makefile for GunnerSquad_WePlayVREditor (ini files are newer than makefile)
+[2019.06.20-06.05.48:048][665]CompilerResultsLog: Parsing headers for GunnerSquad_WePlayVREditor
+[2019.06.20-06.05.48:048][665]CompilerResultsLog:   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.06.20-06.05.48:049][665]CompilerResultsLog: Reflection code generated for GunnerSquad_WePlayVREditor in 4.91347 seconds
+[2019.06.20-06.05.48:049][665]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-06.05.48:049][665]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-06.05.48:049][665]CompilerResultsLog: Attempting to retry...
+[2019.06.20-06.05.48:049][665]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-06.05.48:049][665]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-06.05.48:049][665]CompilerResultsLog: Attempting to retry...
+[2019.06.20-06.05.48:049][665]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-06.05.48:049][665]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-06.05.48:049][665]CompilerResultsLog: ERROR: Exhausted all retries!
+[2019.06.20-06.05.48:049][665]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.06.20-06.05.48:050][665]CompilerResultsLog: Building 4 actions with 12 processes...
+[2019.06.20-06.05.48:050][665]CompilerResultsLog:   [1/4] MyClass.cpp
+[2019.06.20-06.05.48:050][665]CompilerResultsLog:   [2/4] UE4Editor-GunnerSquad_WePlayVR-8263.lib
+[2019.06.20-06.05.48:050][665]CompilerResultsLog:      Creating library D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-8263.lib and object D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-8263.exp
+[2019.06.20-06.05.48:050][665]CompilerResultsLog:   [3/4] UE4Editor-GunnerSquad_WePlayVR-8263.dll
+[2019.06.20-06.05.48:050][665]CompilerResultsLog:      Creating library D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-8263.suppressed.lib and object D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-8263.suppressed.exp
+[2019.06.20-06.05.48:050][665]CompilerResultsLog:   [4/4] GunnerSquad_WePlayVREditor.target
+[2019.06.20-06.05.48:050][665]CompilerResultsLog: Total time in Parallel executor: 1.69 seconds
+[2019.06.20-06.05.48:050][665]CompilerResultsLog: Total execution time: 10.16 seconds
+[2019.06.20-06.05.48:050][665]LogMainFrame: MainFrame: Module compiling took 10.299 seconds
+[2019.06.20-06.05.48:073][665]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2019.06.20-06.05.48:093][665]LogContentBrowser: Native class hierarchy updated for 'GunnerSquad_WePlayVR' in 0.0003 seconds. Added 1 classes and 2 folders.
+[2019.06.20-06.05.48:095][665]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2019.06.20-06.05.48:265][665]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2019.06.20-06.05.48:275][665]LogContentBrowser: Native class hierarchy populated in 0.0064 seconds. Added 2736 classes and 666 folders.
+[2019.06.20-06.05.48:275][665]Display: HotReload took 10.6s.
+[2019.06.20-06.05.48:276][665]Warning: HotReload operation took 10.6s.
+[2019.06.20-06.05.48:652][665]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.06.20-06.05.49:013][667]LogHotReload: New module detected: UE4Editor-GunnerSquad_WePlayVR-8263.dll
+[2019.06.20-06.05.49:027][668]LogHotReload: Starting Hot-Reload from IDE
+[2019.06.20-06.05.49:058][668]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2019.06.20-06.05.49:061][668]LogContentBrowser: Native class hierarchy updated for 'GunnerSquad_WePlayVR' in 0.0005 seconds. Added 1 classes and 2 folders.
+[2019.06.20-06.05.49:063][668]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2019.06.20-06.05.49:084][668]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2019.06.20-06.05.49:094][668]LogContentBrowser: Native class hierarchy populated in 0.0063 seconds. Added 2736 classes and 666 folders.
+[2019.06.20-06.05.49:096][668]Display: HotReload took  0.1s.
+[2019.06.20-06.09.20:125][761]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.06.20-06.14.01:427][472]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.06.20-06.14.44:260][568]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.06.20-06.14.44:344][578]LogTemp: Repeating last play command: Selected Viewport
+[2019.06.20-06.14.44:527][578]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel.Lobby' with GeneratedClass '/Game/GunnerSquad/Maps/Lobby.Lobby_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel.Lobby'
+[2019.06.20-06.14.44:541][578]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.06.20-06.14.44:542][578]PIE: New page: PIE session: Lobby (20-Jun-2019 5:14:44 pm)
+[2019.06.20-06.14.44:607][578]LogPlayLevel: Creating play world package: /Game/GunnerSquad/Maps/UEDPIE_0_Lobby
+[2019.06.20-06.14.44:648][578]LogPlayLevel: PIE: StaticDuplicateObject took: (0.040603s)
+[2019.06.20-06.14.44:649][578]LogAIModule: Creating AISystem for world Lobby
+[2019.06.20-06.14.44:698][578]LogPlayLevel: PIE: World Init took: (0.049958s)
+[2019.06.20-06.14.44:698][578]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/GunnerSquad/Maps/Lobby.Lobby to /Game/GunnerSquad/Maps/UEDPIE_0_Lobby.Lobby (0.091255s)
+[2019.06.20-06.14.44:722][578]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2019.06.20-06.14.44:770][578]LogInit: XAudio2 using 'Headphones (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.06.20-06.14.44:781][578]LogInit: FAudioDevice initialized.
+[2019.06.20-06.14.44:840][578]LogLoad: Game class is 'OPS_GameMode_C'
+[2019.06.20-06.14.45:012][578]LogWorld: Bringing World /Game/GunnerSquad/Maps/UEDPIE_0_Lobby.Lobby up for play (max tick rate 0) at 2019.06.20-11.44.45
+[2019.06.20-06.14.45:028][578]LogWorld: Bringing up level for play took: 0.016124
+[2019.06.20-06.14.45:221][578]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0004 seconds. Added 20 classes and 0 folders.
+[2019.06.20-06.14.45:267][578]PIE: Play in editor start time for /Game/GunnerSquad/Maps/UEDPIE_0_Lobby 0.034
+[2019.06.20-06.14.45:268][578]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel.Lobby' with GeneratedClass '/Game/GunnerSquad/Maps/Lobby.Lobby_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel.Lobby'
+[2019.06.20-06.14.48:536][941]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel.Lobby' with GeneratedClass '/Game/GunnerSquad/Maps/Lobby.Lobby_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel.Lobby'
+[2019.06.20-06.14.48:549][941]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.20-06.14.48:597][941]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.06.20-06.14.48:597][941]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel' has LevelScriptBlueprint '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel.Lobby' with GeneratedClass '/Game/GunnerSquad/Maps/Lobby.Lobby_C' with ClassGeneratedBy '/Game/GunnerSquad/Maps/Lobby.Lobby:PersistentLevel.Lobby'
+[2019.06.20-06.14.48:635][941]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.06.20-06.14.48:637][941]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2019.06.20-06.14.48:670][942]LogPlayLevel: Display: Destroying online subsystem :Context_1
+[2019.06.20-06.17.34:512][856]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.06.20-06.18.13:839][530]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.06.20-09.39.13:735][285]LogHttp: Warning: 000002AE9D7134C0: request failed, libcurl error: 7 (Couldn't connect to server)
+[2019.06.20-09.39.13:737][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 0 (Connection 79 seems to be dead!)
+[2019.06.20-09.39.13:738][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 1 (Closing connection 79)
+[2019.06.20-09.39.13:738][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 2 (TLSv1.2 (OUT), TLS alert, Client hello (1):)
+[2019.06.20-09.39.13:738][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 3 (  Trying 54.83.181.125...)
+[2019.06.20-09.39.13:738][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 4 (TCP_NODELAY set)
+[2019.06.20-09.39.13:738][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 5 (connect to 54.83.181.125 port 443 failed: Timed out)
+[2019.06.20-09.39.13:738][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 6 (  Trying 54.88.198.7...)
+[2019.06.20-09.39.13:738][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 7 (TCP_NODELAY set)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 8 (After 19492ms connect time, move on!)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 9 (connect to 54.88.198.7 port 443 failed: Timed out)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 10 (  Trying 34.232.136.228...)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 11 (TCP_NODELAY set)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 12 (After 9734ms connect time, move on!)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 13 (connect to 34.232.136.228 port 443 failed: Timed out)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 14 (  Trying 54.165.238.255...)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 15 (TCP_NODELAY set)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 16 (After 4867ms connect time, move on!)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 17 (connect to 54.165.238.255 port 443 failed: Timed out)
+[2019.06.20-09.39.13:739][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 18 (  Trying 54.209.204.64...)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 19 (TCP_NODELAY set)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 20 (After 2429ms connect time, move on!)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 21 (connect to 54.209.204.64 port 443 failed: Timed out)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 22 (  Trying 54.175.157.122...)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 23 (TCP_NODELAY set)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 24 (After 1211ms connect time, move on!)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 25 (connect to 54.175.157.122 port 443 failed: Timed out)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 26 (  Trying 3.94.140.213...)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 27 (TCP_NODELAY set)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 28 (After 601ms connect time, move on!)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 29 (connect to 3.94.140.213 port 443 failed: Timed out)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 30 (  Trying 23.20.51.18...)
+[2019.06.20-09.39.13:740][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 31 (TCP_NODELAY set)
+[2019.06.20-09.39.13:741][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 32 (After 297ms connect time, move on!)
+[2019.06.20-09.39.13:741][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 33 (connect to 23.20.51.18 port 443 failed: Timed out)
+[2019.06.20-09.39.13:741][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 34 (Failed to connect to datarouter.ol.epicgames.com port 443: Timed out)
+[2019.06.20-09.39.13:741][285]LogHttp: Warning: 000002AE9D7134C0: libcurl info message cache 35 (Closing connection 80)
+[2019.06.20-09.39.14:076][286]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B11E972EB-4EB0-F68C-1AF0-1F8D6917CF3D%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.22.1-6063286%2B%2B%2BUE4%2BRelease-4.22&UserID=ac5557204c2f0df90d8a8ab9d7575a65%7Caab271d5583b4f989f60f3c65c06fc24%7Caa5cf9d0-d86f-4de7-9b9d-b6794db387ad&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2019.06.20-09.58.47:482][278]Candidate modules for hot reload:
+[2019.06.20-09.58.47:482][278]  GunnerSquad_WePlayVR
+[2019.06.20-09.58.47:483][278]Launching UnrealBuildTool... [D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GunnerSquad_WePlayVR,542 Win64 Development -TargetType=Editor -Project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" "D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject"  -IgnoreJunk]
+[2019.06.20-09.59.52:779][278]CompilerResultsLog: New page: Compilation - 20-Jun-2019 8:59:52 pm
+[2019.06.20-09.59.52:780][278]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad).
+[2019.06.20-09.59.52:780][278]CompilerResultsLog: Creating makefile for GunnerSquad_WePlayVREditor (.uproject file is newer)
+[2019.06.20-09.59.52:780][278]CompilerResultsLog: Parsing headers for GunnerSquad_WePlayVREditor
+[2019.06.20-09.59.52:780][278]CompilerResultsLog:   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.06.20-09.59.52:780][278]CompilerResultsLog: Reflection code generated for GunnerSquad_WePlayVREditor in 5.2493814 seconds
+[2019.06.20-09.59.52:780][278]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-09.59.52:780][278]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-09.59.52:780][278]CompilerResultsLog: Attempting to retry...
+[2019.06.20-09.59.52:780][278]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-09.59.52:780][278]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-09.59.52:781][278]CompilerResultsLog: Attempting to retry...
+[2019.06.20-09.59.52:781][278]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-09.59.52:781][278]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-09.59.52:781][278]CompilerResultsLog: ERROR: Exhausted all retries!
+[2019.06.20-09.59.52:781][278]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.06.20-09.59.52:781][278]CompilerResultsLog: Building 6 actions with 12 processes...
+[2019.06.20-09.59.52:781][278]CompilerResultsLog:   [1/6] OpsManager.cpp
+[2019.06.20-09.59.52:781][278]CompilerResultsLog:   [2/6] GunnerSquad_WePlayVR.init.gen.cpp
+[2019.06.20-09.59.52:781][278]CompilerResultsLog:   [3/6] OpsManager.gen.cpp
+[2019.06.20-09.59.52:781][278]CompilerResultsLog:   [4/6] UE4Editor-GunnerSquad_WePlayVR-0542.lib
+[2019.06.20-09.59.52:781][278]CompilerResultsLog:      Creating library D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-0542.lib and object D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-0542.exp
+[2019.06.20-09.59.52:781][278]CompilerResultsLog:   [5/6] UE4Editor-GunnerSquad_WePlayVR-0542.dll
+[2019.06.20-09.59.52:782][278]CompilerResultsLog:      Creating library D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-0542.suppressed.lib and object D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-0542.suppressed.exp
+[2019.06.20-09.59.52:782][278]CompilerResultsLog:   [6/6] GunnerSquad_WePlayVREditor.target
+[2019.06.20-09.59.52:782][278]CompilerResultsLog: Total time in Parallel executor: 55.71 seconds
+[2019.06.20-09.59.52:782][278]CompilerResultsLog: Total execution time: 64.51 seconds
+[2019.06.20-09.59.52:782][278]LogMainFrame: MainFrame: Module compiling took 65.304 seconds
+[2019.06.20-09.59.52:814][278]LogUObjectHash: Compacting FUObjectHashTables data took   5.45ms
+[2019.06.20-09.59.52:833][278]LogContentBrowser: Native class hierarchy populated in 0.0131 seconds. Added 2736 classes and 666 folders.
+[2019.06.20-09.59.52:833][278]Display: HotReload took 65.4s.
+[2019.06.20-09.59.52:834][278]Warning: HotReload operation took 65.4s.
+[2019.06.20-09.59.53:059][278]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.06.20-09.59.53:069][278]LogHotReload: New module detected: UE4Editor-GunnerSquad_WePlayVR-0542.dll
+[2019.06.20-09.59.53:095][279]LogHotReload: Starting Hot-Reload from IDE
+[2019.06.20-09.59.53:133][279]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2019.06.20-09.59.53:180][279]LogClass: Could not find existing class OpsManager in package /Script/GunnerSquad_WePlayVR for HotReload, assuming new class
+[2019.06.20-09.59.53:183][279]LogContentBrowser: Native class hierarchy updated for 'GunnerSquad_WePlayVR' in 0.0005 seconds. Added 2 classes and 2 folders.
+[2019.06.20-09.59.53:185][279]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2019.06.20-09.59.53:236][279]LogUObjectHash: Compacting FUObjectHashTables data took   2.33ms
+[2019.06.20-09.59.53:246][279]LogContentBrowser: Native class hierarchy populated in 0.0067 seconds. Added 2737 classes and 666 folders.
+[2019.06.20-09.59.53:250][279]Display: HotReload took  0.2s.
+[2019.06.20-10.00.13:733][340]LogUnrealEdMisc: Warning: Heartbeat event firing too frequently (20.476 sec). This should never happen. Something is wrong with the timer delegate!
+[2019.06.20-10.55.40:636][ 61]Candidate modules for hot reload:
+[2019.06.20-10.55.40:637][ 61]  GunnerSquad_WePlayVR
+[2019.06.20-10.55.40:637][ 61]Launching UnrealBuildTool... [D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GunnerSquad_WePlayVR,5097 Win64 Development -TargetType=Editor -Project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" "D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject"  -IgnoreJunk]
+[2019.06.20-10.55.40:662][ 61]Warning: Starting HotReload took  0.0s.
+[2019.06.20-10.55.47:309][857]CompilerResultsLog: New page: Compilation - 20-Jun-2019 9:55:47 pm
+[2019.06.20-10.55.47:310][857]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad).
+[2019.06.20-10.55.47:310][857]CompilerResultsLog: Parsing headers for GunnerSquad_WePlayVREditor
+[2019.06.20-10.55.47:310][857]CompilerResultsLog:   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.06.20-10.55.47:311][857]CompilerResultsLog: Error: D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Source/GunnerSquad_WePlayVR/OpsManager.h(96)  : Error: Unrecognized type 'ULONG' - type must be a UCLASS, USTRUCT or UENUM
+[2019.06.20-10.55.47:311][857]LogMainFrame: MainFrame: Module compiling took 6.681 seconds
+[2019.06.20-10.55.47:311][857]Warning: HotReload failed, recompile failed
+[2019.06.20-10.56.38:350][321]LogUObjectHash: Compacting FUObjectHashTables data took   2.69ms
+[2019.06.20-10.56.39:754][321]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/LobbyD57D556D4263B57E823722841CB4D1A3.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby.umap'
+[2019.06.20-10.56.40:024][321]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby_BuiltData3D42963F4CBAE0810AF92B8FE7C9C524.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby_BuiltData.uasset'
+[2019.06.20-10.56.47:541][ 21]Candidate modules for hot reload:
+[2019.06.20-10.56.47:541][ 21]  GunnerSquad_WePlayVR
+[2019.06.20-10.56.47:541][ 21]Launching UnrealBuildTool... [D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GunnerSquad_WePlayVR,2340 Win64 Development -TargetType=Editor -Project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" "D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject"  -IgnoreJunk]
+[2019.06.20-10.56.47:782][ 21]Warning: Starting HotReload took  0.3s.
+[2019.06.20-10.56.55:509][938]CompilerResultsLog: New page: Compilation - 20-Jun-2019 9:56:55 pm
+[2019.06.20-10.56.55:509][938]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad).
+[2019.06.20-10.56.55:509][938]CompilerResultsLog: Creating makefile for GunnerSquad_WePlayVREditor (ini files are newer than makefile)
+[2019.06.20-10.56.55:510][938]CompilerResultsLog: Parsing headers for GunnerSquad_WePlayVREditor
+[2019.06.20-10.56.55:510][938]CompilerResultsLog:   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.06.20-10.56.55:510][938]CompilerResultsLog: Error: D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Source/GunnerSquad_WePlayVR/OpsManager.h(96)  : Error: Unrecognized type 'LONG' - type must be a UCLASS, USTRUCT or UENUM
+[2019.06.20-10.56.55:510][938]LogMainFrame: MainFrame: Module compiling took 7.972 seconds
+[2019.06.20-10.56.55:510][938]Warning: HotReload failed, recompile failed
+[2019.06.20-10.57.54:999][913]LogUObjectHash: Compacting FUObjectHashTables data took   2.02ms
+[2019.06.20-10.57.55:076][913]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby98C537BD4395B6F23A45B685D353DF5D.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby.umap'
+[2019.06.20-10.57.55:114][913]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby_BuiltData9B5865BB4D810A2F4EA1E98FC1F96541.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby_BuiltData.uasset'
+[2019.06.20-10.57.56:324][ 56]Candidate modules for hot reload:
+[2019.06.20-10.57.56:324][ 56]  GunnerSquad_WePlayVR
+[2019.06.20-10.57.56:324][ 56]Launching UnrealBuildTool... [D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GunnerSquad_WePlayVR,7392 Win64 Development -TargetType=Editor -Project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" "D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject"  -IgnoreJunk]
+[2019.06.20-10.57.56:391][ 56]Warning: Starting HotReload took  0.1s.
+[2019.06.20-10.58.03:346][886]CompilerResultsLog: New page: Compilation - 20-Jun-2019 9:58:03 pm
+[2019.06.20-10.58.03:347][886]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad).
+[2019.06.20-10.58.03:347][886]CompilerResultsLog: Creating makefile for GunnerSquad_WePlayVREditor (ini files are newer than makefile)
+[2019.06.20-10.58.03:347][886]CompilerResultsLog: Parsing headers for GunnerSquad_WePlayVREditor
+[2019.06.20-10.58.03:347][886]CompilerResultsLog:   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.06.20-10.58.03:347][886]CompilerResultsLog: Error: D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Source/GunnerSquad_WePlayVR/OpsManager.h(96)  : Error: Unrecognized type 'long' - type must be a UCLASS, USTRUCT or UENUM
+[2019.06.20-10.58.03:347][886]LogMainFrame: MainFrame: Module compiling took 7.027 seconds
+[2019.06.20-10.58.03:347][886]Warning: HotReload failed, recompile failed
+[2019.06.20-10.58.07:370][366]LogSlate: Window 'Message Log' being destroyed
+[2019.06.20-10.58.07:373][366]LogSlate: Window 'Message Log' being destroyed
+[2019.06.20-11.02.27:163][750]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2019.06.20-11.02.27:259][750]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby6909008843E0257C8FE434A41DC61FFB.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby.umap'
+[2019.06.20-11.02.27:300][750]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby_BuiltData4A9FD82948137A5842F04CA7C9C72BB0.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby_BuiltData.uasset'
+[2019.06.20-11.02.28:191][853]Candidate modules for hot reload:
+[2019.06.20-11.02.28:191][853]  GunnerSquad_WePlayVR
+[2019.06.20-11.02.28:191][853]Launching UnrealBuildTool... [D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GunnerSquad_WePlayVR,1458 Win64 Development -TargetType=Editor -Project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" "D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject"  -IgnoreJunk]
+[2019.06.20-11.02.28:211][853]Warning: Starting HotReload took  0.0s.
+[2019.06.20-11.02.31:767][276]LogSlate: Window 'Message Log' being destroyed
+[2019.06.20-11.02.31:770][276]LogSlate: Window 'Message Log' being destroyed
+[2019.06.20-11.02.34:879][650]CompilerResultsLog: New page: Compilation - 20-Jun-2019 10:02:34 pm
+[2019.06.20-11.02.34:879][650]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad).
+[2019.06.20-11.02.34:879][650]CompilerResultsLog: Creating makefile for GunnerSquad_WePlayVREditor (ini files are newer than makefile)
+[2019.06.20-11.02.34:879][650]CompilerResultsLog: Parsing headers for GunnerSquad_WePlayVREditor
+[2019.06.20-11.02.34:879][650]CompilerResultsLog:   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.06.20-11.02.34:879][650]CompilerResultsLog: Error: D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Source/GunnerSquad_WePlayVR/OpsManager.h(131)  : Error: Missing ';' before 'UCLASS'
+[2019.06.20-11.02.34:879][650]LogMainFrame: MainFrame: Module compiling took 6.692 seconds
+[2019.06.20-11.02.34:879][650]Warning: HotReload failed, recompile failed
+[2019.06.20-11.03.21:337][619]LogUObjectHash: Compacting FUObjectHashTables data took   1.69ms
+[2019.06.20-11.03.21:412][619]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/LobbyF33536DF48DE79291286F2A0B8CE66AB.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby.umap'
+[2019.06.20-11.03.21:453][619]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby_BuiltDataE4C5FB794A7308B9A66D0A92153E49FA.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby_BuiltData.uasset'
+[2019.06.20-11.03.22:740][768]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2019.06.20-11.03.22:812][768]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby02AC298242740B85FC0B798FE2A50227.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby.umap'
+[2019.06.20-11.03.22:850][768]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby_BuiltData8B244F9D4DE95498759C0BA109D3FCEA.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby_BuiltData.uasset'
+[2019.06.20-11.03.32:953][979]LogSlate: Window 'Message Log' being destroyed
+[2019.06.20-11.03.32:956][979]LogSlate: Window 'Message Log' being destroyed
+[2019.06.20-11.03.34:184][123]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2019.06.20-11.03.34:255][123]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby2819762747AD70D5A707358A97AA6DD4.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby.umap'
+[2019.06.20-11.03.34:292][123]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby_BuiltData15D4782A484E78500EDEEC8C68938785.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby_BuiltData.uasset'
+[2019.06.20-11.03.35:923][316]Candidate modules for hot reload:
+[2019.06.20-11.03.35:923][316]  GunnerSquad_WePlayVR
+[2019.06.20-11.03.35:923][316]Launching UnrealBuildTool... [D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GunnerSquad_WePlayVR,4813 Win64 Development -TargetType=Editor -Project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" "D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject"  -IgnoreJunk]
+[2019.06.20-11.03.35:967][316]Warning: Starting HotReload took  0.1s.
+[2019.06.20-11.03.42:489][ 97]CompilerResultsLog: New page: Compilation - 20-Jun-2019 10:03:42 pm
+[2019.06.20-11.03.42:490][ 97]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad).
+[2019.06.20-11.03.42:490][ 97]CompilerResultsLog: Creating makefile for GunnerSquad_WePlayVREditor (ini files are newer than makefile)
+[2019.06.20-11.03.42:490][ 97]CompilerResultsLog: Parsing headers for GunnerSquad_WePlayVREditor
+[2019.06.20-11.03.42:490][ 97]CompilerResultsLog:   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.06.20-11.03.42:490][ 97]CompilerResultsLog: Error: D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Source/GunnerSquad_WePlayVR/OpsManager.h(133)  : Error: Missing ';' before 'UCLASS'
+[2019.06.20-11.03.42:490][ 97]LogMainFrame: MainFrame: Module compiling took 6.569 seconds
+[2019.06.20-11.03.42:490][ 97]Warning: HotReload failed, recompile failed
+[2019.06.20-11.05.10:915][568]LogSlate: Window 'Message Log' being destroyed
+[2019.06.20-11.05.10:919][568]LogSlate: Window 'Message Log' being destroyed
+[2019.06.20-11.05.24:458][820]LogUObjectHash: Compacting FUObjectHashTables data took   1.39ms
+[2019.06.20-11.05.24:542][820]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby727307A544D3D750A8DCA19C0C9223DF.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby.umap'
+[2019.06.20-11.05.24:583][820]LogSavePackage: Moving '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Saved/Lobby_BuiltDataE09771FA4336CAA962F68DAFA5ED434C.tmp' to '../../../../../0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/Content/GunnerSquad/Maps/Lobby_BuiltData.uasset'
+[2019.06.20-11.05.25:386][914]Candidate modules for hot reload:
+[2019.06.20-11.05.25:386][914]  GunnerSquad_WePlayVR
+[2019.06.20-11.05.25:386][914]Launching UnrealBuildTool... [D:/UnrealEngine/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=GunnerSquad_WePlayVR,5274 Win64 Development -TargetType=Editor -Project="D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject" "D:/0_Projects/Z_MyPlayGround/0_Unreal_Projects/1_GunnerSquad/GunnerSquad_WePlayVR/GunnerSquad_WePlayVR.uproject"  -IgnoreJunk]
+[2019.06.20-11.05.25:418][914]Warning: Starting HotReload took  0.0s.
+[2019.06.20-11.07.11:457][866]CompilerResultsLog: New page: Compilation - 20-Jun-2019 10:07:11 pm
+[2019.06.20-11.07.11:458][866]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad).
+[2019.06.20-11.07.11:458][866]CompilerResultsLog: Creating makefile for GunnerSquad_WePlayVREditor (ini files are newer than makefile)
+[2019.06.20-11.07.11:458][866]CompilerResultsLog: Parsing headers for GunnerSquad_WePlayVREditor
+[2019.06.20-11.07.11:458][866]CompilerResultsLog:   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.06.20-11.07.11:458][866]CompilerResultsLog: Reflection code generated for GunnerSquad_WePlayVREditor in 5.5237277 seconds
+[2019.06.20-11.07.11:458][866]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-11.07.11:458][866]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-11.07.11:459][866]CompilerResultsLog: Attempting to retry...
+[2019.06.20-11.07.11:459][866]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-11.07.11:459][866]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-11.07.11:459][866]CompilerResultsLog: Attempting to retry...
+[2019.06.20-11.07.11:459][866]CompilerResultsLog: Failed to delete file 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb'
+[2019.06.20-11.07.11:459][866]CompilerResultsLog:     Exception: Access to the path 'D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.pdb' is denied.
+[2019.06.20-11.07.11:459][866]CompilerResultsLog: ERROR: Exhausted all retries!
+[2019.06.20-11.07.11:459][866]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.06.20-11.07.11:459][866]CompilerResultsLog: Building 6 actions with 12 processes...
+[2019.06.20-11.07.11:460][866]CompilerResultsLog:   [1/6] GunnerSquad_WePlayVR.init.gen.cpp
+[2019.06.20-11.07.11:460][866]CompilerResultsLog:   [2/6] OpsManager.cpp
+[2019.06.20-11.07.11:460][866]CompilerResultsLog:   [3/6] OpsManager.gen.cpp
+[2019.06.20-11.07.11:460][866]CompilerResultsLog:   [4/6] UE4Editor-GunnerSquad_WePlayVR-5274.lib
+[2019.06.20-11.07.11:460][866]CompilerResultsLog:      Creating library D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-5274.lib and object D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-5274.exp
+[2019.06.20-11.07.11:460][866]CompilerResultsLog:   [5/6] UE4Editor-GunnerSquad_WePlayVR-5274.dll
+[2019.06.20-11.07.11:460][866]CompilerResultsLog:      Creating library D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-5274.suppressed.lib and object D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR-5274.suppressed.exp
+[2019.06.20-11.07.11:460][866]CompilerResultsLog:   [6/6] GunnerSquad_WePlayVREditor.target
+[2019.06.20-11.07.11:460][866]CompilerResultsLog: Total time in Parallel executor: 96.74 seconds
+[2019.06.20-11.07.11:460][866]CompilerResultsLog: Total execution time: 105.91 seconds
+[2019.06.20-11.07.11:460][866]LogMainFrame: MainFrame: Module compiling took 106.078 seconds
+[2019.06.20-11.07.11:483][866]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
+[2019.06.20-11.07.11:510][866]LogClass: Could not find existing type eInputNameType for HotReload. Assuming new
+[2019.06.20-11.07.11:511][866]LogClass: Could not find existing type eBuildType for HotReload. Assuming new
+[2019.06.20-11.07.11:511][866]LogClass: Could not find existing type eDeviceStatus for HotReload. Assuming new
+[2019.06.20-11.07.11:511][866]LogClass: Could not find existing type eDeviceType for HotReload. Assuming new
+[2019.06.20-11.07.11:512][866]LogClass: Could not find existing type eAttractionType for HotReload. Assuming new
+[2019.06.20-11.07.11:512][866]LogClass: Could not find existing type OPS_GameServerClientData for HotReload. Assuming new
+[2019.06.20-11.07.11:512][866]LogClass: Could not find existing type OPS_GameServerData for HotReload. Assuming new
+[2019.06.20-11.07.11:512][866]LogClass: Could not find existing type structOPS_StartData for HotReload. Assuming new
+[2019.06.20-11.07.11:512][866]LogClass: Could not find existing type structOPS_Data for HotReload. Assuming new
+[2019.06.20-11.07.11:515][866]LogContentBrowser: Native class hierarchy updated for 'GunnerSquad_WePlayVR' in 0.0006 seconds. Added 2 classes and 2 folders.
+[2019.06.20-11.07.11:517][866]Display: HotReload successful (2 functions remapped  4 scriptstructs remapped)
+[2019.06.20-11.07.11:559][866]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2019.06.20-11.07.11:577][866]LogContentBrowser: Native class hierarchy populated in 0.0087 seconds. Added 2737 classes and 666 folders.
+[2019.06.20-11.07.11:577][866]Display: HotReload took 106.2s.

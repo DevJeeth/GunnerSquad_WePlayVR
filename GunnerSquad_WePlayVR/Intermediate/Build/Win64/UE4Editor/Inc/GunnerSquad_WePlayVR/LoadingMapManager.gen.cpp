@@ -107,17 +107,17 @@ void EmptyLinkFunctionForGeneratedCodeLoadingMapManager() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FOutroLevel_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_strOutroLevel_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_FOutroLevel;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_m_strOutroLevel;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FGameLevel_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_strGameLevel_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_FGameLevel;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_m_strGameLevel;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FLobbyLevel_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_strLobbyLevel_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_FLobbyLevel;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_m_strLobbyLevel;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -134,34 +134,33 @@ void EmptyLinkFunctionForGeneratedCodeLoadingMapManager() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALoadingMapManager_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "LoadingMapManager.h" },
 		{ "ModuleRelativePath", "LoadingMapManager.h" },
-		{ "ToolTip", "#include \"Runtime/Engine/Classes/Kismet/GameplayStatics.h\"" },
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FOutroLevel_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strOutroLevel_MetaData[] = {
 		{ "Category", "LoadingMapManager" },
 		{ "ModuleRelativePath", "LoadingMapManager.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FOutroLevel = { "FOutroLevel", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALoadingMapManager, FOutroLevel), METADATA_PARAMS(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FOutroLevel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FOutroLevel_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strOutroLevel = { "m_strOutroLevel", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALoadingMapManager, m_strOutroLevel), METADATA_PARAMS(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strOutroLevel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strOutroLevel_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FGameLevel_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strGameLevel_MetaData[] = {
 		{ "Category", "LoadingMapManager" },
 		{ "ModuleRelativePath", "LoadingMapManager.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FGameLevel = { "FGameLevel", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALoadingMapManager, FGameLevel), METADATA_PARAMS(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FGameLevel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FGameLevel_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strGameLevel = { "m_strGameLevel", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALoadingMapManager, m_strGameLevel), METADATA_PARAMS(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strGameLevel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strGameLevel_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FLobbyLevel_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strLobbyLevel_MetaData[] = {
 		{ "Category", "LoadingMapManager" },
 		{ "ModuleRelativePath", "LoadingMapManager.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FLobbyLevel = { "FLobbyLevel", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALoadingMapManager, FLobbyLevel), METADATA_PARAMS(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FLobbyLevel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FLobbyLevel_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strLobbyLevel = { "m_strLobbyLevel", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ALoadingMapManager, m_strLobbyLevel), METADATA_PARAMS(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strLobbyLevel_MetaData, ARRAY_COUNT(Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strLobbyLevel_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALoadingMapManager_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FOutroLevel,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FGameLevel,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_FLobbyLevel,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strOutroLevel,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strGameLevel,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALoadingMapManager_Statics::NewProp_m_strLobbyLevel,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ALoadingMapManager_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ALoadingMapManager>::IsAbstract,
@@ -190,7 +189,7 @@ void EmptyLinkFunctionForGeneratedCodeLoadingMapManager() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ALoadingMapManager, 4067511982);
+	IMPLEMENT_CLASS(ALoadingMapManager, 3074062006);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<ALoadingMapManager>()
 	{
 		return ALoadingMapManager::StaticClass();

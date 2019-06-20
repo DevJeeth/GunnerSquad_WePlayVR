@@ -29,16 +29,19 @@ FString ALoadingMapManager::GetLoadedLevel()
 
 	if (GameWorld != NULL)
 	{
-		FString FLevelName = GameWorld->GetMapName();
-		return FLevelName;
+		//FString strLevelName = GameWorld->GetMapName();
+		FString strLevelName = GetWorld()->GetMapName().Mid(GetWorld()->StreamingLevelsPrefix.Len());
+		return strLevelName;
 	}
-	return "";
+	return "Level name not got";
 	
 }
 
 void ALoadingMapManager::LoadLevel(FString a_strLevelName)
 {
-	
-	//UGameplayStatics::OpenLevel(this, a_strLevelName);
+	//Convert Fstring to FName
+	FName strLevelName = FName(*a_strLevelName);
+	UGameplayStatics::OpenLevel(this, strLevelName);
 }
+
 

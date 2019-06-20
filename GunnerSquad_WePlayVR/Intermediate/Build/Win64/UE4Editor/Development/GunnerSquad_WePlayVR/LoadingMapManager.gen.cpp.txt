@@ -2,4 +2,14 @@ D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayV
 D:\UnrealEngine\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 D:\UnrealEngine\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Source\GunnerSquad_WePlayVR/LoadingMapManager.h
+D:\UnrealEngine\UE_4.22\Engine\Source\Runtime/Engine/Classes/Kismet/GameplayStatics.h
+D:\UnrealEngine\UE_4.22\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+D:\UnrealEngine\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+D:\UnrealEngine\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+D:\UnrealEngine\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+D:\UnrealEngine\UE_4.22\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+D:\UnrealEngine\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+d:\unrealengine\ue_4.22\engine\source\runtime\engine\classes\kismet\GameplayStaticsTypes.h
+D:\UnrealEngine\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+D:\UnrealEngine\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
 d:\0_projects\z_myplayground\0_unreal_projects\1_gunnersquad\gunnersquad_weplayvr\intermediate\build\win64\ue4editor\inc\gunnersquad_weplayvr\LoadingMapManager.generated.h

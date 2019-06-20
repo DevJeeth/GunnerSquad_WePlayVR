@@ -2,11 +2,10 @@
 
 #pragma once
 
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "LoadingMapManager.generated.h"
-
-//#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 
 
 UCLASS()
@@ -19,13 +18,13 @@ public:
 	ALoadingMapManager();
 
 	UPROPERTY(BlueprintReadOnly)
-		FString FLobbyLevel;
+		FString m_strLobbyLevel;
 
 	UPROPERTY(BlueprintReadOnly)
-		FString FGameLevel;
+		FString m_strGameLevel;
 
 	UPROPERTY(BlueprintReadOnly)
-		FString FOutroLevel;
+		FString m_strOutroLevel;
 
 protected:
 	// Called when the game starts or when spawned

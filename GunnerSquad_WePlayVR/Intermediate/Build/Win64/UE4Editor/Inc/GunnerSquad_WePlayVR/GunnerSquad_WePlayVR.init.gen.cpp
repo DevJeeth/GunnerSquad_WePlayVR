@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeGunnerSquad_WePlayVR_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x7AA91A5C,
-				0x8A8577A6,
+				0x62498EA6,
+				0x30F8989A,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
