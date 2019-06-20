@@ -13,20 +13,129 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 // Cross Module References
-	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eInputNameType();
+	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eCommand10Type();
 	UPackage* Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
+	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eLogType();
+	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eInputNameType();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eBuildType();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eDeviceStatus();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eDeviceType();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eAttractionType();
-	GUNNERSQUAD_WEPLAYVR_API UScriptStruct* Z_Construct_UScriptStruct_FOPS_GameServerClientData();
-	GUNNERSQUAD_WEPLAYVR_API UScriptStruct* Z_Construct_UScriptStruct_FOPS_GameServerData();
+	GUNNERSQUAD_WEPLAYVR_API UScriptStruct* Z_Construct_UScriptStruct_FstructOPS_GameServerData();
+	GUNNERSQUAD_WEPLAYVR_API UScriptStruct* Z_Construct_UScriptStruct_FstructOPS_GameServerClientData();
 	GUNNERSQUAD_WEPLAYVR_API UScriptStruct* Z_Construct_UScriptStruct_FstructOPS_StartData();
 	GUNNERSQUAD_WEPLAYVR_API UScriptStruct* Z_Construct_UScriptStruct_FstructOPS_Data();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UOpsManager_NoRegister();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UOpsManager();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 // End Cross Module References
+	static UEnum* eCommand10Type_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_GunnerSquad_WePlayVR_eCommand10Type, Z_Construct_UPackage__Script_GunnerSquad_WePlayVR(), TEXT("eCommand10Type"));
+		}
+		return Singleton;
+	}
+	template<> GUNNERSQUAD_WEPLAYVR_API UEnum* StaticEnum<eCommand10Type>()
+	{
+		return eCommand10Type_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_eCommand10Type(eCommand10Type_StaticEnum, TEXT("/Script/GunnerSquad_WePlayVR"), TEXT("eCommand10Type"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_GunnerSquad_WePlayVR_eCommand10Type_Hash() { return 2079434828U; }
+	UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eCommand10Type()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("eCommand10Type"), 0, Get_Z_Construct_UEnum_GunnerSquad_WePlayVR_eCommand10Type_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "eCommand10Type::iStart", (int64)eCommand10Type::iStart },
+				{ "eCommand10Type::iEnd", (int64)eCommand10Type::iEnd },
+				{ "eCommand10Type::iInit", (int64)eCommand10Type::iInit },
+				{ "eCommand10Type::iOPS_Config", (int64)eCommand10Type::iOPS_Config },
+				{ "eCommand10Type::iLanguage_Change", (int64)eCommand10Type::iLanguage_Change },
+				{ "eCommand10Type::iConnectedDevicesUpdate", (int64)eCommand10Type::iConnectedDevicesUpdate },
+				{ "eCommand10Type::iScreenshot", (int64)eCommand10Type::iScreenshot },
+				{ "eCommand10Type::iClearData", (int64)eCommand10Type::iClearData },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "ModuleRelativePath", "OpsManager.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR,
+				nullptr,
+				"eCommand10Type",
+				"eCommand10Type",
+				Enumerators,
+				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
+	static UEnum* eLogType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_GunnerSquad_WePlayVR_eLogType, Z_Construct_UPackage__Script_GunnerSquad_WePlayVR(), TEXT("eLogType"));
+		}
+		return Singleton;
+	}
+	template<> GUNNERSQUAD_WEPLAYVR_API UEnum* StaticEnum<eLogType>()
+	{
+		return eLogType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_eLogType(eLogType_StaticEnum, TEXT("/Script/GunnerSquad_WePlayVR"), TEXT("eLogType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_GunnerSquad_WePlayVR_eLogType_Hash() { return 3882477137U; }
+	UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eLogType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("eLogType"), 0, Get_Z_Construct_UEnum_GunnerSquad_WePlayVR_eLogType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "eLogType::iLOG", (int64)eLogType::iLOG },
+				{ "eLogType::iWARNING", (int64)eLogType::iWARNING },
+				{ "eLogType::iERROR", (int64)eLogType::iERROR },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "ModuleRelativePath", "OpsManager.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR,
+				nullptr,
+				"eLogType",
+				"eLogType",
+				Enumerators,
+				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	static UEnum* eInputNameType_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
@@ -288,29 +397,165 @@ void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 		}
 		return ReturnEnum;
 	}
-class UScriptStruct* FOPS_GameServerClientData::StaticStruct()
+class UScriptStruct* FstructOPS_GameServerData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
 	if (!Singleton)
 	{
-		extern GUNNERSQUAD_WEPLAYVR_API uint32 Get_Z_Construct_UScriptStruct_FOPS_GameServerClientData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FOPS_GameServerClientData, Z_Construct_UPackage__Script_GunnerSquad_WePlayVR(), TEXT("OPS_GameServerClientData"), sizeof(FOPS_GameServerClientData), Get_Z_Construct_UScriptStruct_FOPS_GameServerClientData_Hash());
+		extern GUNNERSQUAD_WEPLAYVR_API uint32 Get_Z_Construct_UScriptStruct_FstructOPS_GameServerData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FstructOPS_GameServerData, Z_Construct_UPackage__Script_GunnerSquad_WePlayVR(), TEXT("structOPS_GameServerData"), sizeof(FstructOPS_GameServerData), Get_Z_Construct_UScriptStruct_FstructOPS_GameServerData_Hash());
 	}
 	return Singleton;
 }
-template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<FOPS_GameServerClientData>()
+template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<FstructOPS_GameServerData>()
 {
-	return FOPS_GameServerClientData::StaticStruct();
+	return FstructOPS_GameServerData::StaticStruct();
 }
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FOPS_GameServerClientData(FOPS_GameServerClientData::StaticStruct, TEXT("/Script/GunnerSquad_WePlayVR"), TEXT("OPS_GameServerClientData"), false, nullptr, nullptr);
-static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFOPS_GameServerClientData
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FstructOPS_GameServerData(FstructOPS_GameServerData::StaticStruct, TEXT("/Script/GunnerSquad_WePlayVR"), TEXT("structOPS_GameServerData"), false, nullptr, nullptr);
+static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS_GameServerData
 {
-	FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFOPS_GameServerClientData()
+	FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS_GameServerData()
 	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("OPS_GameServerClientData")),new UScriptStruct::TCppStructOps<FOPS_GameServerClientData>);
+		UScriptStruct::DeferCppStructOps(FName(TEXT("structOPS_GameServerData")),new UScriptStruct::TCppStructOps<FstructOPS_GameServerData>);
 	}
-} ScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFOPS_GameServerClientData;
-	struct Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics
+} ScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS_GameServerData;
+	struct Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TeamName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_TeamName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SessionId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_SessionId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClientData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ClientData;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ClientData_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameServerPort_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_GameServerPort;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameServerIP_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_GameServerIP;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "This struct will hold the data required for multiplayer" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FstructOPS_GameServerData>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_TeamName_MetaData[] = {
+		{ "Category", "FOPS_GameServerData" },
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_TeamName = { "TeamName", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FstructOPS_GameServerData, TeamName), METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_TeamName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_TeamName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_SessionId_MetaData[] = {
+		{ "Category", "FOPS_GameServerData" },
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_SessionId = { "SessionId", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FstructOPS_GameServerData, SessionId), METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_SessionId_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_SessionId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_ClientData_MetaData[] = {
+		{ "Category", "FOPS_GameServerData" },
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_ClientData = { "ClientData", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FstructOPS_GameServerData, ClientData), METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_ClientData_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_ClientData_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_ClientData_Inner = { "ClientData", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FstructOPS_GameServerClientData, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerPort_MetaData[] = {
+		{ "Category", "FOPS_GameServerData" },
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerPort = { "GameServerPort", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FstructOPS_GameServerData, GameServerPort), METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerPort_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerPort_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerIP_MetaData[] = {
+		{ "Category", "FOPS_GameServerData" },
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerIP = { "GameServerIP", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FstructOPS_GameServerData, GameServerIP), METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerIP_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerIP_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_TeamName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_SessionId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_ClientData,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_ClientData_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerPort,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::NewProp_GameServerIP,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR,
+		nullptr,
+		&NewStructOps,
+		"structOPS_GameServerData",
+		sizeof(FstructOPS_GameServerData),
+		alignof(FstructOPS_GameServerData),
+		Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::PropPointers,
+		ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::Struct_MetaDataParams, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FstructOPS_GameServerData()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FstructOPS_GameServerData_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("structOPS_GameServerData"), sizeof(FstructOPS_GameServerData), Get_Z_Construct_UScriptStruct_FstructOPS_GameServerData_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FstructOPS_GameServerData_Hash() { return 4191091462U; }
+class UScriptStruct* FstructOPS_GameServerClientData::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern GUNNERSQUAD_WEPLAYVR_API uint32 Get_Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FstructOPS_GameServerClientData, Z_Construct_UPackage__Script_GunnerSquad_WePlayVR(), TEXT("structOPS_GameServerClientData"), sizeof(FstructOPS_GameServerClientData), Get_Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Hash());
+	}
+	return Singleton;
+}
+template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<FstructOPS_GameServerClientData>()
+{
+	return FstructOPS_GameServerClientData::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FstructOPS_GameServerClientData(FstructOPS_GameServerClientData::StaticStruct, TEXT("/Script/GunnerSquad_WePlayVR"), TEXT("structOPS_GameServerClientData"), false, nullptr, nullptr);
+static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS_GameServerClientData
+{
+	FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS_GameServerClientData()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("structOPS_GameServerClientData")),new UScriptStruct::TCppStructOps<FstructOPS_GameServerClientData>);
+	}
+} ScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS_GameServerClientData;
+	struct Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
@@ -328,173 +573,63 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFOPS_GameS
 		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::Struct_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "This struct will hold the IP address of each client that needs to connect to the server and the user name of each client if any" },
 	};
 #endif
-	void* Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewStructOps()
+	void* Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FOPS_GameServerClientData>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FstructOPS_GameServerClientData>();
 	}
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_UserName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_UserName_MetaData[] = {
 		{ "Category", "FOPS_GameServerClientData" },
 		{ "ModuleRelativePath", "OpsManager.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_UserName = { "UserName", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FOPS_GameServerClientData, UserName), METADATA_PARAMS(Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_UserName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_UserName_MetaData)) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_UserName = { "UserName", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FstructOPS_GameServerClientData, UserName), METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_UserName_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_UserName_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_ClientIP_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_ClientIP_MetaData[] = {
 		{ "Category", "FOPS_GameServerClientData" },
 		{ "ModuleRelativePath", "OpsManager.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_ClientIP = { "ClientIP", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FOPS_GameServerClientData, ClientIP), METADATA_PARAMS(Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_ClientIP_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_ClientIP_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_UserName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::NewProp_ClientIP,
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_ClientIP = { "ClientIP", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FstructOPS_GameServerClientData, ClientIP), METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_ClientIP_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_ClientIP_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_UserName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::NewProp_ClientIP,
 	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::ReturnStructParams = {
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR,
 		nullptr,
 		&NewStructOps,
-		"OPS_GameServerClientData",
-		sizeof(FOPS_GameServerClientData),
-		alignof(FOPS_GameServerClientData),
-		Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::PropPointers,
-		ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::PropPointers),
+		"structOPS_GameServerClientData",
+		sizeof(FstructOPS_GameServerClientData),
+		alignof(FstructOPS_GameServerClientData),
+		Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::PropPointers,
+		ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::PropPointers),
 		RF_Public|RF_Transient|RF_MarkAsNative,
 		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::Struct_MetaDataParams, ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::Struct_MetaDataParams))
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::Struct_MetaDataParams, ARRAY_COUNT(Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::Struct_MetaDataParams))
 	};
-	UScriptStruct* Z_Construct_UScriptStruct_FOPS_GameServerClientData()
+	UScriptStruct* Z_Construct_UScriptStruct_FstructOPS_GameServerClientData()
 	{
 #if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FOPS_GameServerClientData_Hash();
+		extern uint32 Get_Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Hash();
 		UPackage* Outer = Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("OPS_GameServerClientData"), sizeof(FOPS_GameServerClientData), Get_Z_Construct_UScriptStruct_FOPS_GameServerClientData_Hash(), false);
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("structOPS_GameServerClientData"), sizeof(FstructOPS_GameServerClientData), Get_Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Hash(), false);
 #else
 		static UScriptStruct* ReturnStruct = nullptr;
 #endif
 		if (!ReturnStruct)
 		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FOPS_GameServerClientData_Statics::ReturnStructParams);
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics::ReturnStructParams);
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FOPS_GameServerClientData_Hash() { return 2010009592U; }
-class UScriptStruct* FOPS_GameServerData::StaticStruct()
-{
-	static class UScriptStruct* Singleton = NULL;
-	if (!Singleton)
-	{
-		extern GUNNERSQUAD_WEPLAYVR_API uint32 Get_Z_Construct_UScriptStruct_FOPS_GameServerData_Hash();
-		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FOPS_GameServerData, Z_Construct_UPackage__Script_GunnerSquad_WePlayVR(), TEXT("OPS_GameServerData"), sizeof(FOPS_GameServerData), Get_Z_Construct_UScriptStruct_FOPS_GameServerData_Hash());
-	}
-	return Singleton;
-}
-template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<FOPS_GameServerData>()
-{
-	return FOPS_GameServerData::StaticStruct();
-}
-static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FOPS_GameServerData(FOPS_GameServerData::StaticStruct, TEXT("/Script/GunnerSquad_WePlayVR"), TEXT("OPS_GameServerData"), false, nullptr, nullptr);
-static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFOPS_GameServerData
-{
-	FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFOPS_GameServerData()
-	{
-		UScriptStruct::DeferCppStructOps(FName(TEXT("OPS_GameServerData")),new UScriptStruct::TCppStructOps<FOPS_GameServerData>);
-	}
-} ScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFOPS_GameServerData;
-	struct Z_Construct_UScriptStruct_FOPS_GameServerData_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
-#endif
-		static void* NewStructOps();
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BackPackIP_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_BackPackIP;
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_BackPackIP_Inner;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameServerIP_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_GameServerIP;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClientIP_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ClientIP;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::Struct_MetaDataParams[] = {
-		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "OpsManager.h" },
-	};
-#endif
-	void* Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FOPS_GameServerData>();
-	}
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_BackPackIP_MetaData[] = {
-		{ "Category", "FOPS_GameServerData" },
-		{ "ModuleRelativePath", "OpsManager.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_BackPackIP = { "BackPackIP", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FOPS_GameServerData, BackPackIP), METADATA_PARAMS(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_BackPackIP_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_BackPackIP_MetaData)) };
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_BackPackIP_Inner = { "BackPackIP", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_GameServerIP_MetaData[] = {
-		{ "Category", "FOPS_GameServerData" },
-		{ "ModuleRelativePath", "OpsManager.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_GameServerIP = { "GameServerIP", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FOPS_GameServerData, GameServerIP), METADATA_PARAMS(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_GameServerIP_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_GameServerIP_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_ClientIP_MetaData[] = {
-		{ "Category", "FOPS_GameServerData" },
-		{ "ModuleRelativePath", "OpsManager.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_ClientIP = { "ClientIP", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FOPS_GameServerData, ClientIP), METADATA_PARAMS(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_ClientIP_MetaData, ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_ClientIP_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_BackPackIP,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_BackPackIP_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_GameServerIP,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::NewProp_ClientIP,
-	};
-	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::ReturnStructParams = {
-		(UObject* (*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR,
-		nullptr,
-		&NewStructOps,
-		"OPS_GameServerData",
-		sizeof(FOPS_GameServerData),
-		alignof(FOPS_GameServerData),
-		Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::PropPointers,
-		ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::PropPointers),
-		RF_Public|RF_Transient|RF_MarkAsNative,
-		EStructFlags(0x00000001),
-		METADATA_PARAMS(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::Struct_MetaDataParams, ARRAY_COUNT(Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::Struct_MetaDataParams))
-	};
-	UScriptStruct* Z_Construct_UScriptStruct_FOPS_GameServerData()
-	{
-#if WITH_HOT_RELOAD
-		extern uint32 Get_Z_Construct_UScriptStruct_FOPS_GameServerData_Hash();
-		UPackage* Outer = Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
-		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("OPS_GameServerData"), sizeof(FOPS_GameServerData), Get_Z_Construct_UScriptStruct_FOPS_GameServerData_Hash(), false);
-#else
-		static UScriptStruct* ReturnStruct = nullptr;
-#endif
-		if (!ReturnStruct)
-		{
-			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FOPS_GameServerData_Statics::ReturnStructParams);
-		}
-		return ReturnStruct;
-	}
-	uint32 Get_Z_Construct_UScriptStruct_FOPS_GameServerData_Hash() { return 1606022816U; }
+	uint32 Get_Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Hash() { return 512269460U; }
 class UScriptStruct* FstructOPS_StartData::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
@@ -543,6 +678,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FstructOPS_StartData_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "This is obselete, Alien Takedown and Clock Tower only uses this" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FstructOPS_StartData_Statics::NewStructOps()
@@ -605,7 +741,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FstructOPS_StartData_Hash() { return 3386951049U; }
+	uint32 Get_Z_Construct_UScriptStruct_FstructOPS_StartData_Hash() { return 3292308061U; }
 class UScriptStruct* FstructOPS_Data::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;
