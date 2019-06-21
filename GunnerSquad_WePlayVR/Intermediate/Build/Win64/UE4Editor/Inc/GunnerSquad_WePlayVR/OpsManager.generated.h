@@ -13,137 +13,137 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GUNNERSQUAD_WEPLAYVR_OpsManager_generated_h
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_128_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_129_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_GameServerData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_114_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_115_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_GameServerClientData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_92_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_93_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_StartData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_StartData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_65_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_66_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_Data_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_Data>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_RPC_WRAPPERS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execImportSendClearDataResponse) \
+	DECLARE_FUNCTION(execImportMethodSendClearDataResponse) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendClearDataResponse(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendClearDataResponse(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportConnect) \
+	DECLARE_FUNCTION(execImportMethodConnect) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportConnect(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodConnect(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendLighthouseStatus) \
+	DECLARE_FUNCTION(execImportMethodSendLighthouseStatus) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendLighthouseStatus(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendLighthouseStatus(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendServerTimeout) \
+	DECLARE_FUNCTION(execImportMethodSendServerTimeout) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendServerTimeout(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendServerTimeout(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendServerReady) \
+	DECLARE_FUNCTION(execImportMethodSendServerReady) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendServerReady(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendServerReady(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendLanguageChangeResponse) \
+	DECLARE_FUNCTION(execImportMethodSendLanguageChangeResponse) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendLanguageChangeResponse(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendLanguageChangeResponse(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSetSessionID) \
+	DECLARE_FUNCTION(execImportMethodSetSessionID) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSetSessionID(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSetSessionID(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendStopRumble) \
+	DECLARE_FUNCTION(execImportMethodSendStopRumble) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendStopRumble(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendStopRumble(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendStartRumble) \
+	DECLARE_FUNCTION(execImportMethodSendStartRumble) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendStartRumble(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendStartRumble(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendConnectedDevicesUpdate) \
+	DECLARE_FUNCTION(execImportMethodSendConnectedDevicesUpdate) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendConnectedDevicesUpdate(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendConnectedDevicesUpdate(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendScreenshot) \
+	DECLARE_FUNCTION(execImportMethodSendScreenshot) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendScreenshot(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendScreenshot(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportAddSupportedLanguage) \
+	DECLARE_FUNCTION(execImportMethodAddSupportedLanguage) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportAddSupportedLanguage(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodAddSupportedLanguage(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportClearSupportedLanguages) \
+	DECLARE_FUNCTION(execImportMethodClearSupportedLanguages) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportClearSupportedLanguages(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodClearSupportedLanguages(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -195,19 +195,19 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportMethodEndResponse) \
+	DECLARE_FUNCTION(execImportMethodSendEndResponse) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodEndResponse(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendEndResponse(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportMethodStartResponse) \
+	DECLARE_FUNCTION(execImportMethodSendStartResponse) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodStartResponse(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendStartResponse(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -294,109 +294,109 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 	}
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execImportSendClearDataResponse) \
+	DECLARE_FUNCTION(execImportMethodSendClearDataResponse) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendClearDataResponse(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendClearDataResponse(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportConnect) \
+	DECLARE_FUNCTION(execImportMethodConnect) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportConnect(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodConnect(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendLighthouseStatus) \
+	DECLARE_FUNCTION(execImportMethodSendLighthouseStatus) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendLighthouseStatus(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendLighthouseStatus(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendServerTimeout) \
+	DECLARE_FUNCTION(execImportMethodSendServerTimeout) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendServerTimeout(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendServerTimeout(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendServerReady) \
+	DECLARE_FUNCTION(execImportMethodSendServerReady) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendServerReady(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendServerReady(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendLanguageChangeResponse) \
+	DECLARE_FUNCTION(execImportMethodSendLanguageChangeResponse) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendLanguageChangeResponse(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendLanguageChangeResponse(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSetSessionID) \
+	DECLARE_FUNCTION(execImportMethodSetSessionID) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSetSessionID(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSetSessionID(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendStopRumble) \
+	DECLARE_FUNCTION(execImportMethodSendStopRumble) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendStopRumble(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendStopRumble(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendStartRumble) \
+	DECLARE_FUNCTION(execImportMethodSendStartRumble) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendStartRumble(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendStartRumble(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendConnectedDevicesUpdate) \
+	DECLARE_FUNCTION(execImportMethodSendConnectedDevicesUpdate) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendConnectedDevicesUpdate(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendConnectedDevicesUpdate(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportSendScreenshot) \
+	DECLARE_FUNCTION(execImportMethodSendScreenshot) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportSendScreenshot(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendScreenshot(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportAddSupportedLanguage) \
+	DECLARE_FUNCTION(execImportMethodAddSupportedLanguage) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportAddSupportedLanguage(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodAddSupportedLanguage(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportClearSupportedLanguages) \
+	DECLARE_FUNCTION(execImportMethodClearSupportedLanguages) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportClearSupportedLanguages(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodClearSupportedLanguages(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -448,19 +448,19 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportMethodEndResponse) \
+	DECLARE_FUNCTION(execImportMethodSendEndResponse) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodEndResponse(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendEndResponse(); \
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportMethodStartResponse) \
+	DECLARE_FUNCTION(execImportMethodSendStartResponse) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodStartResponse(); \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendStartResponse(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -547,7 +547,7 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 	}
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_INCLASS_NO_PURE_DECLS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUOpsManager(); \
 	friend struct Z_Construct_UClass_UOpsManager_Statics; \
@@ -556,7 +556,7 @@ public: \
 	DECLARE_SERIALIZER(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_INCLASS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_INCLASS \
 private: \
 	static void StaticRegisterNativesUOpsManager(); \
 	friend struct Z_Construct_UClass_UOpsManager_Statics; \
@@ -565,7 +565,7 @@ public: \
 	DECLARE_SERIALIZER(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_STANDARD_CONSTRUCTORS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOpsManager(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOpsManager) \
@@ -578,7 +578,7 @@ private: \
 public:
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_ENHANCED_CONSTRUCTORS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOpsManager(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -591,26 +591,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UOpsManager); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_PRIVATE_PROPERTY_OFFSET
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_219_PROLOG
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_GENERATED_BODY_LEGACY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_PRIVATE_PROPERTY_OFFSET
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_220_PROLOG
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_PRIVATE_PROPERTY_OFFSET \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_RPC_WRAPPERS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_INCLASS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_STANDARD_CONSTRUCTORS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_PRIVATE_PROPERTY_OFFSET \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_RPC_WRAPPERS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_INCLASS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_PRIVATE_PROPERTY_OFFSET \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_RPC_WRAPPERS_NO_PURE_DECLS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_INCLASS_NO_PURE_DECLS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_ENHANCED_CONSTRUCTORS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_PRIVATE_PROPERTY_OFFSET \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_RPC_WRAPPERS_NO_PURE_DECLS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_INCLASS_NO_PURE_DECLS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

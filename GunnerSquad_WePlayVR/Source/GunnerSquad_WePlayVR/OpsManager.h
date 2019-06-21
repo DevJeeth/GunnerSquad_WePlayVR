@@ -5,7 +5,7 @@
 //TODO: These headers need to be included
 //#include "JsonUtilities.h"
 #include <functional>
-//#include "Runtime/Engine/Public/Tickable.h"
+#include "Runtime/Engine/Public/Tickable.h"
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "OpsManager.generated.h"
@@ -218,7 +218,7 @@ enum class eCommand10Type :uint8
 };
 
 UCLASS()
-class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject/*, public FTickableGameObject*/
+class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject, public FTickableGameObject
 {
 	GENERATED_BODY()
 
@@ -244,7 +244,7 @@ private:
 	__SetSupportedLanguages m_funcSetSupportedLanguages;
 	__RegisterForCommands m_funcRegisterForCommands;
 	__ClearConnectedDevicesData m_funcClearConnectedDevicesData;
-	__AddConnecedDeviceToProfile m_funcAddConnectedDeviceToProfile;
+	__AddConnecedDeviceToProfile m_funcAddConnectedDeviceToProfile; 
 	__SendLighthouseStatus m_funcSendLighthouseStatus;
 	
 	__AddPropToProfile m_funcAddPropToProfile;
@@ -269,6 +269,12 @@ private:
 
 	__SendClearDataResponse m_funcSendClearDataResponse;
 
+	__SendServerReady m_funcSendServerReadyResponse;
+	__SendServerTimeout m_funcSendServerTimeout;
+
+	__SendStartRumble m_funcSendStartRumble;
+	__SendStopRumble m_funcSendStopRumble;
+
 	__CloseAndCleanUpOPSClient m_funcCloseAndCleanOPSClient;
 
 	const char ** StringToCharArray(TArray<FString> a_strInternalName);
@@ -285,11 +291,11 @@ private:
 
 public:
 
-	/*void Tick(float DeltaTime) override;
+	void Tick(float DeltaTime) override;
 	bool IsTickable() const override;
 	bool IsTickableInEditor() const override;
 	bool IsTickableWhenPaused() const override;
-	TStatId GetStatId() const override;*/
+	TStatId GetStatId() const override;
 
 	///Use this function to toggle is process cmd status
 	void SetIsProcessingCmdStatus(bool a_bIsProcessingOpsMsg);
@@ -304,7 +310,7 @@ public:
 	//This is Obselete only Clock Tower uses this, instead of this FstructOPS_GameServerClientData instance should be used
 	FstructOPS_StartData m_dataOPS_StartData;
 
-#pragma region Import Functions
+#pragma region Import Methods
 	//Retreiving the DLL from the path and name of DLL
 	UFUNCTION()
 		bool ImportDLL(FString a_strFolderName, FString a_strDLLName);
@@ -361,17 +367,18 @@ public:
 	UFUNCTION()
 		bool ImportMethodAddConnecedDeviceToProfile();
 
+	/****** These methods needs to be confirmed if still in use ******/
 	UFUNCTION()
 		bool ImportMethodClearSupportedLanguages();
 
 	UFUNCTION()
-		bool ImportMethodAddSupportedLanguage();
+		bool ImportMethodSendConnectedDevicesUpdate();
 
+	UFUNCTION()
+		bool ImportMethodAddSupportedLanguage();
+	/*****************************************************************/
 	UFUNCTION()
 		bool ImportMethodSendScreenshot();
-
-	UFUNCTION()
-		bool ImportMethodSendConnectedDevicesUpdate();
 
 	UFUNCTION()
 		bool ImportMethodSendStartRumble();
@@ -401,7 +408,96 @@ public:
 		bool ImportMethodSendClearDataResponse();
 #pragma endregion
 
+#pragma region Methods Exposed In Unreal
+	UFUNCTION()
+		void SendClearDataResponse();
+
+	UFUNCTION()
+		void Connect();
+
+	UFUNCTION()
+		void CreateOPSClient();
+
+	UFUNCTION()
+		void RegisterForCommands();
+
+	UFUNCTION()
+		void RegisterForLogs();
+
+	UFUNCTION()
+		void CleanUpOPSClient();
+
+	UFUNCTION()
+		void SetIPForOPS(FString a_strOPSIP);
+
+	UFUNCTION()
+		void SendProfileToOPS();
+
+	UFUNCTION()
+		void SendInitResponseToOPS();
+
+	UFUNCTION()
+		void SendOPSConfigResponse();
+
+	UFUNCTION()
+		void SendStartResponseToOPS();
+
+	UFUNCTION()
+		void SendEndResponseToOPS();
+
+	UFUNCTION()
+		void SetSupportedLanguages(TArray<FString> a_strInternalName, int a_nLength);//Since there is one in Game instance access it here rather than ufunctions!
+
+	UFUNCTION()
+		void SetGameInformation(int a_nGameDuration, int a_nMinimumNumberPlayer, int a_nMaximumNumberPlayer, eInputNameType a_enumInputNameType = eInputNameType::None);
+
+	UFUNCTION()
+		void ClearPropsData();//Since somewhere a clash dont use ufunction!
+
+	UFUNCTION()
+		void AddPropToProfile(FString a_strPropName, int a_iID);//Since somewhere a clash dont use ufunction!
+
+	UFUNCTION()
+		void ClearConnectedDevicesData();
+
+	UFUNCTION()
+		void AddConnecedDeviceToProfile(eDeviceType a_enumType, FString a_strValue, FString a_strID, eDeviceStatus a_enumStatus);
+
+	UFUNCTION()
+		void ClearSupportedLanguages();
+
+	UFUNCTION()
+		void AddSupportedLanguage(FString a_strLanguageName);
+
+	UFUNCTION()
+		void SendScreenshot(TArray<uint8> a_arrImageData);
+		FString m_strImageData;
+
+	UFUNCTION()
+		void SendConnectedDevicesUpdate();
+
+	UFUNCTION()
+		void SendStartRumble(FString a_strClipName, int a_nVolume, bool a_bPlayOnce);
 	
+	UFUNCTION()
+		void SendStopRumble();
+	
+	UFUNCTION()
+		void SetSessionID(FString a_strSessionID);
+
+	UFUNCTION()
+		void SendLanguageChangeResponse();
+	
+	UFUNCTION()
+		void SendServerReady(FString a_strGameServerIP, int a_iPort);
+	
+	UFUNCTION()
+		void SendServerTimeout();
+
+	UFUNCTION()
+		void SendLighthouseStatus(FString a_strLighthouseID, eDeviceStatus a_enumStatus);
+#pragma endregion
+
 	
 
 	
