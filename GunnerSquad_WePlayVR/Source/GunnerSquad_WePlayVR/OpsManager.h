@@ -3,8 +3,9 @@
 #pragma once
 
 //TODO: These headers need to be included
-#include <functional>
 //#include "JsonUtilities.h"
+#include <functional>
+//#include "Runtime/Engine/Public/Tickable.h"
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "OpsManager.generated.h"
@@ -58,6 +59,7 @@ enum class eInputNameType : uint8
 
 /******************CONFIG struct of DATA received from OPS********************/
 
+//This struct contains the OPS Configuration Data
 USTRUCT(BlueprintType)
 struct FstructOPS_Data
 {
@@ -84,7 +86,7 @@ public:
 
 
 
-//This is obselete, Alien Takedown and Clock Tower only uses this
+//This struct is obselete, Alien Takedown and Clock Tower only uses this
 USTRUCT(BlueprintType)
 struct FstructOPS_StartData
 {
@@ -120,7 +122,7 @@ public:
 };
 
 
-//This struct will hold the data required for multiplayer
+//This struct will hold the data required for multiplayer/Singleplayer as single player games are also networked
 USTRUCT(BlueprintType)
 struct FstructOPS_GameServerData
 {
@@ -216,35 +218,44 @@ enum class eCommand10Type :uint8
 };
 
 UCLASS()
-class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject
+class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject/*, public FTickableGameObject*/
 {
 	GENERATED_BODY()
 
 private:
 	void *v_dllHandle;
 
+	bool m_bInitReceived = false;
+	bool m_bOPSConfigurationReceived = false;
+	bool m_bStartReceived = false;
+	bool m_bEndReceived = false;
+	bool m_bLanguageChangeReceived = false;
+	bool m_bDeviceUpdate = false;
+	bool m_bScreenshot = false;
+	bool m_bClearScoreData = false;
+
 	CommandCallback m_delOnCommand;
 	LogCallback m_delOnLogsReceived;
 
 	__RegisterForLogs m_funcRegisterForLogs;
 	__SetOPSIP m_funcSetOPSIP;
-	__CreateOPSClient m_funcCreatOPSClient;
+	__CreateOPSClient m_funcCreateOPSClient;
 	__SetGameInformation m_funcSetGameInformation;
-	__SetSupportedLanguages m_funcSetSupportedLanguage;
+	__SetSupportedLanguages m_funcSetSupportedLanguages;
 	__RegisterForCommands m_funcRegisterForCommands;
 	__ClearConnectedDevicesData m_funcClearConnectedDevicesData;
 	__AddConnecedDeviceToProfile m_funcAddConnectedDeviceToProfile;
-	__SendLighthouseStatus m_funcSendLightHouseStatus;
+	__SendLighthouseStatus m_funcSendLighthouseStatus;
 	
 	__AddPropToProfile m_funcAddPropToProfile;
 	__ClearPropsData m_funcClearPropsData;
 
 	__SendProfile m_funcSendProfile;
 
-	__Connect m_funcSendConnect;
+	__Connect m_funcConnect;
 
 	__SetSessionID m_funcSetSessionID;
-	__SendOPS_ConfigResponse m_funcSendConfigResponse;
+	__SendOPS_ConfigResponse m_funcSendOPSConfigResponse;
 
 	__SendInitResponse m_funcSendInitResponse;
 
@@ -254,20 +265,144 @@ private:
 	
 	__SendLanguageChangeResponse m_funcSendLanguageChangeResponse;
 	
-	__SendScreenshot m_funcSendScreenShot;
+	__SendScreenshot m_funcSendScreenshot;
 
-	__SendClearDataResponse m_funcSendCleardataResponse;
+	__SendClearDataResponse m_funcSendClearDataResponse;
 
 	__CloseAndCleanUpOPSClient m_funcCloseAndCleanOPSClient;
 
+	const char ** StringToCharArray(TArray<FString> a_strInternalName);
+	const char **arrLanguages;
 
 
+	bool m_bIsProcessingOpsMsg = false;
+
+	bool _GetIsProcessingOpsMsg();
 
 
+	//Not sure if this is being used
 	//typedef void(*__SendConnectedDevicesUpdate)();
 
 public:
-	/*UFUNCTION()
-		 bool ImportDLL(FString a_strFolderName, FString a_strDLLName);*/
+
+	/*void Tick(float DeltaTime) override;
+	bool IsTickable() const override;
+	bool IsTickableInEditor() const override;
+	bool IsTickableWhenPaused() const override;
+	TStatId GetStatId() const override;*/
+
+	///Use this function to toggle is process cmd status
+	void SetIsProcessingCmdStatus(bool a_bIsProcessingOpsMsg);
+
+	//Helper Function
+	template<typename OutStructType>
+	bool ConvertJsonToStruct(FString a_strJsonContent, OutStructType* OutStruct);
+
+	FstructOPS_Data m_dataOPS_Configuration;
+	FstructOPS_GameServerClientData m_dataOPS_GameServerClientData;
+
+	//This is Obselete only Clock Tower uses this, instead of this FstructOPS_GameServerClientData instance should be used
+	FstructOPS_StartData m_dataOPS_StartData;
+
+#pragma region Import Functions
+	//Retreiving the DLL from the path and name of DLL
+	UFUNCTION()
+		bool ImportDLL(FString a_strFolderName, FString a_strDLLName);
+
+	// Importing the DLL functions and setting to all the functions instance created
+	UFUNCTION()
+		bool ImportDLLMethods();
+
+	UFUNCTION()
+		bool ImportMethodCreateOPSClientMethod();
+
+	UFUNCTION()
+		bool ImportMethodRegisterForLogs();
+
+	UFUNCTION()
+		bool ImportMethodRegisterForCommands();
+
+	UFUNCTION()
+		bool ImportMethodSetOPSIP();
+
+	UFUNCTION()
+		bool ImportMethodCloseAndCleanUpOPS();
+
+	UFUNCTION()
+		bool ImportMethodSendProfile();
+
+	UFUNCTION()
+		bool ImportMethodSendInitResponse();
+
+	UFUNCTION()
+		bool ImportMethodSendOPSConfigResponse();
+
+	UFUNCTION()
+		bool ImportMethodSendStartResponse();
+
+	UFUNCTION()
+		bool ImportMethodSendEndResponse();
+
+	UFUNCTION()
+		bool ImportMethodSetSupportedLanguages();//Since there is one in Game instance access it here rather than ufunctions!
+
+	UFUNCTION()
+		bool ImportMethodSetGameInformation();
+
+	UFUNCTION()
+		bool ImportMethodClearPropsData();//Since somewhere a clash dont use ufunction!
+
+	UFUNCTION()
+		bool ImportMethodAddPropToProfile();//Since somewhere a clash dont use ufunction!
+
+	UFUNCTION()
+		bool ImportMethodClearConnectedDevicesData();
+
+	UFUNCTION()
+		bool ImportMethodAddConnecedDeviceToProfile();
+
+	UFUNCTION()
+		bool ImportMethodClearSupportedLanguages();
+
+	UFUNCTION()
+		bool ImportMethodAddSupportedLanguage();
+
+	UFUNCTION()
+		bool ImportMethodSendScreenshot();
+
+	UFUNCTION()
+		bool ImportMethodSendConnectedDevicesUpdate();
+
+	UFUNCTION()
+		bool ImportMethodSendStartRumble();
+
+	UFUNCTION()
+		bool ImportMethodSendStopRumble();
+
+	UFUNCTION()
+		bool ImportMethodSetSessionID();
+
+	UFUNCTION()
+		bool ImportMethodSendLanguageChangeResponse();
+
+	UFUNCTION()
+		bool ImportMethodSendServerReady();
+
+	UFUNCTION()
+		bool ImportMethodSendServerTimeout();
+
+	UFUNCTION()
+		bool ImportMethodSendLighthouseStatus();
+
+	UFUNCTION()
+		bool ImportMethodConnect();
+
+	UFUNCTION()
+		bool ImportMethodSendClearDataResponse();
+#pragma endregion
+
+	
+	
+
 	
 };

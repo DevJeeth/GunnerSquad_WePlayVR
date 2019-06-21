@@ -28,6 +28,37 @@ void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UOpsManager_NoRegister();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UOpsManager();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportConnect();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportDLL();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportDLLMethods();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendScreenshot();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendServerReady();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendStartRumble();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSendStopRumble();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_ImportSetSessionID();
 // End Cross Module References
 	static UEnum* eCommand10Type_StaticEnum()
 	{
@@ -890,6 +921,1201 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 	uint32 Get_Z_Construct_UScriptStruct_FstructOPS_Data_Hash() { return 227707865U; }
 	void UOpsManager::StaticRegisterNativesUOpsManager()
 	{
+		UClass* Class = UOpsManager::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "ImportAddSupportedLanguage", &UOpsManager::execImportAddSupportedLanguage },
+			{ "ImportClearSupportedLanguages", &UOpsManager::execImportClearSupportedLanguages },
+			{ "ImportConnect", &UOpsManager::execImportConnect },
+			{ "ImportDLL", &UOpsManager::execImportDLL },
+			{ "ImportDLLMethods", &UOpsManager::execImportDLLMethods },
+			{ "ImportMethodAddConnecedDeviceToProfile", &UOpsManager::execImportMethodAddConnecedDeviceToProfile },
+			{ "ImportMethodAddPropToProfile", &UOpsManager::execImportMethodAddPropToProfile },
+			{ "ImportMethodClearConnectedDevicesData", &UOpsManager::execImportMethodClearConnectedDevicesData },
+			{ "ImportMethodClearPropsData", &UOpsManager::execImportMethodClearPropsData },
+			{ "ImportMethodCloseAndCleanUpOPS", &UOpsManager::execImportMethodCloseAndCleanUpOPS },
+			{ "ImportMethodCreateOPSClientMethod", &UOpsManager::execImportMethodCreateOPSClientMethod },
+			{ "ImportMethodEndResponse", &UOpsManager::execImportMethodEndResponse },
+			{ "ImportMethodRegisterForCommands", &UOpsManager::execImportMethodRegisterForCommands },
+			{ "ImportMethodRegisterForLogs", &UOpsManager::execImportMethodRegisterForLogs },
+			{ "ImportMethodSendInitResponse", &UOpsManager::execImportMethodSendInitResponse },
+			{ "ImportMethodSendOPSConfigResponse", &UOpsManager::execImportMethodSendOPSConfigResponse },
+			{ "ImportMethodSendProfile", &UOpsManager::execImportMethodSendProfile },
+			{ "ImportMethodSetGameInformation", &UOpsManager::execImportMethodSetGameInformation },
+			{ "ImportMethodSetOPSIP", &UOpsManager::execImportMethodSetOPSIP },
+			{ "ImportMethodSetSupportedLanguages", &UOpsManager::execImportMethodSetSupportedLanguages },
+			{ "ImportMethodStartResponse", &UOpsManager::execImportMethodStartResponse },
+			{ "ImportSendClearDataResponse", &UOpsManager::execImportSendClearDataResponse },
+			{ "ImportSendConnectedDevicesUpdate", &UOpsManager::execImportSendConnectedDevicesUpdate },
+			{ "ImportSendLanguageChangeResponse", &UOpsManager::execImportSendLanguageChangeResponse },
+			{ "ImportSendLighthouseStatus", &UOpsManager::execImportSendLighthouseStatus },
+			{ "ImportSendScreenshot", &UOpsManager::execImportSendScreenshot },
+			{ "ImportSendServerReady", &UOpsManager::execImportSendServerReady },
+			{ "ImportSendServerTimeout", &UOpsManager::execImportSendServerTimeout },
+			{ "ImportSendStartRumble", &UOpsManager::execImportSendStartRumble },
+			{ "ImportSendStopRumble", &UOpsManager::execImportSendStopRumble },
+			{ "ImportSetSessionID", &UOpsManager::execImportSetSessionID },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics
+	{
+		struct OpsManager_eventImportAddSupportedLanguage_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportAddSupportedLanguage_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportAddSupportedLanguage_Parms), &Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportAddSupportedLanguage", sizeof(OpsManager_eventImportAddSupportedLanguage_Parms), Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics
+	{
+		struct OpsManager_eventImportClearSupportedLanguages_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportClearSupportedLanguages_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportClearSupportedLanguages_Parms), &Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportClearSupportedLanguages", sizeof(OpsManager_eventImportClearSupportedLanguages_Parms), Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportConnect_Statics
+	{
+		struct OpsManager_eventImportConnect_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportConnect_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportConnect_Parms), &Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportConnect", sizeof(OpsManager_eventImportConnect_Parms), Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportConnect()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportConnect_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportDLL_Statics
+	{
+		struct OpsManager_eventImportDLL_Parms
+		{
+			FString a_strFolderName;
+			FString a_strDLLName;
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_a_strDLLName;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_a_strFolderName;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportDLL_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportDLL_Parms), &Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::NewProp_a_strDLLName = { "a_strDLLName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OpsManager_eventImportDLL_Parms, a_strDLLName), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::NewProp_a_strFolderName = { "a_strFolderName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OpsManager_eventImportDLL_Parms, a_strFolderName), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::NewProp_ReturnValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::NewProp_a_strDLLName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::NewProp_a_strFolderName,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "Retreiving the DLL from the path and name of DLL" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportDLL", sizeof(OpsManager_eventImportDLL_Parms), Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportDLL()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportDLL_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics
+	{
+		struct OpsManager_eventImportDLLMethods_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportDLLMethods_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportDLLMethods_Parms), &Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "Importing the DLL functions and setting to all the functions instance created" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportDLLMethods", sizeof(OpsManager_eventImportDLLMethods_Parms), Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportDLLMethods()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportDLLMethods_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics
+	{
+		struct OpsManager_eventImportMethodAddConnecedDeviceToProfile_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodAddConnecedDeviceToProfile_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodAddConnecedDeviceToProfile_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodAddConnecedDeviceToProfile", sizeof(OpsManager_eventImportMethodAddConnecedDeviceToProfile_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics
+	{
+		struct OpsManager_eventImportMethodAddPropToProfile_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodAddPropToProfile_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodAddPropToProfile_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "Since somewhere a clash dont use ufunction!" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodAddPropToProfile", sizeof(OpsManager_eventImportMethodAddPropToProfile_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics
+	{
+		struct OpsManager_eventImportMethodClearConnectedDevicesData_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodClearConnectedDevicesData_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodClearConnectedDevicesData_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "Since somewhere a clash dont use ufunction!" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodClearConnectedDevicesData", sizeof(OpsManager_eventImportMethodClearConnectedDevicesData_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics
+	{
+		struct OpsManager_eventImportMethodClearPropsData_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodClearPropsData_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodClearPropsData_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodClearPropsData", sizeof(OpsManager_eventImportMethodClearPropsData_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics
+	{
+		struct OpsManager_eventImportMethodCloseAndCleanUpOPS_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodCloseAndCleanUpOPS_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodCloseAndCleanUpOPS_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodCloseAndCleanUpOPS", sizeof(OpsManager_eventImportMethodCloseAndCleanUpOPS_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics
+	{
+		struct OpsManager_eventImportMethodCreateOPSClientMethod_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodCreateOPSClientMethod_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodCreateOPSClientMethod_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodCreateOPSClientMethod", sizeof(OpsManager_eventImportMethodCreateOPSClientMethod_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics
+	{
+		struct OpsManager_eventImportMethodEndResponse_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodEndResponse_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodEndResponse_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodEndResponse", sizeof(OpsManager_eventImportMethodEndResponse_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics
+	{
+		struct OpsManager_eventImportMethodRegisterForCommands_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodRegisterForCommands_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodRegisterForCommands_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodRegisterForCommands", sizeof(OpsManager_eventImportMethodRegisterForCommands_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics
+	{
+		struct OpsManager_eventImportMethodRegisterForLogs_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodRegisterForLogs_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodRegisterForLogs_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodRegisterForLogs", sizeof(OpsManager_eventImportMethodRegisterForLogs_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics
+	{
+		struct OpsManager_eventImportMethodSendInitResponse_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodSendInitResponse_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodSendInitResponse_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodSendInitResponse", sizeof(OpsManager_eventImportMethodSendInitResponse_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics
+	{
+		struct OpsManager_eventImportMethodSendOPSConfigResponse_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodSendOPSConfigResponse_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodSendOPSConfigResponse_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodSendOPSConfigResponse", sizeof(OpsManager_eventImportMethodSendOPSConfigResponse_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics
+	{
+		struct OpsManager_eventImportMethodSendProfile_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodSendProfile_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodSendProfile_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodSendProfile", sizeof(OpsManager_eventImportMethodSendProfile_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics
+	{
+		struct OpsManager_eventImportMethodSetGameInformation_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodSetGameInformation_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodSetGameInformation_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "Since there is one in Game instance access it here rather than ufunctions!" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodSetGameInformation", sizeof(OpsManager_eventImportMethodSetGameInformation_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics
+	{
+		struct OpsManager_eventImportMethodSetOPSIP_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodSetOPSIP_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodSetOPSIP_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodSetOPSIP", sizeof(OpsManager_eventImportMethodSetOPSIP_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics
+	{
+		struct OpsManager_eventImportMethodSetSupportedLanguages_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodSetSupportedLanguages_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodSetSupportedLanguages_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodSetSupportedLanguages", sizeof(OpsManager_eventImportMethodSetSupportedLanguages_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics
+	{
+		struct OpsManager_eventImportMethodStartResponse_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportMethodStartResponse_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportMethodStartResponse_Parms), &Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportMethodStartResponse", sizeof(OpsManager_eventImportMethodStartResponse_Parms), Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics
+	{
+		struct OpsManager_eventImportSendClearDataResponse_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendClearDataResponse_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendClearDataResponse_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendClearDataResponse", sizeof(OpsManager_eventImportSendClearDataResponse_Parms), Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics
+	{
+		struct OpsManager_eventImportSendConnectedDevicesUpdate_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendConnectedDevicesUpdate_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendConnectedDevicesUpdate_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendConnectedDevicesUpdate", sizeof(OpsManager_eventImportSendConnectedDevicesUpdate_Parms), Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics
+	{
+		struct OpsManager_eventImportSendLanguageChangeResponse_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendLanguageChangeResponse_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendLanguageChangeResponse_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendLanguageChangeResponse", sizeof(OpsManager_eventImportSendLanguageChangeResponse_Parms), Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics
+	{
+		struct OpsManager_eventImportSendLighthouseStatus_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendLighthouseStatus_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendLighthouseStatus_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendLighthouseStatus", sizeof(OpsManager_eventImportSendLighthouseStatus_Parms), Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics
+	{
+		struct OpsManager_eventImportSendScreenshot_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendScreenshot_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendScreenshot_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendScreenshot", sizeof(OpsManager_eventImportSendScreenshot_Parms), Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendScreenshot()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendScreenshot_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics
+	{
+		struct OpsManager_eventImportSendServerReady_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendServerReady_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendServerReady_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendServerReady", sizeof(OpsManager_eventImportSendServerReady_Parms), Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendServerReady()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendServerReady_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics
+	{
+		struct OpsManager_eventImportSendServerTimeout_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendServerTimeout_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendServerTimeout_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendServerTimeout", sizeof(OpsManager_eventImportSendServerTimeout_Parms), Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics
+	{
+		struct OpsManager_eventImportSendStartRumble_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendStartRumble_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendStartRumble_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendStartRumble", sizeof(OpsManager_eventImportSendStartRumble_Parms), Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendStartRumble()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendStartRumble_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics
+	{
+		struct OpsManager_eventImportSendStopRumble_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSendStopRumble_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSendStopRumble_Parms), &Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSendStopRumble", sizeof(OpsManager_eventImportSendStopRumble_Parms), Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSendStopRumble()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSendStopRumble_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics
+	{
+		struct OpsManager_eventImportSetSessionID_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OpsManager_eventImportSetSessionID_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OpsManager_eventImportSetSessionID_Parms), &Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "ImportSetSessionID", sizeof(OpsManager_eventImportSetSessionID_Parms), Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_ImportSetSessionID()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_ImportSetSessionID_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UOpsManager_NoRegister()
 	{
@@ -898,6 +2124,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 	struct Z_Construct_UClass_UOpsManager_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -907,6 +2134,39 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 	UObject* (*const Z_Construct_UClass_UOpsManager_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UObject,
 		(UObject* (*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_UOpsManager_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UOpsManager_ImportAddSupportedLanguage, "ImportAddSupportedLanguage" }, // 3190874509
+		{ &Z_Construct_UFunction_UOpsManager_ImportClearSupportedLanguages, "ImportClearSupportedLanguages" }, // 2294285850
+		{ &Z_Construct_UFunction_UOpsManager_ImportConnect, "ImportConnect" }, // 2858418557
+		{ &Z_Construct_UFunction_UOpsManager_ImportDLL, "ImportDLL" }, // 3011063134
+		{ &Z_Construct_UFunction_UOpsManager_ImportDLLMethods, "ImportDLLMethods" }, // 3392060444
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodAddConnecedDeviceToProfile, "ImportMethodAddConnecedDeviceToProfile" }, // 2112435702
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodAddPropToProfile, "ImportMethodAddPropToProfile" }, // 2277041011
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodClearConnectedDevicesData, "ImportMethodClearConnectedDevicesData" }, // 310505294
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodClearPropsData, "ImportMethodClearPropsData" }, // 3022636851
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodCloseAndCleanUpOPS, "ImportMethodCloseAndCleanUpOPS" }, // 3047387375
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodCreateOPSClientMethod, "ImportMethodCreateOPSClientMethod" }, // 3060773476
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodEndResponse, "ImportMethodEndResponse" }, // 3850092045
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForCommands, "ImportMethodRegisterForCommands" }, // 3432181543
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodRegisterForLogs, "ImportMethodRegisterForLogs" }, // 1252444110
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodSendInitResponse, "ImportMethodSendInitResponse" }, // 2961273052
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodSendOPSConfigResponse, "ImportMethodSendOPSConfigResponse" }, // 2808221360
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodSendProfile, "ImportMethodSendProfile" }, // 3057770648
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodSetGameInformation, "ImportMethodSetGameInformation" }, // 2646439890
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodSetOPSIP, "ImportMethodSetOPSIP" }, // 3123566532
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodSetSupportedLanguages, "ImportMethodSetSupportedLanguages" }, // 1146967880
+		{ &Z_Construct_UFunction_UOpsManager_ImportMethodStartResponse, "ImportMethodStartResponse" }, // 3740859746
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendClearDataResponse, "ImportSendClearDataResponse" }, // 2333043138
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendConnectedDevicesUpdate, "ImportSendConnectedDevicesUpdate" }, // 2472848156
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendLanguageChangeResponse, "ImportSendLanguageChangeResponse" }, // 2487197290
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendLighthouseStatus, "ImportSendLighthouseStatus" }, // 4218372949
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendScreenshot, "ImportSendScreenshot" }, // 4173770491
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendServerReady, "ImportSendServerReady" }, // 1687271306
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendServerTimeout, "ImportSendServerTimeout" }, // 1270485605
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendStartRumble, "ImportSendStartRumble" }, // 2129702018
+		{ &Z_Construct_UFunction_UOpsManager_ImportSendStopRumble, "ImportSendStopRumble" }, // 3995865946
+		{ &Z_Construct_UFunction_UOpsManager_ImportSetSessionID, "ImportSetSessionID" }, // 186986494
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOpsManager_Statics::Class_MetaDataParams[] = {
@@ -922,11 +2182,11 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
-		0,
+		ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x001000A0u,
@@ -941,7 +2201,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UOpsManager, 1207594467);
+	IMPLEMENT_CLASS(UOpsManager, 1387042367);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UOpsManager>()
 	{
 		return UOpsManager::StaticClass();
