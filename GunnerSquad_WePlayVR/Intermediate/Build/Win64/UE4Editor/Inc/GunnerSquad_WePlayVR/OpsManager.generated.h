@@ -8,40 +8,273 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+enum class eDeviceStatus : uint8;
+enum class eDeviceType : uint8;
+enum class eInputNameType : uint8;
 #ifdef GUNNERSQUAD_WEPLAYVR_OpsManager_generated_h
 #error "OpsManager.generated.h already included, missing '#pragma once' in OpsManager.h"
 #endif
 #define GUNNERSQUAD_WEPLAYVR_OpsManager_generated_h
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_129_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_130_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_GameServerData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_115_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_116_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_GameServerClientData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_93_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_94_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_StartData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_StartData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_66_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_67_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_Data_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_Data>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_RPC_WRAPPERS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSendLighthouseStatus) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strLighthouseID); \
+		P_GET_ENUM(eDeviceStatus,Z_Param_a_enumStatus); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendLighthouseStatus(Z_Param_a_strLighthouseID,eDeviceStatus(Z_Param_a_enumStatus)); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendServerTimeout) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendServerTimeout(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendServerReady) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strGameServerIP); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_iPort); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendServerReady(Z_Param_a_strGameServerIP,Z_Param_a_iPort); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendLanguageChangeResponse) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendLanguageChangeResponse(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetSessionID) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strSessionID); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetSessionID(Z_Param_a_strSessionID); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendStopRumble) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendStopRumble(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendStartRumble) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strClipName); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nVolume); \
+		P_GET_UBOOL(Z_Param_a_bPlayOnce); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendStartRumble(Z_Param_a_strClipName,Z_Param_a_nVolume,Z_Param_a_bPlayOnce); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendScreenshot) \
+	{ \
+		P_GET_TARRAY(uint8,Z_Param_a_arrImageData); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendScreenshot(Z_Param_a_arrImageData); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAddConnecedDeviceToProfile) \
+	{ \
+		P_GET_ENUM(eDeviceType,Z_Param_a_enumType); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strID); \
+		P_GET_ENUM(eDeviceStatus,Z_Param_a_enumStatus); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddConnecedDeviceToProfile(eDeviceType(Z_Param_a_enumType),Z_Param_a_strValue,Z_Param_a_strID,eDeviceStatus(Z_Param_a_enumStatus)); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execClearConnectedDevicesData) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ClearConnectedDevicesData(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAddPropToProfile) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strPropName); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_iID); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddPropToProfile(Z_Param_a_strPropName,Z_Param_a_iID); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execClearPropsData) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ClearPropsData(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetGameInformation) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nGameDuration); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nMinimumNumberPlayer); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nMaximumNumberPlayer); \
+		P_GET_ENUM(eInputNameType,Z_Param_a_enumInputNameType); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetGameInformation(Z_Param_a_nGameDuration,Z_Param_a_nMinimumNumberPlayer,Z_Param_a_nMaximumNumberPlayer,eInputNameType(Z_Param_a_enumInputNameType)); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetSupportedLanguages) \
+	{ \
+		P_GET_TARRAY(FString,Z_Param_a_strInternalName); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nLength); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetSupportedLanguages(Z_Param_a_strInternalName,Z_Param_a_nLength); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendEndResponseToOPS) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendEndResponseToOPS(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendStartResponseToOPS) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendStartResponseToOPS(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendOPSConfigResponse) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendOPSConfigResponse(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendInitResponseToOPS) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendInitResponseToOPS(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendProfileToOPS) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendProfileToOPS(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetIPForOPS) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strOPSIP); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetIPForOPS(Z_Param_a_strOPSIP); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execCleanUpOPSClient) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->CleanUpOPSClient(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execRegisterForLogs) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RegisterForLogs(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execRegisterForCommands) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RegisterForCommands(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execCreateOPSClient) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->CreateOPSClient(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execConnect) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Connect(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendClearDataResponse) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendClearDataResponse(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execImportMethodSendClearDataResponse) \
 	{ \
@@ -115,35 +348,11 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportMethodSendConnectedDevicesUpdate) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendConnectedDevicesUpdate(); \
-		P_NATIVE_END; \
-	} \
- \
 	DECLARE_FUNCTION(execImportMethodSendScreenshot) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendScreenshot(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execImportMethodAddSupportedLanguage) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodAddSupportedLanguage(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execImportMethodClearSupportedLanguages) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodClearSupportedLanguages(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -294,7 +503,237 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 	}
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSendLighthouseStatus) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strLighthouseID); \
+		P_GET_ENUM(eDeviceStatus,Z_Param_a_enumStatus); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendLighthouseStatus(Z_Param_a_strLighthouseID,eDeviceStatus(Z_Param_a_enumStatus)); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendServerTimeout) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendServerTimeout(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendServerReady) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strGameServerIP); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_iPort); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendServerReady(Z_Param_a_strGameServerIP,Z_Param_a_iPort); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendLanguageChangeResponse) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendLanguageChangeResponse(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetSessionID) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strSessionID); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetSessionID(Z_Param_a_strSessionID); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendStopRumble) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendStopRumble(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendStartRumble) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strClipName); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nVolume); \
+		P_GET_UBOOL(Z_Param_a_bPlayOnce); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendStartRumble(Z_Param_a_strClipName,Z_Param_a_nVolume,Z_Param_a_bPlayOnce); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendScreenshot) \
+	{ \
+		P_GET_TARRAY(uint8,Z_Param_a_arrImageData); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendScreenshot(Z_Param_a_arrImageData); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAddConnecedDeviceToProfile) \
+	{ \
+		P_GET_ENUM(eDeviceType,Z_Param_a_enumType); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strValue); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strID); \
+		P_GET_ENUM(eDeviceStatus,Z_Param_a_enumStatus); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddConnecedDeviceToProfile(eDeviceType(Z_Param_a_enumType),Z_Param_a_strValue,Z_Param_a_strID,eDeviceStatus(Z_Param_a_enumStatus)); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execClearConnectedDevicesData) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ClearConnectedDevicesData(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execAddPropToProfile) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strPropName); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_iID); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddPropToProfile(Z_Param_a_strPropName,Z_Param_a_iID); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execClearPropsData) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->ClearPropsData(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetGameInformation) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nGameDuration); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nMinimumNumberPlayer); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nMaximumNumberPlayer); \
+		P_GET_ENUM(eInputNameType,Z_Param_a_enumInputNameType); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetGameInformation(Z_Param_a_nGameDuration,Z_Param_a_nMinimumNumberPlayer,Z_Param_a_nMaximumNumberPlayer,eInputNameType(Z_Param_a_enumInputNameType)); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetSupportedLanguages) \
+	{ \
+		P_GET_TARRAY(FString,Z_Param_a_strInternalName); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_a_nLength); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetSupportedLanguages(Z_Param_a_strInternalName,Z_Param_a_nLength); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendEndResponseToOPS) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendEndResponseToOPS(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendStartResponseToOPS) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendStartResponseToOPS(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendOPSConfigResponse) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendOPSConfigResponse(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendInitResponseToOPS) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendInitResponseToOPS(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendProfileToOPS) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendProfileToOPS(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSetIPForOPS) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_a_strOPSIP); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SetIPForOPS(Z_Param_a_strOPSIP); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execCleanUpOPSClient) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->CleanUpOPSClient(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execRegisterForLogs) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RegisterForLogs(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execRegisterForCommands) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->RegisterForCommands(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execCreateOPSClient) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->CreateOPSClient(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execConnect) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->Connect(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendClearDataResponse) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendClearDataResponse(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execImportMethodSendClearDataResponse) \
 	{ \
@@ -368,35 +807,11 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execImportMethodSendConnectedDevicesUpdate) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendConnectedDevicesUpdate(); \
-		P_NATIVE_END; \
-	} \
- \
 	DECLARE_FUNCTION(execImportMethodSendScreenshot) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendScreenshot(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execImportMethodAddSupportedLanguage) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodAddSupportedLanguage(); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execImportMethodClearSupportedLanguages) \
-	{ \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(bool*)Z_Param__Result=P_THIS->ImportMethodClearSupportedLanguages(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -547,7 +962,7 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 	}
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_INCLASS_NO_PURE_DECLS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUOpsManager(); \
 	friend struct Z_Construct_UClass_UOpsManager_Statics; \
@@ -556,7 +971,7 @@ public: \
 	DECLARE_SERIALIZER(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_INCLASS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_INCLASS \
 private: \
 	static void StaticRegisterNativesUOpsManager(); \
 	friend struct Z_Construct_UClass_UOpsManager_Statics; \
@@ -565,7 +980,7 @@ public: \
 	DECLARE_SERIALIZER(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_STANDARD_CONSTRUCTORS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOpsManager(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOpsManager) \
@@ -578,7 +993,7 @@ private: \
 public:
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_ENHANCED_CONSTRUCTORS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOpsManager(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -591,26 +1006,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UOpsManager); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_PRIVATE_PROPERTY_OFFSET
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_220_PROLOG
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_GENERATED_BODY_LEGACY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_PRIVATE_PROPERTY_OFFSET
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_221_PROLOG
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_PRIVATE_PROPERTY_OFFSET \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_RPC_WRAPPERS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_INCLASS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_STANDARD_CONSTRUCTORS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_PRIVATE_PROPERTY_OFFSET \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_RPC_WRAPPERS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_INCLASS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_PRIVATE_PROPERTY_OFFSET \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_RPC_WRAPPERS_NO_PURE_DECLS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_INCLASS_NO_PURE_DECLS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_223_ENHANCED_CONSTRUCTORS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_PRIVATE_PROPERTY_OFFSET \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_RPC_WRAPPERS_NO_PURE_DECLS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_INCLASS_NO_PURE_DECLS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

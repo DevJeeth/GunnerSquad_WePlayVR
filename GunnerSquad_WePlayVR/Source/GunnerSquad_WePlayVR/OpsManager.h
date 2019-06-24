@@ -3,11 +3,12 @@
 #pragma once
 
 //TODO: These headers need to be included
-//#include "JsonUtilities.h"
+
 #include <functional>
 #include "Runtime/Engine/Public/Tickable.h"
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "JsonUtilities.h"
 #include "OpsManager.generated.h"
 
 /**
@@ -225,6 +226,10 @@ class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject, public FTickableGam
 private:
 	void *v_dllHandle;
 
+	int m_iGameplayTime;
+	int m_iMinPlayer;
+	int m_iMaxPlayer;
+
 	bool m_bInitReceived = false;
 	bool m_bOPSConfigurationReceived = false;
 	bool m_bStartReceived = false;
@@ -290,6 +295,8 @@ private:
 	//typedef void(*__SendConnectedDevicesUpdate)();
 
 public:
+
+	
 
 	void Tick(float DeltaTime) override;
 	bool IsTickable() const override;
@@ -367,16 +374,6 @@ public:
 	UFUNCTION()
 		bool ImportMethodAddConnecedDeviceToProfile();
 
-	/****** These methods needs to be confirmed if still in use ******/
-	UFUNCTION()
-		bool ImportMethodClearSupportedLanguages();
-
-	UFUNCTION()
-		bool ImportMethodSendConnectedDevicesUpdate();
-
-	UFUNCTION()
-		bool ImportMethodAddSupportedLanguage();
-	/*****************************************************************/
 	UFUNCTION()
 		bool ImportMethodSendScreenshot();
 
@@ -464,17 +461,8 @@ public:
 		void AddConnecedDeviceToProfile(eDeviceType a_enumType, FString a_strValue, FString a_strID, eDeviceStatus a_enumStatus);
 
 	UFUNCTION()
-		void ClearSupportedLanguages();
-
-	UFUNCTION()
-		void AddSupportedLanguage(FString a_strLanguageName);
-
-	UFUNCTION()
 		void SendScreenshot(TArray<uint8> a_arrImageData);
 		FString m_strImageData;
-
-	UFUNCTION()
-		void SendConnectedDevicesUpdate();
 
 	UFUNCTION()
 		void SendStartRumble(FString a_strClipName, int a_nVolume, bool a_bPlayOnce);
@@ -498,7 +486,5 @@ public:
 		void SendLighthouseStatus(FString a_strLighthouseID, eDeviceStatus a_enumStatus);
 #pragma endregion
 
-	
 
-	
 };

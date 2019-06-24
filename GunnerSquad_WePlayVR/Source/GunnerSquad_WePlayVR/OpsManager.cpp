@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "OPSManager.h"
 #include "Paths.h"
 #include "Engine.h"
 #include <vector> 
 #include "Base64.h"
-#include "OPSManager.h"
+
 
 //Gets the DLL for the specified path of a specific name
 bool UOpsManager::ImportDLL(FString a_strFolderName, FString a_strDLLName)
@@ -500,7 +500,6 @@ bool UOpsManager::ImportDLLMethods()
 		return false;
 	}
 
-
 	if (!ImportMethodSetSupportedLanguages())
 	{
 		UE_LOG(LogTemp, Error, TEXT("ImportMethodSetSupportedLanguages FAILED!"));
@@ -539,25 +538,9 @@ bool UOpsManager::ImportDLLMethods()
 		return false;
 	}
 
-	if (!ImportMethodClearSupportedLanguages())
-	{
-		UE_LOG(LogTemp, Error, TEXT("ImportClearSupportedLanguages FAILED!"));
-		return false;
-	}
-	if (!ImportMethodAddSupportedLanguage())
-	{
-		UE_LOG(LogTemp, Error, TEXT("ImportAddSupportedLanguage FAILED!"));
-		return false;
-	}
 	if (!ImportMethodSendScreenshot())
 	{
 		UE_LOG(LogTemp, Error, TEXT("ImportSendScreenshot FAILED!"));
-		return false;
-	}
-
-	if (!ImportMethodSendConnectedDevicesUpdate())
-	{
-		UE_LOG(LogTemp, Error, TEXT("ImportSendConnectedDevicesUpdate FAILED!"));
 		return false;
 	}
 
@@ -638,20 +621,22 @@ void UOpsManager::CreateOPSClient()
 		UE_LOG(LogTemp, Error, TEXT("OPS Client Function was null"));
 		return;
 	}
-	UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 
-	bool temp_bStreamerEnabled = m_refVRGameInstance->Settings->Streaming_Enabled;
-	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Is it for Streamer??,%d"), temp_bStreamerEnabled);
-	FString temp_strProjectVersion = m_refVRGameInstance->GetProjectVersion();
-	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Version:,%s"), *temp_strProjectVersion);
-	FString temp_strProjectName = m_refVRGameInstance->GetProjectName();
-	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Name:,%s"), *temp_strProjectName);
+	//TODO: Implement Game Instance
+	//UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 
-	eBuildType temp_eCurrentBuildType = temp_bStreamerEnabled ? eBuildType::iStreamer : eBuildType::iGame;
+	////bool temp_bStreamerEnabled = m_refVRGameInstance->Settings->Streaming_Enabled;
+	//UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Is it for Streamer??,%d"), temp_bStreamerEnabled);
+	//FString temp_strProjectVersion = m_refVRGameInstance->GetProjectVersion();
+	//UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Version:,%s"), *temp_strProjectVersion);
+	//FString temp_strProjectName = m_refVRGameInstance->GetProjectName();
+	//UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Name:,%s"), *temp_strProjectName);
 
-	int temp_iBuildType = (int)(temp_eCurrentBuildType);
-	m_funcCreateOPSClient(TCHAR_TO_ANSI(*temp_strProjectName), "Clock Tower", TCHAR_TO_ANSI(*temp_strProjectVersion), false, temp_iBuildType, eAttractionType::iArena);//STREAMER MAKE THE LAST ON TRUE
-	//m_funcCreateOPSClient("Clocktower", "Clocktower", "1.0", false, temp_iBuildType);//STREAMER MAKE THE LAST ON TRUE
+	//eBuildType temp_eCurrentBuildType = temp_bStreamerEnabled ? eBuildType::iStreamer : eBuildType::iGame;
+
+	//int temp_iBuildType = (int)(temp_eCurrentBuildType);
+	//m_funcCreateOPSClient(TCHAR_TO_ANSI(*temp_strProjectName), "Clock Tower", TCHAR_TO_ANSI(*temp_strProjectVersion), false, temp_iBuildType, eAttractionType::iArena);//STREAMER MAKE THE LAST ON TRUE
+	////m_funcCreateOPSClient("Clocktower", "Clocktower", "1.0", false, temp_iBuildType);//STREAMER MAKE THE LAST ON TRUE
 
 	SetGameInformation(300, 1, 1, eInputNameType::None);
 
@@ -664,19 +649,21 @@ void UOpsManager::CreateOPSClient()
 
 
 	//m_funcSetSupportedLanguages(arrLanguages, 3);
-	ClearSupportedLanguages();
-	if (m_refVRGameInstance->m_arrSupportedLanguageNames.Num() > 0)
-	{
-		//SetSupportedLanguages(m_refVRGameInstance->m_arrSupportedLanguageNames, m_refVRGameInstance->m_arrSupportedLanguageNames.Num());//PLEASE ADDED METHOSD TO FIND LENGHT!!!!
-		for (int i = 0; i < m_refVRGameInstance->m_arrSupportedLanguageNames.Num(); i++)
-		{
-			AddSupportedLanguage(m_refVRGameInstance->m_arrSupportedLanguageNames[i]);
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:m_arrSupportedLanguageNames is EMPTY !!!!"));
-	}
+
+	//FIXME: Note sure what has been followed to implement supported language
+	//ClearSupportedLanguages();
+	//if (m_refVRGameInstance->m_arrSupportedLanguageNames.Num() > 0)
+	//{
+	//	//SetSupportedLanguages(m_refVRGameInstance->m_arrSupportedLanguageNames, m_refVRGameInstance->m_arrSupportedLanguageNames.Num());//PLEASE ADDED METHOSD TO FIND LENGHT!!!!
+	//	for (int i = 0; i < m_refVRGameInstance->m_arrSupportedLanguageNames.Num(); i++)
+	//	{
+	//		AddSupportedLanguage(m_refVRGameInstance->m_arrSupportedLanguageNames[i]);
+	//	}
+	//}
+	//else
+	//{
+	//	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:m_arrSupportedLanguageNames is EMPTY !!!!"));
+	//}
 
 
 	ClearConnectedDevicesData();
@@ -801,29 +788,31 @@ void UOpsManager::Tick(float DeltaTime)
 		//wait and send lighthouse status***********************************
 		//Will Set as Disconnected
 
-		UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
+		//TODO: Implement GameInstance
+		//UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 
 		SendLighthouseStatus("A", eDeviceStatus::iNotConnected);
 		SendLighthouseStatus("B", eDeviceStatus::iNotConnected);
 		UE_LOG(LogTemp, Error, TEXT("UOpsManager:m_bInitReceived!!!"));
-		if (m_refVRGameInstance != nullptr)
+		//TODO: Implement GameInstance
+		/*if (m_refVRGameInstance != nullptr)
 		{
 			m_refVRGameInstance->SteamVRStatus->CheckForStatus();
 			m_refVRGameInstance->CheckAndUpdateLightHouseStatus(true);
 			UE_LOG(LogTemp, Error, TEXT("UOpsManager:Inside m_bInitReceived:Sending Lighthouse status!"));
-		}
+		}*/
 	}
 	if (m_bOPSConfigurationReceived)
 	{
 
-		UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
+		//TODO: Implement GameInstance
+		//UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 
-
-		m_refVRGameInstance->InitializeAnalyticsData();
+		/*m_refVRGameInstance->InitializeAnalyticsData();
 		UE_LOG(LogTemp, Error, TEXT("UOpsManager:OPSConfigurationReceived!!! InitializeAnalyticsData as OPS configuration recieved!"));
 		m_refVRGameInstance->Settings->Physical_Props_Enabled = m_dataOPS_Configuration.UseVirtualProps;
 		UE_LOG(LogTemp, Error, TEXT("CPP: OPSConfigurationReceived!!! Settings object is Overwritten for PHyiscal prop! ,based on OPS.dll config!!!Value:%d"), m_dataOPS_Configuration.UseVirtualProps);
-
+*/
 		SendOPSConfigResponse();
 		m_bOPSConfigurationReceived = false;
 	}
@@ -831,17 +820,19 @@ void UOpsManager::Tick(float DeltaTime)
 	{
 		//SendStartResponseToOPS();
 		//Put onStartCommandReceived here...from game instance bcos of threading
-		UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
+		//TODO: Implement GameInstance
+		/*UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 		m_refVRGameInstance->onStartCommandReceived();
-		m_bStartReceived = false;
+		m_bStartReceived = false;*/
 	}
 	if (m_bEndReceived)
 	{
 		//Put onm_bEndReceived here...from game instance bcos of threading
 		//SendEndResponseToOPS();
-		UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
+		//TODO: Implement GameInstance
+		/*UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 		m_refVRGameInstance->OnEndCommandReceived();
-		m_bEndReceived = false;
+		m_bEndReceived = false;*/
 	}
 
 	if (m_bLanguageChangeReceived)
@@ -852,17 +843,19 @@ void UOpsManager::Tick(float DeltaTime)
 
 	if (m_bDeviceUpdate)
 	{
-		UE_LOG(LogTemp, Error, TEXT("UOpsManager:DeviceUpdate Called.!"));
+		//TODO: Implement GameInstance
+		/*UE_LOG(LogTemp, Error, TEXT("UOpsManager:DeviceUpdate Called.!"));
 		UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 		m_refVRGameInstance->CheckAndSendVRDeviceStatusFromOPSDLL();
-		m_bDeviceUpdate = false;
+		m_bDeviceUpdate = false;*/
 	}
 	if (m_bScreenshot)
 	{
-		UE_LOG(LogTemp, Error, TEXT("UOpsManager:m_bScreenshot Called.!"));
+		//TODO: Implement GameInstance
+		/*UE_LOG(LogTemp, Error, TEXT("UOpsManager:m_bScreenshot Called.!"));
 		UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 		m_refVRGameInstance->ScreenShotReceivedFromOPSDLL();
-		m_bScreenshot = false;
+		m_bScreenshot = false;*/
 	}
 
 	if (m_bClearScoreData == true)
@@ -941,7 +934,8 @@ void UOpsManager::SetIPForOPS(FString a_strOPSIP)
 		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function was not initialized"));
 		return;
 	}
-	UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
+	//TODO: Implement GameInstance
+	/*UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
 	FString temp_strOPSIPFromSettings = m_refVRGameInstance->Settings->OPS_IP;
 
 	if (!m_refVRGameInstance->m_strOPSIP.IsEmpty())
@@ -960,7 +954,7 @@ void UOpsManager::SetIPForOPS(FString a_strOPSIP)
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function NOT called  as SettingSOPS_IP is  empty and no Cmd Line Ip given"));
-	}
+	}*/
 
 }
 
