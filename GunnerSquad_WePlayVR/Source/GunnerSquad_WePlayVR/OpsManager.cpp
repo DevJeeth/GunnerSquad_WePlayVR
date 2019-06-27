@@ -5,7 +5,7 @@
 #include "Engine.h"
 #include <vector> 
 #include "Base64.h"
-
+#include "WePlayVR_GameInstance.h"
 
 //Gets the DLL for the specified path of a specific name
 bool UOpsManager::ImportDLL(FString a_strFolderName, FString a_strDLLName)
@@ -437,6 +437,21 @@ bool UOpsManager::ImportMethodCloseAndCleanUpOPS()
 	return false;	// Return an error.
 }
 
+bool UOpsManager::ImportMethodSendConnectedDevicesUpdate()
+{
+	if (v_dllHandle != NULL)
+	{
+		m_funcSendConnectedDeviceUpdate = NULL;
+		FString procName = "SendConnectedDevicesUpdate";	// Needs to be the exact name of the DLL method.
+		m_funcSendConnectedDeviceUpdate = (__SendConnectedDevicesUpdate)FPlatformProcess::GetDllExport(v_dllHandle, *procName);
+		if (m_funcSendConnectedDeviceUpdate != NULL)
+		{
+			return true;
+		}
+	}
+	return false;	// Return an error.
+}
+
 bool UOpsManager::ImportDLLMethods()
 {
 
@@ -590,7 +605,18 @@ bool UOpsManager::ImportDLLMethods()
 		UE_LOG(LogTemp, Error, TEXT("ImportSendClearDataResponse  FAILED!"));
 		return false;
 	}
+
+	if (!ImportMethodSendConnectedDevicesUpdate())
+	{
+		UE_LOG(LogTemp, Error, TEXT("ImportMethodSendConnectedDevicesUpdate  FAILED!"));
+		return false;
+	}
 	return true;
+}
+
+void UOpsManager::RegisterToStartCommand(OnStartCommandReceived a_delStartCommand, UObject m_refclass)
+{
+
 }
 
 void UOpsManager::SendClearDataResponse()
@@ -789,7 +815,7 @@ void UOpsManager::Tick(float DeltaTime)
 		//Will Set as Disconnected
 
 		//TODO: Implement GameInstance
-		//UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
+		//UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
 		SendLighthouseStatus("A", eDeviceStatus::iNotConnected);
 		SendLighthouseStatus("B", eDeviceStatus::iNotConnected);
@@ -818,6 +844,9 @@ void UOpsManager::Tick(float DeltaTime)
 	}
 	if (m_bStartReceived)
 	{
+
+		m_bStartReceived = false;
+
 		//SendStartResponseToOPS();
 		//Put onStartCommandReceived here...from game instance bcos of threading
 		//TODO: Implement GameInstance
@@ -967,6 +996,7 @@ void UOpsManager::SendProfileToOPS()
 	}
 
 	m_funcSendProfile();
+
 }
 
 void UOpsManager::SendInitResponseToOPS()
@@ -991,6 +1021,14 @@ void UOpsManager::SendOPSConfigResponse()
 	m_funcSendOPSConfigResponse();
 }
 
+#pragma region StartCommandProcess
+
+void UOpsManager::StartCommandReceived()
+{
+	UE_LOG(LogTemp, Log, TEXT("[OpsManager] Start Command Received"));
+	m_delOnStartCommandReceived.ExecuteIfBound();
+}
+
 void UOpsManager::SendStartResponseToOPS()
 {
 	if (m_funcSendStartResponse == NULL)
@@ -999,7 +1037,19 @@ void UOpsManager::SendStartResponseToOPS()
 		return;
 	}
 
+	UE_LOG(LogTemp, Log, TEXT("[OpsManager] Start Response Sent"));
 	m_funcSendStartResponse();
+}
+
+#pragma endregion
+
+
+#pragma region EndCommandProcess
+
+void UOpsManager::EndCommandReceived()
+{
+	UE_LOG(LogTemp, Log, TEXT("[OpsManager] End Command Received"));
+	m_delOnEndCommandReceived.ExecuteIfBound();
 }
 
 void UOpsManager::SendEndResponseToOPS()
@@ -1010,11 +1060,11 @@ void UOpsManager::SendEndResponseToOPS()
 		return;
 	}
 
+	UE_LOG(LogTemp, Log, TEXT("[OpsManager] End Response Sent"));
 	m_funcSendEndResponse();
+
 }
-
-
-
+#pragma endregion
 
 
 

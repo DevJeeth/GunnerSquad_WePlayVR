@@ -3,12 +3,12 @@
 #pragma once
 
 //TODO: These headers need to be included
-
+#include "Json.h"
+#include "JsonUtilities.h"
 #include <functional>
 #include "Runtime/Engine/Public/Tickable.h"
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "JsonUtilities.h"
 #include "OpsManager.generated.h"
 
 /**
@@ -219,7 +219,7 @@ enum class eCommand10Type :uint8
 };
 
 UCLASS()
-class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject, public FTickableGameObject
+class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UGameInstance , public FTickableGameObject 
 {
 	GENERATED_BODY()
 
@@ -250,6 +250,7 @@ private:
 	__RegisterForCommands m_funcRegisterForCommands;
 	__ClearConnectedDevicesData m_funcClearConnectedDevicesData;
 	__AddConnecedDeviceToProfile m_funcAddConnectedDeviceToProfile; 
+	__SendConnectedDevicesUpdate m_funcSendConnectedDeviceUpdate;
 	__SendLighthouseStatus m_funcSendLighthouseStatus;
 	
 	__AddPropToProfile m_funcAddPropToProfile;
@@ -290,11 +291,42 @@ private:
 
 	bool _GetIsProcessingOpsMsg();
 
+	//This delegate will be called when START COMMAND is received from OPS
+	DECLARE_DELEGATE(OnStartCommandReceived);
+	//This delegate will be called when START RESPONSE is sent to OPS 
+	DECLARE_DELEGATE(OnStartResponse);
+	//This delegate will be called when END COMMAND is received from OPS
+	DECLARE_DELEGATE(OnEndCommandReceived);
+	//This delegate will be called when END RESPONSE is sent to OPS
+	DECLARE_DELEGATE(OnEndResponse);
 
-	//Not sure if this is being used
-	//typedef void(*__SendConnectedDevicesUpdate)();
+	OnStartCommandReceived m_delOnStartCommandReceived;
+	OnStartResponse m_delOnStartResponse;
+	OnEndCommandReceived m_delOnEndCommandReceived;
+	OnEndResponse m_delEndResponse;
+
+#pragma region Methods_For_Internal_Execution
+	void StartCommandReceived();
+	void EndCommandReceived();
+
+#pragma endregion
 
 public:
+#pragma region RegisterAndDeregisterStartAndStop
+	void RegisterToStartCommand(OnStartCommandReceived m_delStartCommand, UObject m_refclass);
+	void DeregisterStartCommand();
+
+	void RegisterToEndCommand(OnEndCommandReceived m_delEndCommand, UObject m_refclass);
+	void DeregisterEndCommand();
+#pragma endregion
+
+#pragma region RegisterAndDeregisterStartAndStopResponses
+	void RegisterToStartResponse(OnStartResponse m_delStartResponse, UObject m_refclass);
+	void DeregisterStartResponse();
+
+	void RegisterToEndResponse(OnEndResponse m_delEndResponse, UObject m_refclass);
+	void DeregisterEndResponse();
+#pragma endregion
 
 	
 
@@ -403,6 +435,10 @@ public:
 
 	UFUNCTION()
 		bool ImportMethodSendClearDataResponse();
+
+	UFUNCTION()
+		bool ImportMethodSendConnectedDevicesUpdate();
+
 #pragma endregion
 
 #pragma region Methods Exposed In Unreal
@@ -461,6 +497,9 @@ public:
 		void AddConnecedDeviceToProfile(eDeviceType a_enumType, FString a_strValue, FString a_strID, eDeviceStatus a_enumStatus);
 
 	UFUNCTION()
+		void SendConnectionDeviceUpdate();
+
+	UFUNCTION()
 		void SendScreenshot(TArray<uint8> a_arrImageData);
 		FString m_strImageData;
 
@@ -485,6 +524,8 @@ public:
 	UFUNCTION()
 		void SendLighthouseStatus(FString a_strLighthouseID, eDeviceStatus a_enumStatus);
 #pragma endregion
+
+
 
 
 };

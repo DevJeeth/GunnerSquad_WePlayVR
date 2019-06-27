@@ -28,6 +28,12 @@
 /wd4838
 /we4668
 /I .
+/I Runtime\Online
+/I Runtime\Online\HTTP\Public
+/I Runtime\Online\HTTP
+/I Runtime\Online\HTTP\Public\GenericPlatform
+/I Runtime\Online\HTTP\Public\Interfaces
+/I Runtime\Online\HTTP\Public\Windows
 /I Runtime
 /I Runtime\Json\Public
 /I Runtime\Json
@@ -76,6 +82,19 @@
 /I Runtime\CoreUObject\Public\Serialization\Formatters
 /I Runtime\CoreUObject\Public\Templates
 /I Runtime\CoreUObject\Public\UObject
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay
+/I Runtime\HeadMountedDisplay\Public
+/I Runtime\HeadMountedDisplay
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
+/I Runtime\AugmentedReality\Public
+/I Runtime\AugmentedReality
+/I ..\Plugins\Runtime\Steam\SteamVR\Intermediate\Build\Win64\UE4Editor\Inc\SteamVR
+/I ..\Plugins\Runtime\Steam\SteamVR\Source
+/I ..\Plugins\Runtime\Steam\SteamVR\Source\SteamVR\Classes
+/I ..\Plugins\Runtime\Steam\SteamVR\Source\SteamVR\Public
+/I ..\Plugins\Runtime\Steam\SteamVR\Source\SteamVR
+/I ThirdParty
+/I ThirdParty\OpenVR\OpenVRv1_0_16\headers
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 /I Runtime\Engine\Classes
 /I Runtime\Engine\Public
@@ -258,12 +277,6 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\EditorSubsystem
 /I Editor\EditorSubsystem\Public
 /I Editor\EditorSubsystem
-/I Runtime\Online
-/I Runtime\Online\HTTP\Public
-/I Runtime\Online\HTTP
-/I Runtime\Online\HTTP\Public\GenericPlatform
-/I Runtime\Online\HTTP\Public\Interfaces
-/I Runtime\Online\HTTP\Public\Windows
 /I Runtime\UnrealAudio\Public
 /I Runtime\UnrealAudio
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\FunctionalTesting
@@ -289,9 +302,6 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\IntroTutorials
 /I Editor\IntroTutorials\Public
 /I Editor\IntroTutorials
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay
-/I Runtime\HeadMountedDisplay\Public
-/I Runtime\HeadMountedDisplay
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\VREditor
 /I Editor\VREditor
 /I Editor\VREditor\Public
@@ -426,7 +436,6 @@
 /I Runtime\AudioMixer\Public\DSP
 /I Runtime\AudioMixer\Public\DSP\Encoders
 /I Runtime\AudioMixer\Public\SoundFileIO
-/I ThirdParty
 /I ThirdParty\libSampleRate\Public
 /I ThirdParty\libSampleRate
 /I D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Inc\GunnerSquad_WePlayVR

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GunnerSquad_WePlayVR.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{4DCCDF04-A3DE-4323-AAA1-4D84A4793257}</UniqueIdentifier>
+      <UniqueIdentifier>{3148D8AD-D588-4090-91E0-83E30877EDDD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GunnerSquad_WePlayVR.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{160EB257-182B-4DDC-8372-1EBF2E07CA0D}</UniqueIdentifier>
+      <UniqueIdentifier>{F7E05B3F-FB86-418E-B9DF-A6936E97C28D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GunnerSquad_WePlayVR">
-      <UniqueIdentifier>{6CFD5F03-B544-40F3-97FE-3DDE8247561F}</UniqueIdentifier>
+      <UniqueIdentifier>{0F3FC91D-83E3-4E3B-AD9F-29531324F196}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.Build.cs">
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
@@ -44,15 +44,23 @@
     <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\LoadingMapManager.h">
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\OpsManager.h">
+    <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\MyClass.cpp">
+      <Filter>Source\GunnerSquad_WePlayVR</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\MyClass.h">
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\OpsManager.cpp">
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
     </ClCompile>
+    <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\OpsManager.h">
+      <Filter>Source\GunnerSquad_WePlayVR</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\WePlayVR_GameInstance.cpp">
+      <Filter>Source\GunnerSquad_WePlayVR</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\WePlayVR_GameInstance.h">
+      <Filter>Source\GunnerSquad_WePlayVR</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

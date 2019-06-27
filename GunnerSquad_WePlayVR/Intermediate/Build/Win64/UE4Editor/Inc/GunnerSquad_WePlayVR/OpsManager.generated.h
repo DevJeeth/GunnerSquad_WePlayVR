@@ -119,6 +119,14 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execSendConnectionDeviceUpdate) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendConnectionDeviceUpdate(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execAddConnecedDeviceToProfile) \
 	{ \
 		P_GET_ENUM(eDeviceType,Z_Param_a_enumType); \
@@ -273,6 +281,14 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SendClearDataResponse(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execImportMethodSendConnectedDevicesUpdate) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendConnectedDevicesUpdate(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -578,6 +594,14 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execSendConnectionDeviceUpdate) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendConnectionDeviceUpdate(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execAddConnecedDeviceToProfile) \
 	{ \
 		P_GET_ENUM(eDeviceType,Z_Param_a_enumType); \
@@ -732,6 +756,14 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SendClearDataResponse(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execImportMethodSendConnectedDevicesUpdate) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->ImportMethodSendConnectedDevicesUpdate(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -967,7 +999,7 @@ private: \
 	static void StaticRegisterNativesUOpsManager(); \
 	friend struct Z_Construct_UClass_UOpsManager_Statics; \
 public: \
-	DECLARE_CLASS(UOpsManager, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GunnerSquad_WePlayVR"), NO_API) \
+	DECLARE_CLASS(UOpsManager, UGameInstance, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/GunnerSquad_WePlayVR"), NO_API) \
 	DECLARE_SERIALIZER(UOpsManager)
 
 
@@ -976,7 +1008,7 @@ private: \
 	static void StaticRegisterNativesUOpsManager(); \
 	friend struct Z_Construct_UClass_UOpsManager_Statics; \
 public: \
-	DECLARE_CLASS(UOpsManager, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/GunnerSquad_WePlayVR"), NO_API) \
+	DECLARE_CLASS(UOpsManager, UGameInstance, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/GunnerSquad_WePlayVR"), NO_API) \
 	DECLARE_SERIALIZER(UOpsManager)
 
 
