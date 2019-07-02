@@ -441,10 +441,10 @@ bool UOpsManager::ImportMethodSendConnectedDevicesUpdate()
 {
 	if (v_dllHandle != NULL)
 	{
-		m_funcSendConnectedDeviceUpdate = NULL;
+		m_funcSendConnectedDevicesUpdate = NULL;
 		FString procName = "SendConnectedDevicesUpdate";	// Needs to be the exact name of the DLL method.
-		m_funcSendConnectedDeviceUpdate = (__SendConnectedDevicesUpdate)FPlatformProcess::GetDllExport(v_dllHandle, *procName);
-		if (m_funcSendConnectedDeviceUpdate != NULL)
+		m_funcSendConnectedDevicesUpdate = (__SendConnectedDevicesUpdate)FPlatformProcess::GetDllExport(v_dllHandle, *procName);
+		if (m_funcSendConnectedDevicesUpdate != NULL)
 		{
 			return true;
 		}
@@ -614,7 +614,22 @@ bool UOpsManager::ImportDLLMethods()
 	return true;
 }
 
-void UOpsManager::RegisterToStartCommand(OnStartCommandReceived a_delStartCommand, UObject m_refclass)
+void UOpsManager::RegisterToStartCommand(OnStartCommandReceived a_delStartCommands)
+{
+
+}
+
+void UOpsManager::DeregisterStartCommand()
+{
+
+}
+
+void UOpsManager::RegisterToEndCommand(OnEndCommandReceived m_delEndCommand)
+{
+
+
+}
+void UOpsManager::DeregisterEndCommand()
 {
 
 }
@@ -810,9 +825,6 @@ void UOpsManager::Tick(float DeltaTime)
 	{
 		SendInitResponseToOPS();
 		m_bInitReceived = false;
-
-		//wait and send lighthouse status***********************************
-		//Will Set as Disconnected
 
 		//TODO: Implement GameInstance
 		//UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
@@ -1221,18 +1233,18 @@ void UOpsManager::AddConnecedDeviceToProfile(eDeviceType a_enumType, FString a_s
 //	m_funcAddSupportedLanguage(TCHAR_TO_ANSI(*a_strLanguageName));
 //}
 //
-//void UOpsManager::SendConnectedDevicesUpdate()
-//{
-//	if (m_funcSendConnectedDevicesUpdate == NULL)
-//	{
-//		UE_LOG(LogTemp, Error, TEXT("m_funcSendConnectedDevicesUpdate was not initialized"));
-//		return;
-//	}
-//
-//	m_funcSendConnectedDevicesUpdate();
-//}
 /*************************************/
 
+void UOpsManager::SendConnectedDevicesUpdate()
+{
+	if (m_funcSendConnectedDevicesUpdate == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("m_funcSendConnectedDevicesUpdate was not initialized"));
+		return;
+	}
+
+	m_funcSendConnectedDevicesUpdate();
+}
 
 void UOpsManager::SendScreenshot(TArray<uint8> a_arrImageData)
 {
@@ -1247,10 +1259,6 @@ void UOpsManager::SendScreenshot(TArray<uint8> a_arrImageData)
 
 	m_funcSendScreenshot(TCHAR_TO_ANSI(*m_strImageData));
 }
-
-
-
-
 
 void UOpsManager::SendStartRumble(FString a_strClipName, int a_nVolume, bool a_bPlayOnce)
 {
@@ -1275,7 +1283,6 @@ void UOpsManager::SendStopRumble()
 	m_funcSendStopRumble();
 }
 
-
 void UOpsManager::SetSessionID(FString a_strSessionID)
 {
 
@@ -1287,7 +1294,6 @@ void UOpsManager::SetSessionID(FString a_strSessionID)
 
 	m_funcSetSessionID(TCHAR_TO_ANSI(*a_strSessionID));
 }
-
 
 void UOpsManager::SendLanguageChangeResponse()
 {
@@ -1336,10 +1342,6 @@ void UOpsManager::SendLighthouseStatus(FString a_strLighthouseID, eDeviceStatus 
 
 	m_funcSendLighthouseStatus(TCHAR_TO_ANSI(*a_strLighthouseID), a_enumStatus);
 }
-
-
-
-
 
 void UOpsManager::SetIsProcessingCmdStatus(bool a_bIsProcessingOpsMsg)
 {

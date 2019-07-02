@@ -1,4 +1,4 @@
-﻿Log file open, 06/27/19 12:53:01
+﻿Log file open, 07/02/19 11:27:49
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -10,7 +10,7 @@ LogInit: Display: Running engine for game: GunnerSquad_WePlayVR
 LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 35 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.506408
+LogStats: Stats thread started at 0.387254
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +5:30, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -104,17 +104,17 @@ Creating makefile for GunnerSquad_WePlayVREditor (ini files are newer than makef
 @progress push 5%
 Parsing headers for GunnerSquad_WePlayVREditor
   Running UnrealHeaderTool "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.uproject" "D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\GunnerSquad_WePlayVREditor\Development\GunnerSquad_WePlayVREditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-Reflection code generated for GunnerSquad_WePlayVREditor in 50.0547576 seconds
+Reflection code generated for GunnerSquad_WePlayVREditor in 27.6909206 seconds
 @progress pop
 Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-Building 5 actions with 12 processes...
+Building 2 actions with 12 processes...
   @progress 'Compiling C++ source code...' 0%
-  @progress 'Compiling C++ source code...' 20%
-  [1/5] WePlayVR_GameInstance.cpp
-  d:\0_projects\z_myplayground\0_unreal_projects\1_gunnersquad\gunnersquad_weplayvr\source\gunnersquad_weplayvr\WePlayVR_GameInstance.h(16): error C2338: You have to define UWePlayVR_GameInstance::UWePlayVR_GameInstance() or UWePlayVR_GameInstance::UWePlayVR_GameInstance(const FObjectInitializer&). This is required by UObject system to work correctly.
-  @progress 'Compiling C++ source code...' 40%
-  [2/5] WePlayVR_GameInstance.gen.cpp
-  D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Source\GunnerSquad_WePlayVR/WePlayVR_GameInstance.h(16): error C2338: You have to define UWePlayVR_GameInstance::UWePlayVR_GameInstance() or UWePlayVR_GameInstance::UWePlayVR_GameInstance(const FObjectInitializer&). This is required by UObject system to work correctly.
+  @progress 'Compiling C++ source code...' 50%
+  [1/2] UE4Editor-GunnerSquad_WePlayVR.dll
+     Creating library D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR.suppressed.lib and object D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Development\GunnerSquad_WePlayVR\UE4Editor-GunnerSquad_WePlayVR.suppressed.exp
+  OpsManager.cpp.obj : error LNK2019: unresolved external symbol "public: void __cdecl UOpsManager::SendConnectionDeviceUpdate(void)" (?SendConnectionDeviceUpdate@UOpsManager@@QEAAXXZ) referenced in function "public: static void __cdecl UOpsManager::execSendConnectionDeviceUpdate(class UObject *,struct FFrame &,void * const)" (?execSendConnectionDeviceUpdate@UOpsManager@@SAXPEAVUObject@@AEAUFFrame@@QEAX@Z)
+  OpsManager.gen.cpp.obj : error LNK2001: unresolved external symbol "public: void __cdecl UOpsManager::SendConnectionDeviceUpdate(void)" (?SendConnectionDeviceUpdate@UOpsManager@@QEAAXXZ)
+  D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Binaries\Win64\UE4Editor-GunnerSquad_WePlayVR.dll : fatal error LNK1120: 1 unresolved externals
 LogInit: Warning: Still incompatible or missing module: GunnerSquad_WePlayVR
 LogExit: Preparing to exit.
 LogModuleManager: Shutting down and abandoning module DesktopPlatform (40)
@@ -138,4 +138,4 @@ LogModuleManager: Shutting down and abandoning module SandboxFile (6)
 LogModuleManager: Shutting down and abandoning module PakFile (4)
 LogModuleManager: Shutting down and abandoning module RSA (3)
 LogExit: Exiting.
-Log file closed, 06/27/19 12:54:13
+Log file closed, 07/02/19 11:32:52

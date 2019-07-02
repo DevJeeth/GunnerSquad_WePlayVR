@@ -3,12 +3,13 @@
 #pragma once
 
 //TODO: These headers need to be included
-#include "Json.h"
-#include "JsonUtilities.h"
+
 #include <functional>
 #include "Runtime/Engine/Public/Tickable.h"
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "Json.h"
+#include "JsonUtilities.h"
 #include "OpsManager.generated.h"
 
 /**
@@ -250,7 +251,7 @@ private:
 	__RegisterForCommands m_funcRegisterForCommands;
 	__ClearConnectedDevicesData m_funcClearConnectedDevicesData;
 	__AddConnecedDeviceToProfile m_funcAddConnectedDeviceToProfile; 
-	__SendConnectedDevicesUpdate m_funcSendConnectedDeviceUpdate;
+	__SendConnectedDevicesUpdate m_funcSendConnectedDevicesUpdate;
 	__SendLighthouseStatus m_funcSendLighthouseStatus;
 	
 	__AddPropToProfile m_funcAddPropToProfile;
@@ -308,23 +309,22 @@ private:
 #pragma region Methods_For_Internal_Execution
 	void StartCommandReceived();
 	void EndCommandReceived();
-
 #pragma endregion
 
 public:
 #pragma region RegisterAndDeregisterStartAndStop
-	void RegisterToStartCommand(OnStartCommandReceived m_delStartCommand, UObject m_refclass);
+	void RegisterToStartCommand(OnStartCommandReceived m_delStartCommand);
 	void DeregisterStartCommand();
 
-	void RegisterToEndCommand(OnEndCommandReceived m_delEndCommand, UObject m_refclass);
+	void RegisterToEndCommand(OnEndCommandReceived m_delEndCommand);
 	void DeregisterEndCommand();
 #pragma endregion
 
 #pragma region RegisterAndDeregisterStartAndStopResponses
-	void RegisterToStartResponse(OnStartResponse m_delStartResponse, UObject m_refclass);
+	void RegisterToStartResponse(OnStartResponse m_delStartResponse);
 	void DeregisterStartResponse();
 
-	void RegisterToEndResponse(OnEndResponse m_delEndResponse, UObject m_refclass);
+	void RegisterToEndResponse(OnEndResponse m_delEndResponse);
 	void DeregisterEndResponse();
 #pragma endregion
 
@@ -497,7 +497,7 @@ public:
 		void AddConnecedDeviceToProfile(eDeviceType a_enumType, FString a_strValue, FString a_strID, eDeviceStatus a_enumStatus);
 
 	UFUNCTION()
-		void SendConnectionDeviceUpdate();
+		void SendConnectedDevicesUpdate();
 
 	UFUNCTION()
 		void SendScreenshot(TArray<uint8> a_arrImageData);

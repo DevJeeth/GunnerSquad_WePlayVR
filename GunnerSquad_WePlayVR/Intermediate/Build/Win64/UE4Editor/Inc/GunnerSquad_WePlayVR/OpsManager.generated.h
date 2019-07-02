@@ -16,35 +16,35 @@ enum class eInputNameType : uint8;
 #endif
 #define GUNNERSQUAD_WEPLAYVR_OpsManager_generated_h
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_130_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_131_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_GameServerData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_GameServerData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_116_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_117_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_GameServerClientData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_GameServerClientData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_94_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_95_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_StartData_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_StartData>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_67_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_68_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FstructOPS_Data_Statics; \
 	GUNNERSQUAD_WEPLAYVR_API static class UScriptStruct* StaticStruct();
 
 
 template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOPS_Data>();
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_RPC_WRAPPERS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execSendLighthouseStatus) \
 	{ \
@@ -119,11 +119,11 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execSendConnectionDeviceUpdate) \
+	DECLARE_FUNCTION(execSendConnectedDevicesUpdate) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->SendConnectionDeviceUpdate(); \
+		P_THIS->SendConnectedDevicesUpdate(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -519,7 +519,7 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 	}
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSendLighthouseStatus) \
 	{ \
@@ -594,11 +594,11 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execSendConnectionDeviceUpdate) \
+	DECLARE_FUNCTION(execSendConnectedDevicesUpdate) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->SendConnectionDeviceUpdate(); \
+		P_THIS->SendConnectedDevicesUpdate(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -994,7 +994,7 @@ template<> GUNNERSQUAD_WEPLAYVR_API UScriptStruct* StaticStruct<struct FstructOP
 	}
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_INCLASS_NO_PURE_DECLS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUOpsManager(); \
 	friend struct Z_Construct_UClass_UOpsManager_Statics; \
@@ -1003,7 +1003,7 @@ public: \
 	DECLARE_SERIALIZER(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_INCLASS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_INCLASS \
 private: \
 	static void StaticRegisterNativesUOpsManager(); \
 	friend struct Z_Construct_UClass_UOpsManager_Statics; \
@@ -1012,7 +1012,7 @@ public: \
 	DECLARE_SERIALIZER(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_STANDARD_CONSTRUCTORS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOpsManager(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOpsManager) \
@@ -1025,7 +1025,7 @@ private: \
 public:
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_ENHANCED_CONSTRUCTORS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOpsManager(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -1038,26 +1038,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UOpsManager); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOpsManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_PRIVATE_PROPERTY_OFFSET
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_221_PROLOG
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_GENERATED_BODY_LEGACY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_PRIVATE_PROPERTY_OFFSET
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_222_PROLOG
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_PRIVATE_PROPERTY_OFFSET \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_RPC_WRAPPERS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_INCLASS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_STANDARD_CONSTRUCTORS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_PRIVATE_PROPERTY_OFFSET \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_RPC_WRAPPERS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_INCLASS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_PRIVATE_PROPERTY_OFFSET \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_RPC_WRAPPERS_NO_PURE_DECLS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_INCLASS_NO_PURE_DECLS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_224_ENHANCED_CONSTRUCTORS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_PRIVATE_PROPERTY_OFFSET \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_RPC_WRAPPERS_NO_PURE_DECLS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_INCLASS_NO_PURE_DECLS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_OpsManager_h_225_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

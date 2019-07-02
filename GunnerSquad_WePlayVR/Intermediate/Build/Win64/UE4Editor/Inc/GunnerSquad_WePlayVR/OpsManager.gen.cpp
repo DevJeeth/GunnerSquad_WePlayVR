@@ -67,7 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_RegisterForCommands();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_RegisterForLogs();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SendClearDataResponse();
-	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SendEndResponseToOPS();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SendInitResponseToOPS();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SendLanguageChangeResponse();
@@ -987,7 +987,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 			{ "RegisterForCommands", &UOpsManager::execRegisterForCommands },
 			{ "RegisterForLogs", &UOpsManager::execRegisterForLogs },
 			{ "SendClearDataResponse", &UOpsManager::execSendClearDataResponse },
-			{ "SendConnectionDeviceUpdate", &UOpsManager::execSendConnectionDeviceUpdate },
+			{ "SendConnectedDevicesUpdate", &UOpsManager::execSendConnectedDevicesUpdate },
 			{ "SendEndResponseToOPS", &UOpsManager::execSendEndResponseToOPS },
 			{ "SendInitResponseToOPS", &UOpsManager::execSendInitResponseToOPS },
 			{ "SendLanguageChangeResponse", &UOpsManager::execSendLanguageChangeResponse },
@@ -2357,7 +2357,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate_Statics
+	struct Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate_Statics
 	{
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -2365,17 +2365,17 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate_Statics::Function_MetaDataParams[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "OpsManager.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "SendConnectionDeviceUpdate", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "SendConnectedDevicesUpdate", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2919,7 +2919,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		{ &Z_Construct_UFunction_UOpsManager_RegisterForCommands, "RegisterForCommands" }, // 2841698792
 		{ &Z_Construct_UFunction_UOpsManager_RegisterForLogs, "RegisterForLogs" }, // 651513903
 		{ &Z_Construct_UFunction_UOpsManager_SendClearDataResponse, "SendClearDataResponse" }, // 2811696306
-		{ &Z_Construct_UFunction_UOpsManager_SendConnectionDeviceUpdate, "SendConnectionDeviceUpdate" }, // 1735106274
+		{ &Z_Construct_UFunction_UOpsManager_SendConnectedDevicesUpdate, "SendConnectedDevicesUpdate" }, // 3227808689
 		{ &Z_Construct_UFunction_UOpsManager_SendEndResponseToOPS, "SendEndResponseToOPS" }, // 1922378203
 		{ &Z_Construct_UFunction_UOpsManager_SendInitResponseToOPS, "SendInitResponseToOPS" }, // 3086451723
 		{ &Z_Construct_UFunction_UOpsManager_SendLanguageChangeResponse, "SendLanguageChangeResponse" }, // 576511871
@@ -2970,7 +2970,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UOpsManager, 1787076645);
+	IMPLEMENT_CLASS(UOpsManager, 2069624311);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UOpsManager>()
 	{
 		return UOpsManager::StaticClass();
