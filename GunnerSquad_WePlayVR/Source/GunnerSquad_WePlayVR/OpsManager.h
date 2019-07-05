@@ -312,8 +312,12 @@ private:
 #pragma endregion
 
 public:
+
+	UOpsManager();
+
 #pragma region RegisterAndDeregisterStartAndStop
-	void RegisterToStartCommand(OnStartCommandReceived m_delStartCommand);
+	template <typename T>
+	void RegisterToStartCommand(T a_classType void* a_func); 
 	void DeregisterStartCommand();
 
 	void RegisterToEndCommand(OnEndCommandReceived m_delEndCommand);

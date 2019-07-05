@@ -7,6 +7,13 @@
 #include "Base64.h"
 #include "WePlayVR_GameInstance.h"
 
+
+UOpsManager::UOpsManager()
+{
+	TSharedRef< FLogWriter > m_refLogWriter(new FLogWriter());
+	RegisterToStartCommand(m_refLogWriter, &FLogWriter::WriteToLog);
+}
+
 //Gets the DLL for the specified path of a specific name
 bool UOpsManager::ImportDLL(FString a_strFolderName, FString a_strDLLName)
 {
@@ -615,9 +622,11 @@ bool UOpsManager::ImportDLLMethods()
 	return true;
 }
 
-void UOpsManager::RegisterToStartCommand(OnStartCommandReceived a_delStartCommands)
+template <typename T>
+void UOpsManager::RegisterToStartCommand(T a_classType, void* a_func)
 {
-
+	TSharedRef< a_classType > delClass(new a_classType()); 
+	m_delOnStartCommandReceived.BindSP(delClass, a_func);
 }
 
 void UOpsManager::DeregisterStartCommand()
@@ -1351,3 +1360,13 @@ void UOpsManager::SetIsProcessingCmdStatus(bool a_bIsProcessingOpsMsg)
 }
 
 
+class FLogWriter
+{
+	void WriteToLog(FString);
+
+public:
+	void FLogWriter::WriteToLog(FString a_strData)
+	{
+		UE_LOG(LogLoad, Error, TEXT("WRITE LOG."));
+	}
+};
