@@ -30,6 +30,7 @@ bool UOpsManager::ImportDLL(FString a_strFolderName, FString a_strDLLName)
 bool UOpsManager::ImportMethodRegisterForLogs()
 {
 	if (v_dllHandle != NULL)
+
 	{
 		m_funcRegisterForLogs = NULL;
 		FString procName = "RegisterForLogs";	// Needs to be the exact name of the DLL method.
