@@ -11,8 +11,6 @@
 //
 //void UWePlayVR_GameInstance::Init()
 //{
-//	Super::Init();
-//	
 //	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Init "));
 //}
 //

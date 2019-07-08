@@ -317,7 +317,7 @@ public:
 
 #pragma region RegisterAndDeregisterStartAndStop
 	template <typename T>
-	void RegisterToStartCommand(T a_classType void* a_func); 
+	void RegisterToStartCommand(T a_classType, void* a_func); 
 	void DeregisterStartCommand();
 
 	void RegisterToEndCommand(OnEndCommandReceived m_delEndCommand);

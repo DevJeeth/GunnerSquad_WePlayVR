@@ -10,8 +10,6 @@
 
 UOpsManager::UOpsManager()
 {
-	TSharedRef< FLogWriter > m_refLogWriter(new FLogWriter());
-	RegisterToStartCommand(m_refLogWriter, &FLogWriter::WriteToLog);
 }
 
 //Gets the DLL for the specified path of a specific name
@@ -625,8 +623,8 @@ bool UOpsManager::ImportDLLMethods()
 template <typename T>
 void UOpsManager::RegisterToStartCommand(T a_classType, void* a_func)
 {
-	TSharedRef< a_classType > delClass(new a_classType()); 
-	m_delOnStartCommandReceived.BindSP(delClass, a_func);
+	
+	m_delOnStartCommandReceived.BindSP(a_classType, a_func);
 }
 
 void UOpsManager::DeregisterStartCommand()
@@ -1359,14 +1357,3 @@ void UOpsManager::SetIsProcessingCmdStatus(bool a_bIsProcessingOpsMsg)
 	UE_LOG(LogTemp, Error, TEXT("SetIsProcessingCmdStatus: a_bIsProcessingOpsMsg? :%d"), m_bIsProcessingOpsMsg);
 }
 
-
-class FLogWriter
-{
-	void WriteToLog(FString);
-
-public:
-	void FLogWriter::WriteToLog(FString a_strData)
-	{
-		UE_LOG(LogLoad, Error, TEXT("WRITE LOG."));
-	}
-};
