@@ -10,6 +10,7 @@
 
 UOpsManager::UOpsManager()
 {
+
 }
 
 //Gets the DLL for the specified path of a specific name
@@ -620,11 +621,12 @@ bool UOpsManager::ImportDLLMethods()
 	return true;
 }
 
+
 template <typename T>
-void UOpsManager::RegisterToStartCommand(T a_classType, void* a_func)
+void UOpsManager::RegisterToStartCommand(T a_classType, TFunction<void()> a_func)// std::function<void()> a_func
 {
-	
-	m_delOnStartCommandReceived.BindSP(a_classType, a_func);
+	m_delOnStartCommandReceived.AddDynamic(a_classType, a_func);
+
 }
 
 void UOpsManager::DeregisterStartCommand()
@@ -632,11 +634,12 @@ void UOpsManager::DeregisterStartCommand()
 
 }
 
-void UOpsManager::RegisterToEndCommand(OnEndCommandReceived m_delEndCommand)
+template <typename T>
+void UOpsManager::RegisterToEndCommand(T a_classType, std::function<void()> a_func)
 {
 
-
 }
+
 void UOpsManager::DeregisterEndCommand()
 {
 
@@ -719,10 +722,6 @@ void UOpsManager::CreateOPSClient()
 	AddConnecedDeviceToProfile(eDeviceType::iHMD, "Vive", "Main", eDeviceStatus::iNotConnected);
 	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0", "Left", eDeviceStatus::iNotConnected);
 	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, "0", "Right", eDeviceStatus::iNotConnected);
-
-	//As light house is a seperate entity.
-	//AddConnecedDeviceToProfile(eDeviceType::iVive_Lighthouse, "0", "A", eDeviceStatus::iNotConnected);
-	//AddConnecedDeviceToProfile(eDeviceType::iVive_Lighthouse, "0", "B", eDeviceStatus::iNotConnected);
 
 }
 
@@ -1046,7 +1045,7 @@ void UOpsManager::SendOPSConfigResponse()
 void UOpsManager::StartCommandReceived()
 {
 	UE_LOG(LogTemp, Log, TEXT("[OpsManager] Start Command Received"));
-	m_delOnStartCommandReceived.ExecuteIfBound();
+	m_delOnStartCommandReceived.Broadcast();
 }
 
 void UOpsManager::SendStartResponseToOPS()
@@ -1355,5 +1354,12 @@ void UOpsManager::SetIsProcessingCmdStatus(bool a_bIsProcessingOpsMsg)
 {
 	m_bIsProcessingOpsMsg = a_bIsProcessingOpsMsg;
 	UE_LOG(LogTemp, Error, TEXT("SetIsProcessingCmdStatus: a_bIsProcessingOpsMsg? :%d"), m_bIsProcessingOpsMsg);
+}
+
+
+void UOpsManager::SimulateStartFromOPS()
+{
+	UE_LOG(LogLoad, Log, TEXT("Calling the Delegate on START."));
+	m_delOnStartCommandReceived.Broadcast();
 }
 

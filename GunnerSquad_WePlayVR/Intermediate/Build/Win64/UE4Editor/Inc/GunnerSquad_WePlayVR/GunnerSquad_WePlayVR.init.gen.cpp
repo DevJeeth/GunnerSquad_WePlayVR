@@ -11,18 +11,22 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGunnerSquad_WePlayVR_init() {}
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_GunnerSquad_WePlayVR()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature,
+			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/GunnerSquad_WePlayVR",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xFD99099D,
-				0x84FEEB3C,
+				0xE0B4661B,
+				0x9189926C,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

@@ -219,6 +219,8 @@ enum class eCommand10Type :uint8
 	iClearData = 8
 };
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartCommandReceived);
+
 UCLASS()
 class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UGameInstance , public FTickableGameObject 
 {
@@ -293,7 +295,8 @@ private:
 	bool _GetIsProcessingOpsMsg();
 
 	//This delegate will be called when START COMMAND is received from OPS
-	DECLARE_DELEGATE(OnStartCommandReceived);
+	//DECLARE_DELEGATE(OnStartCommandReceived);
+	
 	//This delegate will be called when START RESPONSE is sent to OPS 
 	DECLARE_DELEGATE(OnStartResponse);
 	//This delegate will be called when END COMMAND is received from OPS
@@ -301,7 +304,7 @@ private:
 	//This delegate will be called when END RESPONSE is sent to OPS
 	DECLARE_DELEGATE(OnEndResponse);
 
-	OnStartCommandReceived m_delOnStartCommandReceived;
+	
 	OnStartResponse m_delOnStartResponse;
 	OnEndCommandReceived m_delOnEndCommandReceived;
 	OnEndResponse m_delEndResponse;
@@ -314,13 +317,14 @@ private:
 public:
 
 	UOpsManager();
-
+	FOnStartCommandReceived m_delOnStartCommandReceived;
 #pragma region RegisterAndDeregisterStartAndStop
 	template <typename T>
-	void RegisterToStartCommand(T a_classType, void* a_func); 
+	void RegisterToStartCommand(T a_classType, TFunction<void()> a_func);//std::function<void()> a_func
 	void DeregisterStartCommand();
 
-	void RegisterToEndCommand(OnEndCommandReceived m_delEndCommand);
+	template <typename T>
+	void RegisterToEndCommand(T a_classType, std::function<void()> a_func);
 	void DeregisterEndCommand();
 #pragma endregion
 
@@ -332,7 +336,8 @@ public:
 	void DeregisterEndResponse();
 #pragma endregion
 
-	
+	//This is just for testing, remove this
+	void SimulateStartFromOPS();
 
 	void Tick(float DeltaTime) override;
 	bool IsTickable() const override;

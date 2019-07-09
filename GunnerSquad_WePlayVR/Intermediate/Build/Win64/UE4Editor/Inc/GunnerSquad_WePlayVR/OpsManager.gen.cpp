@@ -13,8 +13,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 // Cross Module References
-	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eCommand10Type();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
+	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eCommand10Type();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eLogType();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eInputNameType();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eBuildType();
@@ -85,6 +86,28 @@ void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SetSessionID();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SetSupportedLanguages();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR, nullptr, "OnStartCommandReceived__DelegateSignature", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	static UEnum* eCommand10Type_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
