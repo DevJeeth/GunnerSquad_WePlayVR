@@ -15,12 +15,26 @@ AGameManager::AGameManager()
 void AGameManager::BeginPlay()
 {
 	Super::BeginPlay();
-	m_refOpsManager = Cast<UOpsManager>(GetGameInstance());
+
+	//m_refOpsManager = Cast<UOpsManager>(UGameplayStatics::GetGameInstance(GetWorld()));
+
+	m_refOpsManager = NewObject<UOpsManager>(this);
+	if (m_refOpsManager != NULL)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("OpsManager FOUND"));
+		m_refOpsManager->WelcomeMessage();
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("OpsManager NOT FOUND"));
+		return;
+	}
+	
 	m_refOpsManager->m_delOnStartCommandReceived.AddDynamic(this, &AGameManager::StartGame);
+	UE_LOG(LogTemp, Warning, TEXT("Registered StartGame to delegate"));
 	//auto func = std::bind(&AGameManager::StartGame, this);
 	//m_refOpsManager->RegisterToStartCommand(this, func); 
-	////m_refOpsManager->RegisterToStartCommand(this, this->StartGame);
-	//m_refOpsManager->SimulateStartFromOPS();
+	m_refOpsManager->SimulateStartFromOPS();
 }
 
 

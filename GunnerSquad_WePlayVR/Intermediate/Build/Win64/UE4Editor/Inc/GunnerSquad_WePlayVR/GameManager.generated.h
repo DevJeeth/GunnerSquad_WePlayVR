@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GUNNERSQUAD_WEPLAYVR_GameManager_generated_h
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_RPC_WRAPPERS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execStartGame) \
 	{ \
@@ -24,7 +24,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execStartGame) \
 	{ \
@@ -35,7 +35,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_INCLASS_NO_PURE_DECLS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGameManager(); \
 	friend struct Z_Construct_UClass_AGameManager_Statics; \
@@ -44,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(AGameManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_INCLASS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAGameManager(); \
 	friend struct Z_Construct_UClass_AGameManager_Statics; \
@@ -53,7 +53,7 @@ public: \
 	DECLARE_SERIALIZER(AGameManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_STANDARD_CONSTRUCTORS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AGameManager(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGameManager) \
@@ -66,7 +66,7 @@ private: \
 public:
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_ENHANCED_CONSTRUCTORS \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AGameManager(AGameManager&&); \
@@ -77,26 +77,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGameManager); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGameManager)
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_PRIVATE_PROPERTY_OFFSET
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_10_PROLOG
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_GENERATED_BODY_LEGACY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_PRIVATE_PROPERTY_OFFSET
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_11_PROLOG
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_PRIVATE_PROPERTY_OFFSET \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_RPC_WRAPPERS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_INCLASS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_STANDARD_CONSTRUCTORS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_PRIVATE_PROPERTY_OFFSET \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_RPC_WRAPPERS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_INCLASS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_GENERATED_BODY \
+#define GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_PRIVATE_PROPERTY_OFFSET \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_INCLASS_NO_PURE_DECLS \
-	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_13_ENHANCED_CONSTRUCTORS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_PRIVATE_PROPERTY_OFFSET \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_INCLASS_NO_PURE_DECLS \
+	GunnerSquad_WePlayVR_Source_GunnerSquad_WePlayVR_GameManager_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

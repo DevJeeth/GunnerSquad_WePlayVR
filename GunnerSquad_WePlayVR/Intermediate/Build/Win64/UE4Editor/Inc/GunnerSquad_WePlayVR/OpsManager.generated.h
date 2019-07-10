@@ -523,6 +523,14 @@ static inline void FOnStartCommandReceived_DelegateWrapper(const FMulticastScrip
 		P_NATIVE_BEGIN; \
 		*(bool*)Z_Param__Result=P_THIS->ImportDLL(Z_Param_a_strFolderName,Z_Param_a_strDLLName); \
 		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execWelcomeMessage) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->WelcomeMessage(); \
+		P_NATIVE_END; \
 	}
 
 
@@ -997,6 +1005,14 @@ static inline void FOnStartCommandReceived_DelegateWrapper(const FMulticastScrip
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(bool*)Z_Param__Result=P_THIS->ImportDLL(Z_Param_a_strFolderName,Z_Param_a_strDLLName); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execWelcomeMessage) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->WelcomeMessage(); \
 		P_NATIVE_END; \
 	}
 

@@ -13,6 +13,27 @@ UOpsManager::UOpsManager()
 
 }
 
+~UOpsManager::UOpsManager()
+{
+
+}
+
+void UOpsManager:: WelcomeMessage()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Welcome to WePlayVR"));
+}
+
+
+UOpsManager* UOpsManager::GetInstance()
+{
+	if (instance == NULL)
+	{
+		instance = NewObject<UOpsManager>();
+	}
+
+	return instance;
+}
+
 //Gets the DLL for the specified path of a specific name
 bool UOpsManager::ImportDLL(FString a_strFolderName, FString a_strDLLName)
 {

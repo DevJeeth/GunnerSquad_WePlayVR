@@ -85,6 +85,7 @@ void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SetIPForOPS();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SetSessionID();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SetSupportedLanguages();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_WelcomeMessage();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature_Statics
 	{
@@ -1027,6 +1028,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 			{ "SetIPForOPS", &UOpsManager::execSetIPForOPS },
 			{ "SetSessionID", &UOpsManager::execSetSessionID },
 			{ "SetSupportedLanguages", &UOpsManager::execSetSupportedLanguages },
+			{ "WelcomeMessage", &UOpsManager::execWelcomeMessage },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
 	}
@@ -2884,6 +2886,28 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UOpsManager_WelcomeMessage_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOpsManager_WelcomeMessage_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOpsManager_WelcomeMessage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOpsManager, nullptr, "WelcomeMessage", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOpsManager_WelcomeMessage_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UOpsManager_WelcomeMessage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOpsManager_WelcomeMessage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOpsManager_WelcomeMessage_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_UOpsManager_NoRegister()
 	{
 		return UOpsManager::StaticClass();
@@ -2895,6 +2919,11 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_delOnStartCommandReceived_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_m_delOnStartCommandReceived;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -2959,6 +2988,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		{ &Z_Construct_UFunction_UOpsManager_SetIPForOPS, "SetIPForOPS" }, // 3029722226
 		{ &Z_Construct_UFunction_UOpsManager_SetSessionID, "SetSessionID" }, // 2423269009
 		{ &Z_Construct_UFunction_UOpsManager_SetSupportedLanguages, "SetSupportedLanguages" }, // 1770634145
+		{ &Z_Construct_UFunction_UOpsManager_WelcomeMessage, "WelcomeMessage" }, // 54344511
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOpsManager_Statics::Class_MetaDataParams[] = {
@@ -2966,6 +2996,16 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		{ "ModuleRelativePath", "OpsManager.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived_MetaData[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+		{ "ToolTip", "FIXME\nUFUNCTION(BlueprintPure,Category = \"OPS\",meta = (DisplayName = \"Get OpsManager Instance\",Keywords = \"OPS Manager\"))\n       UOpsManager *GetInstance();" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived = { "m_delOnStartCommandReceived", nullptr, (EPropertyFlags)0x0010000000080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UOpsManager, m_delOnStartCommandReceived), Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived_MetaData, ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOpsManager_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOpsManager_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UOpsManager>::IsAbstract,
 	};
@@ -2975,13 +3015,13 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		FuncInfo,
-		nullptr,
+		Z_Construct_UClass_UOpsManager_Statics::PropPointers,
 		nullptr,
 		ARRAY_COUNT(DependentSingletons),
 		ARRAY_COUNT(FuncInfo),
+		ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::PropPointers),
 		0,
-		0,
-		0x001000A8u,
+		0x009000A8u,
 		METADATA_PARAMS(Z_Construct_UClass_UOpsManager_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UOpsManager()
@@ -2993,7 +3033,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UOpsManager, 2069624311);
+	IMPLEMENT_CLASS(UOpsManager, 3677875397);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UOpsManager>()
 	{
 		return UOpsManager::StaticClass();

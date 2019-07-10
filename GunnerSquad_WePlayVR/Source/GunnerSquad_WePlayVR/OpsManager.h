@@ -222,11 +222,12 @@ enum class eCommand10Type :uint8
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartCommandReceived);
 
 UCLASS()
-class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UGameInstance , public FTickableGameObject 
+class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject , public FTickableGameObject 
 {
 	GENERATED_BODY()
 
 private:
+	static UOpsManager * instance;
 	void *v_dllHandle;
 
 	int m_iGameplayTime;
@@ -309,6 +310,9 @@ private:
 	OnEndCommandReceived m_delOnEndCommandReceived;
 	OnEndResponse m_delEndResponse;
 
+	//FIXME
+	//UPROPERTY(Transient)
+	//	UOpsManager *m_refOpsManager;
 #pragma region Methods_For_Internal_Execution
 	void StartCommandReceived();
 	void EndCommandReceived();
@@ -317,6 +321,16 @@ private:
 public:
 
 	UOpsManager();
+	~UOpsManager();
+
+	static UOpsManager* GetInstance();
+
+	UFUNCTION()
+	void WelcomeMessage();
+	//FIXME
+	//UFUNCTION(BlueprintPure,Category = "OPS",meta = (DisplayName = "Get OpsManager Instance",Keywords = "OPS Manager"))
+	//	UOpsManager *GetInstance();
+	UPROPERTY()
 	FOnStartCommandReceived m_delOnStartCommandReceived;
 #pragma region RegisterAndDeregisterStartAndStop
 	template <typename T>
