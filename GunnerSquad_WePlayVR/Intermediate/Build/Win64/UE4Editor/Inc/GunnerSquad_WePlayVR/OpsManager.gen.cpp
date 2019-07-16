@@ -13,8 +13,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 // Cross Module References
-	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eCommand10Type();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eLogType();
 	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eInputNameType();
@@ -28,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 	GUNNERSQUAD_WEPLAYVR_API UScriptStruct* Z_Construct_UScriptStruct_FstructOPS_Data();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UOpsManager_NoRegister();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UOpsManager();
-	ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_AddConnecedDeviceToProfile();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_AddPropToProfile();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_CleanUpOPSClient();
@@ -87,6 +90,72 @@ void EmptyLinkFunctionForGeneratedCodeOpsManager() {}
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_SetSupportedLanguages();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UOpsManager_WelcomeMessage();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR, nullptr, "OnEndResponse__DelegateSignature", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR, nullptr, "OnEndCommandReceived__DelegateSignature", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR, nullptr, "OnStartResponse__DelegateSignature", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature_Statics
 	{
 #if WITH_METADATA
@@ -2920,6 +2989,18 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_delEndResponse_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_m_delEndResponse;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_delOnEndCommandReceived_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_m_delOnEndCommandReceived;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_delOnStartResponse_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_m_delOnStartResponse;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_delOnStartCommandReceived_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_m_delOnStartCommandReceived;
@@ -2928,7 +3009,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UOpsManager_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UGameInstance,
+		(UObject* (*)())Z_Construct_UClass_UObject,
 		(UObject* (*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UOpsManager_Statics::FuncInfo[] = {
@@ -2997,13 +3078,33 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delEndResponse_MetaData[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delEndResponse = { "m_delEndResponse", nullptr, (EPropertyFlags)0x0010000000080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UOpsManager, m_delEndResponse), Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delEndResponse_MetaData, ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delEndResponse_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnEndCommandReceived_MetaData[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnEndCommandReceived = { "m_delOnEndCommandReceived", nullptr, (EPropertyFlags)0x0010000000080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UOpsManager, m_delOnEndCommandReceived), Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnEndCommandReceived_MetaData, ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnEndCommandReceived_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartResponse_MetaData[] = {
+		{ "ModuleRelativePath", "OpsManager.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartResponse = { "m_delOnStartResponse", nullptr, (EPropertyFlags)0x0010000000080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UOpsManager, m_delOnStartResponse), Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartResponse_MetaData, ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartResponse_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived_MetaData[] = {
 		{ "ModuleRelativePath", "OpsManager.h" },
-		{ "ToolTip", "FIXME\nUFUNCTION(BlueprintPure,Category = \"OPS\",meta = (DisplayName = \"Get OpsManager Instance\",Keywords = \"OPS Manager\"))\n       UOpsManager *GetInstance();" },
 	};
 #endif
 	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived = { "m_delOnStartCommandReceived", nullptr, (EPropertyFlags)0x0010000000080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UOpsManager, m_delOnStartCommandReceived), Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived_MetaData, ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UOpsManager_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delEndResponse,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnEndCommandReceived,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartResponse,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UOpsManager_Statics::NewProp_m_delOnStartCommandReceived,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UOpsManager_Statics::StaticCppClassTypeInfo = {
@@ -3021,7 +3122,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::PropPointers),
 		0,
-		0x009000A8u,
+		0x009000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UOpsManager_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_UOpsManager_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UOpsManager()
@@ -3033,7 +3134,7 @@ static struct FScriptStruct_GunnerSquad_WePlayVR_StaticRegisterNativesFstructOPS
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UOpsManager, 3677875397);
+	IMPLEMENT_CLASS(UOpsManager, 4237388842);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UOpsManager>()
 	{
 		return UOpsManager::StaticClass();

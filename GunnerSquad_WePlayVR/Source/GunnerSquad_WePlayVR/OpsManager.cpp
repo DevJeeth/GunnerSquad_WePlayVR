@@ -13,26 +13,17 @@ UOpsManager::UOpsManager()
 
 }
 
-~UOpsManager::UOpsManager()
+UOpsManager::~UOpsManager()
 {
 
 }
+
 
 void UOpsManager:: WelcomeMessage()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Welcome to WePlayVR"));
 }
 
-
-UOpsManager* UOpsManager::GetInstance()
-{
-	if (instance == NULL)
-	{
-		instance = NewObject<UOpsManager>();
-	}
-
-	return instance;
-}
 
 //Gets the DLL for the specified path of a specific name
 bool UOpsManager::ImportDLL(FString a_strFolderName, FString a_strDLLName)
@@ -643,29 +634,6 @@ bool UOpsManager::ImportDLLMethods()
 }
 
 
-template <typename T>
-void UOpsManager::RegisterToStartCommand(T a_classType, TFunction<void()> a_func)// std::function<void()> a_func
-{
-	m_delOnStartCommandReceived.AddDynamic(a_classType, a_func);
-
-}
-
-void UOpsManager::DeregisterStartCommand()
-{
-
-}
-
-template <typename T>
-void UOpsManager::RegisterToEndCommand(T a_classType, std::function<void()> a_func)
-{
-
-}
-
-void UOpsManager::DeregisterEndCommand()
-{
-
-}
-
 void UOpsManager::SendClearDataResponse()
 {
 	if (m_funcSendClearDataResponse == NULL)
@@ -854,19 +822,19 @@ void UOpsManager::Tick(float DeltaTime)
 		SendInitResponseToOPS();
 		m_bInitReceived = false;
 
-		//TODO: Implement GameInstance
+		
 		//UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
 		SendLighthouseStatus("A", eDeviceStatus::iNotConnected);
 		SendLighthouseStatus("B", eDeviceStatus::iNotConnected);
 		UE_LOG(LogTemp, Error, TEXT("UOpsManager:m_bInitReceived!!!"));
 		//TODO: Implement GameInstance
-		/*if (m_refVRGameInstance != nullptr)
-		{
-			m_refVRGameInstance->SteamVRStatus->CheckForStatus();
-			m_refVRGameInstance->CheckAndUpdateLightHouseStatus(true);
-			UE_LOG(LogTemp, Error, TEXT("UOpsManager:Inside m_bInitReceived:Sending Lighthouse status!"));
-		}*/
+		//if (m_refVRGameInstance != nullptr)
+		//{
+		//	m_refWePlayVR_GameInstance->SteamVRStatus->CheckForStatus();
+		//	m_refWePlayVR_GameInstance->CheckAndUpdateLightHouseStatus(true);
+		//	UE_LOG(LogTemp, Error, TEXT("UOpsManager:Inside m_bInitReceived:Sending Lighthouse status!"));
+		//}
 	}
 	if (m_bOPSConfigurationReceived)
 	{
@@ -1003,27 +971,28 @@ void UOpsManager::SetIPForOPS(FString a_strOPSIP)
 		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function was not initialized"));
 		return;
 	}
-	//TODO: Implement GameInstance
-	/*UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
-	FString temp_strOPSIPFromSettings = m_refVRGameInstance->Settings->OPS_IP;
+	
+	//UWePlayVR_GameInstance* m_refVRGameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
-	if (!m_refVRGameInstance->m_strOPSIP.IsEmpty())
-	{
-		m_funcSetOPSIP(TCHAR_TO_ANSI(*m_refVRGameInstance->m_strOPSIP));
-		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function called  as CMD line is not empty:%s"), *(m_refVRGameInstance->m_strOPSIP));
+	//TODO: Implement Settings
+	//FString temp_strOPSIPFromSettings = m_refVRGameInstance->Settings->OPS_IP;
 
-	}
+	//if (!m_refVRGameInstance->m_strOPSIP.IsEmpty())
+	//{
+	//	m_funcSetOPSIP(TCHAR_TO_ANSI(*m_refVRGameInstance->m_strOPSIP));
+	//	UE_LOG(LogTemp, Error, TEXT("Set OPS IP function called  as CMD line is not empty:%s"), *(m_refVRGameInstance->m_strOPSIP));
 
-	else if (!temp_strOPSIPFromSettings.IsEmpty())
+	//}
+	/*else if (!temp_strOPSIPFromSettings.IsEmpty())
 	{
 		m_funcSetOPSIP(TCHAR_TO_ANSI(*temp_strOPSIPFromSettings));
 		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function called  as SettingSOPS_IP is not empty:%s"), *temp_strOPSIPFromSettings);
 
-	}
+	}*/
 	else
 	{
 		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function NOT called  as SettingSOPS_IP is  empty and no Cmd Line Ip given"));
-	}*/
+	}
 
 }
 
@@ -1089,7 +1058,7 @@ void UOpsManager::SendStartResponseToOPS()
 void UOpsManager::EndCommandReceived()
 {
 	UE_LOG(LogTemp, Log, TEXT("[OpsManager] End Command Received"));
-	m_delOnEndCommandReceived.ExecuteIfBound();
+	m_delOnEndCommandReceived.Broadcast();
 }
 
 void UOpsManager::SendEndResponseToOPS()

@@ -220,6 +220,10 @@ enum class eCommand10Type :uint8
 };
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartCommandReceived);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnStartResponse);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndCommandReceived);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEndResponse);
+
 
 UCLASS()
 class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject , public FTickableGameObject 
@@ -227,7 +231,9 @@ class GUNNERSQUAD_WEPLAYVR_API UOpsManager : public UObject , public FTickableGa
 	GENERATED_BODY()
 
 private:
-	static UOpsManager * instance;
+	UOpsManager();
+	~UOpsManager();
+
 	void *v_dllHandle;
 
 	int m_iGameplayTime;
@@ -295,24 +301,7 @@ private:
 
 	bool _GetIsProcessingOpsMsg();
 
-	//This delegate will be called when START COMMAND is received from OPS
-	//DECLARE_DELEGATE(OnStartCommandReceived);
-	
-	//This delegate will be called when START RESPONSE is sent to OPS 
-	DECLARE_DELEGATE(OnStartResponse);
-	//This delegate will be called when END COMMAND is received from OPS
-	DECLARE_DELEGATE(OnEndCommandReceived);
-	//This delegate will be called when END RESPONSE is sent to OPS
-	DECLARE_DELEGATE(OnEndResponse);
 
-	
-	OnStartResponse m_delOnStartResponse;
-	OnEndCommandReceived m_delOnEndCommandReceived;
-	OnEndResponse m_delEndResponse;
-
-	//FIXME
-	//UPROPERTY(Transient)
-	//	UOpsManager *m_refOpsManager;
 #pragma region Methods_For_Internal_Execution
 	void StartCommandReceived();
 	void EndCommandReceived();
@@ -320,35 +309,21 @@ private:
 
 public:
 
-	UOpsManager();
-	~UOpsManager();
-
-	static UOpsManager* GetInstance();
-
 	UFUNCTION()
 	void WelcomeMessage();
-	//FIXME
-	//UFUNCTION(BlueprintPure,Category = "OPS",meta = (DisplayName = "Get OpsManager Instance",Keywords = "OPS Manager"))
-	//	UOpsManager *GetInstance();
+
 	UPROPERTY()
 	FOnStartCommandReceived m_delOnStartCommandReceived;
-#pragma region RegisterAndDeregisterStartAndStop
-	template <typename T>
-	void RegisterToStartCommand(T a_classType, TFunction<void()> a_func);//std::function<void()> a_func
-	void DeregisterStartCommand();
 
-	template <typename T>
-	void RegisterToEndCommand(T a_classType, std::function<void()> a_func);
-	void DeregisterEndCommand();
-#pragma endregion
+	UPROPERTY()
+	FOnStartResponse m_delOnStartResponse;
 
-#pragma region RegisterAndDeregisterStartAndStopResponses
-	void RegisterToStartResponse(OnStartResponse m_delStartResponse);
-	void DeregisterStartResponse();
+	UPROPERTY()
+	FOnEndCommandReceived m_delOnEndCommandReceived;
 
-	void RegisterToEndResponse(OnEndResponse m_delEndResponse);
-	void DeregisterEndResponse();
-#pragma endregion
+	UPROPERTY()
+	FOnEndResponse m_delEndResponse;
+
 
 	//This is just for testing, remove this
 	void SimulateStartFromOPS();

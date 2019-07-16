@@ -12,6 +12,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGunnerSquad_WePlayVR_init() {}
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_GunnerSquad_WePlayVR()
 	{
 		static UPackage* ReturnPackage = nullptr;
@@ -19,14 +22,17 @@ void EmptyLinkFunctionForGeneratedCodeGunnerSquad_WePlayVR_init() {}
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartCommandReceived__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnStartResponse__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndCommandReceived__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_GunnerSquad_WePlayVR_OnEndResponse__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/GunnerSquad_WePlayVR",
 				SingletonFuncArray,
 				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xA8001DEF,
-				0x0DF2B8EC,
+				0x5E0228AF,
+				0xCEDAFBD9,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
