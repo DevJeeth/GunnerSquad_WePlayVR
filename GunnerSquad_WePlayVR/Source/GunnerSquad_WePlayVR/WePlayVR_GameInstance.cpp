@@ -51,6 +51,20 @@ void UWePlayVR_GameInstance::InitializeOPS()
 
 	if (!m_refOpsManager->ImportDLLMethods())
 		return;
+
+	//register to logs, all DLL logs will also be handled here
+	m_refOpsManager->RegisterForLogs();
+
+	//TODO: Getting OPS IP from File or other sources
+	FString m_strOPSIP = "192.168.1.107";
+	m_refOpsManager->SetIPForOPS(m_strOPSIP);
+	//Creating Ops Client 
+	m_refOpsManager->CreateOPSClient();
+	m_refOpsManager->RegisterForCommands();
+	m_refOpsManager->Connect();
+	m_refOpsManager->SendProfileToOPS();
+
+	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Connection has been extablished and profile has been sent"));
 }
 
 #pragma region Ops_Blueprint_Intermediate_Methods

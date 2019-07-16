@@ -8,7 +8,7 @@ public class GunnerSquad_WePlayVR : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "Networking", "Sockets", "InputCore", "XmlParser", "AIModule", "GameplayTasks", "LevelSequence", "MovieScene", "OnlineSubsystem", "EngineSettings" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] { "Http","Json", "JsonUtilities", "HeadMountedDisplay", "SteamVR", "OpenVR" });
 

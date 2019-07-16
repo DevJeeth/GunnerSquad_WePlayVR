@@ -711,3 +711,4 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.1
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\xmemory
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE\stdexcept
 d:\0_projects\z_myplayground\0_unreal_projects\1_gunnersquad\gunnersquad_weplayvr\source\gunnersquad_weplayvr\WePlayVR_GameInstance.h
+D:\0_Projects\Z_MyPlayGround\0_Unreal_Projects\1_GunnerSquad\GunnerSquad_WePlayVR\Intermediate\Build\Win64\UE4Editor\Inc\GunnerSquad_WePlayVR\WePlayVR_GameInstance.generated.h

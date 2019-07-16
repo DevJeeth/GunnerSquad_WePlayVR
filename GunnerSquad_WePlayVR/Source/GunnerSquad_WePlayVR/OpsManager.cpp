@@ -664,7 +664,7 @@ void UOpsManager::CreateOPSClient()
 	}
 
 	//TODO: Implement Game Instance
-	//UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
+	UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
 	////bool temp_bStreamerEnabled = m_refVRGameInstance->Settings->Streaming_Enabled;
 	//UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Is it for Streamer??,%d"), temp_bStreamerEnabled);
@@ -972,17 +972,17 @@ void UOpsManager::SetIPForOPS(FString a_strOPSIP)
 		return;
 	}
 	
-	//UWePlayVR_GameInstance* m_refVRGameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
+	UWePlayVR_GameInstance* m_refVRGameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
 	//TODO: Implement Settings
 	//FString temp_strOPSIPFromSettings = m_refVRGameInstance->Settings->OPS_IP;
 
-	//if (!m_refVRGameInstance->m_strOPSIP.IsEmpty())
-	//{
-	//	m_funcSetOPSIP(TCHAR_TO_ANSI(*m_refVRGameInstance->m_strOPSIP));
-	//	UE_LOG(LogTemp, Error, TEXT("Set OPS IP function called  as CMD line is not empty:%s"), *(m_refVRGameInstance->m_strOPSIP));
+	if (!m_refVRGameInstance->m_strOPSIP.IsEmpty())
+	{
+		m_funcSetOPSIP(TCHAR_TO_ANSI(*m_refVRGameInstance->m_strOPSIP));
+		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function called  as CMD line is not empty:%s"), *(m_refVRGameInstance->m_strOPSIP));
 
-	//}
+	}
 	/*else if (!temp_strOPSIPFromSettings.IsEmpty())
 	{
 		m_funcSetOPSIP(TCHAR_TO_ANSI(*temp_strOPSIPFromSettings));
