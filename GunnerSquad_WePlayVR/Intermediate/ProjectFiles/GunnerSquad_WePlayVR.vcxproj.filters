@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GunnerSquad_WePlayVR.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{AE492C93-E2D1-4FF9-92AD-CB3A57780BCF}</UniqueIdentifier>
+      <UniqueIdentifier>{F170580E-AAF5-403A-8748-7A59D84E3B38}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GunnerSquad_WePlayVR.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{3A34409A-80FE-4484-AA2C-C23E6E2AFA42}</UniqueIdentifier>
+      <UniqueIdentifier>{4FBCE4B5-C53F-4179-9305-917ED004D266}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GunnerSquad_WePlayVR">
-      <UniqueIdentifier>{814AA6D6-E92C-4BB5-9BFA-241C9870D291}</UniqueIdentifier>
+      <UniqueIdentifier>{F77FC341-B7A0-44F9-9937-2583CA0E28BE}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\CustomFileReadingLibrary.cpp">
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
@@ -66,12 +66,6 @@
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\OpsManager.h">
-      <Filter>Source\GunnerSquad_WePlayVR</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\USettingsData.cpp">
-      <Filter>Source\GunnerSquad_WePlayVR</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\USettingsData.h">
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\WePlayVR_GameInstance.cpp">

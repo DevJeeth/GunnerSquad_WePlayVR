@@ -110,6 +110,76 @@ void UWePlayVR_GameInstance::SendVRDeviceStatusUpdate()
 {
 	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] VR Device Update Command Received, calling VR Device Status Blueprint event "));
 }
+
+void UWePlayVR_GameInstance::SendStartRumbleCommand(FString a_strClipName, int a_nVolume, bool a_bPlayOnce)
+{
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendStartRumble not called, reference to OPS lost"));
+		return;
+	}
+
+	m_refOpsManager->SendStartRumble(a_strClipName, a_nVolume, a_bPlayOnce); 
+}
+
+void UWePlayVR_GameInstance::SendStopRumbleCommand()
+{
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendStopRumble not called, reference to OPS lost"));
+		return;
+	}
+
+	m_refOpsManager->SendStopRumble();
+}
+
+
+void UWePlayVR_GameInstance::SendLanguageChangeResponse()
+{
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendLanguageChangeResponse not called, reference to OPS lost"));
+		return;
+	}
+
+	m_refOpsManager->SendLanguageChangeResponse();
+}
+
+void UWePlayVR_GameInstance::SendScreenshotResponse(TArray<uint8> a_arrImageData)
+{
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendLanguageChangeResponse not called, reference to OPS lost"));
+		return;
+	}
+
+	m_refOpsManager->SendScreenshot(a_arrImageData);
+}
+
+FString UWePlayVR_GameInstance::GetProjectName()
+{
+	FString ProjectName;
+	GConfig->GetString(
+		TEXT("/Script/EngineSettings.GeneralProjectSettings"),
+		TEXT("ProjectName"),
+		ProjectName,
+		GGameIni
+	);
+	return ProjectName;
+}
+
+FString UWePlayVR_GameInstance::GetProjectVersion()
+{
+	FString ProjectVersion;
+	GConfig->GetString(
+		TEXT("/Script/EngineSettings.GeneralProjectSettings"),
+		TEXT("ProjectVersion"),
+		ProjectVersion,
+		GGameIni
+	);
+	return ProjectVersion;
+}
+
 #pragma endregion
 
 #pragma region Ops_Blueprint_Events 
@@ -144,11 +214,42 @@ void UWePlayVR_GameInstance::OnScreenShotCommandReceived()
 #pragma region Ops_Wrapper_Method_Calls
 void UWePlayVR_GameInstance::SetSupportedLanguages(TArray<FString> a_arrLanguageNames)
 {
-	m_refOpsManager
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SetSupportLanguages not called, reference to OPS lost"));
+		return;
+	}
+
+	m_refOpsManager->SetSupportedLanguages(a_arrLanguageNames, a_arrLanguageNames.Num());
 }
 #pragma endregion
 
 
+#pragma region Responses_To_Ops
+
+void UWePlayVR_GameInstance::SendStartCommandResponse()
+{
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendStartResponseToOPS not called, reference to OPS lost"));
+		return;
+	}
+
+	m_refOpsManager->SendStartResponseToOPS();
+}
+
+
+void UWePlayVR_GameInstance::SendEndCommandResponse()
+{
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendEndResponseToOPS not called, reference to OPS lost"));
+		return;
+	}
+
+	m_refOpsManager->SendEndResponseToOPS();
+}
+#pragma endregion
 
 
 

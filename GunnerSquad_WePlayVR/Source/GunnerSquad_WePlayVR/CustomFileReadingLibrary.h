@@ -23,7 +23,7 @@
  * 
  */
 UCLASS(Blueprintable)
-class VR_FROM_BLANK_API UCustomFileReadingLibrary : public UBlueprintFunctionLibrary
+class GUNNERSQUAD_WEPLAYVR_API UCustomFileReadingLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 	

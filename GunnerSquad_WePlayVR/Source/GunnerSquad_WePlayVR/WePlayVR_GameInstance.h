@@ -62,27 +62,29 @@ public:
 		void SendEndCommandResponse();
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
-		void SendStartRumbleCommand(int a_iClipIndex, int a_nVolume, bool a_bPlayOnce);
+		void SendStartRumbleCommand(FString a_strClipName, int a_nVolume, bool a_bPlayOnce);
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendStopRumbleCommand();
 
-	//These do not to be exposed in the blueprint, DEVICE UPDATE SHOULD BE HANDLED BY OPS SYSTEM
-	UFUNCTION()
-		void SendControllerStatus(int a_iIndex);
-	UFUNCTION()
-		void SendHMDStatus();
-	UFUNCTION()
-		void SendLightHouseStatus(FString a_strID);
+
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SetSupportedLanguages(TArray<FString> a_arrLanguageNames);//PLEASE NOTE SAME FUNC PRESENT IN OPS HENCE UNREAL RELATED HEADACHES...
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
-		void SendLanguageDetails();
-
-	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendLanguageChangeResponse();
+
+	//TODO: Device Updates need to be looked into and implemented
+	//These do not to be exposed in the blueprint, DEVICE UPDATE SHOULD BE HANDLED BY OPS SYSTEM
+	UFUNCTION()
+		void SendControllerStatus(int a_iIndex);
+
+	UFUNCTION()
+		void SendHMDStatus();
+
+	UFUNCTION()
+		void SendLightHouseStatus(FString a_strID);
 
 	//Master command to check and send the status of the VR devices
 	UFUNCTION(BlueprintCallable, Category = "Commands")
