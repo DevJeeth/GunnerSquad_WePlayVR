@@ -3,6 +3,7 @@
 #pragma once
 
 #include "OpsManager.h"
+#include "SettingsData.h"
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h" 
 #include "WePlayVR_GameInstance.generated.h"
@@ -76,9 +77,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendLanguageChangeResponse();
 
+	UPROPERTY()
+		USettingsData* m_refSettingsData; 
+
 #pragma region VRDevices_Update_Functionality
 	//TODO: Device Updates need to be looked into and implemented
-	//These do not to be exposed in the blueprint, DEVICE UPDATE SHOULD BE HANDLED BY OPS SYSTEM
+	//These not to be exposed in the blueprint, DEVICE UPDATE SHOULD BE HANDLED BY OPS SYSTEM
 	//UFUNCTION()
 	//	void SendControllerStatus(int a_iIndex);
 

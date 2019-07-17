@@ -187,34 +187,6 @@ FString UWePlayVR_GameInstance::GetProjectVersion()
 
 #pragma endregion
 
-#pragma region Ops_Blueprint_Events 
-//void UWePlayVR_GameInstance::OnStartCommandReceived()
-//{
-//	//The game developer can handle START what needs to be done by using this blueprint event
-//}
-
-//void UWePlayVR_GameInstance::OnEndCommandReceived()
-//{
-//	//The game developer can handle END what needs to be done by using this blueprint event
-//}
-
-//TArray<FString> UWePlayVR_GameInstance::OnLanguageDetailsGetCommand()
-//{
-//	//Needs to return an array of all the supported language
-//	TArray<FString> m_arrLanguageSupported;
-//	return m_arrLanguageSupported;
-//}
-
-//void UWePlayVR_GameInstance::OnLanguageChangeCommandReceived(const FString& a_strLanguageChange)
-//{
-//	//The game developer can handle setting the language when this event is called
-//}
-
-//void UWePlayVR_GameInstance::OnScreenShotCommandReceived()
-//{
-//	//Handle screenshots here 
-//}
-#pragma endregion
 
 #pragma region Ops_Wrapper_Method_Calls
 void UWePlayVR_GameInstance::SetSupportedLanguages(TArray<FString> a_arrLanguageNames)

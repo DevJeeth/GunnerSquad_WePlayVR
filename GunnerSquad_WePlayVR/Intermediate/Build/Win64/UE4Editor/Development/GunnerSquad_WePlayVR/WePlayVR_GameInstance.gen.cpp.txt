@@ -100,4 +100,6 @@ d:\unrealengine\ue_4.22\engine\source\runtime\jsonutilities\public\JsonObjectCon
 d:\unrealengine\ue_4.22\engine\source\runtime\jsonutilities\public\JsonObjectWrapper.h
 D:\UnrealEngine\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\JsonUtilities\JsonObjectWrapper.generated.h
 d:\0_projects\z_myplayground\0_unreal_projects\1_gunnersquad\gunnersquad_weplayvr\intermediate\build\win64\ue4editor\inc\gunnersquad_weplayvr\OpsManager.generated.h
+d:\0_projects\z_myplayground\0_unreal_projects\1_gunnersquad\gunnersquad_weplayvr\source\gunnersquad_weplayvr\SettingsData.h
+d:\0_projects\z_myplayground\0_unreal_projects\1_gunnersquad\gunnersquad_weplayvr\intermediate\build\win64\ue4editor\inc\gunnersquad_weplayvr\SettingsData.generated.h
 d:\0_projects\z_myplayground\0_unreal_projects\1_gunnersquad\gunnersquad_weplayvr\intermediate\build\win64\ue4editor\inc\gunnersquad_weplayvr\WePlayVR_GameInstance.generated.h

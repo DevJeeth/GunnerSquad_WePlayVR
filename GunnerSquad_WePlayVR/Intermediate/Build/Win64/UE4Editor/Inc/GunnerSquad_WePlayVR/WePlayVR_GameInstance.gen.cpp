@@ -31,6 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartRumbleCommand();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendStopRumbleCommand();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SetSupportedLanguages();
+	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_USettingsData_NoRegister();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UOpsManager_NoRegister();
 // End Cross Module References
 	static FName NAME_UWePlayVR_GameInstance_OnEndCommandReceived = FName(TEXT("OnEndCommandReceived"));
@@ -515,6 +516,10 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_m_strOPSIP;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_refSettingsData_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_m_refSettingsData;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_refOpsManager_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_m_refOpsManager;
@@ -566,6 +571,12 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_strOPSIP = { "m_strOPSIP", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWePlayVR_GameInstance, m_strOPSIP), METADATA_PARAMS(Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_strOPSIP_MetaData, ARRAY_COUNT(Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_strOPSIP_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_refSettingsData_MetaData[] = {
+		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_refSettingsData = { "m_refSettingsData", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWePlayVR_GameInstance, m_refSettingsData), Z_Construct_UClass_USettingsData_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_refSettingsData_MetaData, ARRAY_COUNT(Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_refSettingsData_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_refOpsManager_MetaData[] = {
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
 	};
@@ -575,6 +586,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_arystrCommandline,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_arystrCommandline_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_strOPSIP,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_refSettingsData,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWePlayVR_GameInstance_Statics::NewProp_m_refOpsManager,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UWePlayVR_GameInstance_Statics::StaticCppClassTypeInfo = {
@@ -604,7 +616,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 2817805352);
+	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 3082524641);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UWePlayVR_GameInstance>()
 	{
 		return UWePlayVR_GameInstance::StaticClass();

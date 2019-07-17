@@ -670,17 +670,18 @@ void UOpsManager::CreateOPSClient()
 	//TODO: Implement Game Instance
 	UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
-	////bool temp_bStreamerEnabled = m_refVRGameInstance->Settings->Streaming_Enabled;
-	//UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Is it for Streamer??,%d"), temp_bStreamerEnabled);
-	//FString temp_strProjectVersion = m_refVRGameInstance->GetProjectVersion();
-	//UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Version:,%s"), *temp_strProjectVersion);
-	//FString temp_strProjectName = m_refVRGameInstance->GetProjectName();
-	//UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Name:,%s"), *temp_strProjectName);
+	FString strGameName = m_refWePlayVR_GameInstance->m_refSettingsData->m_strGameName;
+	bool bStreamerEnabled = m_refWePlayVR_GameInstance->m_refSettingsData->m_bStreamerEnabled;  
+	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Is it for Streamer??,%d"), bStreamerEnabled);
+	FString strProjectVersion = m_refWePlayVR_GameInstance->GetProjectVersion();
+	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Version:,%s"), *strProjectVersion);
+	FString strProjectName = m_refWePlayVR_GameInstance->GetProjectName();
+	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Name:,%s"), *strProjectName);
 
-	//eBuildType temp_eCurrentBuildType = temp_bStreamerEnabled ? eBuildType::iStreamer : eBuildType::iGame;
+	eBuildType eCurrentBuildType = bStreamerEnabled ? eBuildType::iStreamer : eBuildType::iGame;
 
-	//int temp_iBuildType = (int)(temp_eCurrentBuildType);
-	//m_funcCreateOPSClient(TCHAR_TO_ANSI(*temp_strProjectName), "Clock Tower", TCHAR_TO_ANSI(*temp_strProjectVersion), false, temp_iBuildType, eAttractionType::iArena);//STREAMER MAKE THE LAST ON TRUE
+	int iBuildType = (int)(eCurrentBuildType);
+	m_funcCreateOPSClient(TCHAR_TO_ANSI(*strProjectName), "Clock Tower", TCHAR_TO_ANSI(*strProjectVersion), false, iBuildType, eAttractionType::iArena);//STREAMER MAKE THE LAST ON TRUE
 	////m_funcCreateOPSClient("Clocktower", "Clocktower", "1.0", false, temp_iBuildType);//STREAMER MAKE THE LAST ON TRUE
 
 	SetGameInformation(300, 1, 1, eInputNameType::None);
