@@ -40,6 +40,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_NATIVE_END; \
 	} \
  \
+	DECLARE_FUNCTION(execSendClearLeaderboardResponse) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendClearLeaderboardResponse(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execSendLanguageChangeResponse) \
 	{ \
 		P_FINISH; \
@@ -117,6 +125,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SendScreenshotResponse(Z_Param_a_arrImageData); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendClearLeaderboardResponse) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendClearLeaderboardResponse(); \
 		P_NATIVE_END; \
 	} \
  \

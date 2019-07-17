@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "OpsManager.h"
 #include "SettingsData.generated.h"
 
 /**
@@ -38,5 +39,18 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton")
 		FString	m_strOpsIP;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton") 
+		int m_iMinPlayerCount;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton") 
+		int m_iMaxPlayerCount;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton") 
+		int m_iGamePlayTime;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton")
+		eAttractionType AttractionType;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton")
+		eInputNameType InputNameType;
 };

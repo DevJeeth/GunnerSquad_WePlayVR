@@ -42,6 +42,9 @@ protected:
 		void OnLanguageChangeCommandReceived(const FString& a_strLanguage);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "CommandEvents")
+		void OnClearLeaderboardReceived();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "CommandEvents")
 		TArray<FString> OnLanguageDetailsGetCommand();
 
 public:
@@ -69,13 +72,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendStopRumbleCommand();
 
-
-
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SetSupportedLanguages(TArray<FString> a_arrLanguageNames);//PLEASE NOTE SAME FUNC PRESENT IN OPS HENCE UNREAL RELATED HEADACHES...
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendLanguageChangeResponse();
+
+	UFUNCTION(BlueprintCallable, Category = "Commands")
+		void SendClearLeaderboardResponse();
 
 	UPROPERTY()
 		USettingsData* m_refSettingsData; 
@@ -133,4 +137,5 @@ public:
 	void LanguageChangeCommandReceived(FString s_strNewLanguage);
 	void ScreenshotCommandReceived();
 	void SendVRDeviceStatusUpdate();
+	void ClearLeaderBoardCommandReceived();
 };

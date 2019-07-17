@@ -19,11 +19,13 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	UPackage* Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectName();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectVersion();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendEndCommandResponse();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendScreenshotResponse();
@@ -34,6 +36,11 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_USettingsData_NoRegister();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UOpsManager_NoRegister();
 // End Cross Module References
+	static FName NAME_UWePlayVR_GameInstance_OnClearLeaderboardReceived = FName(TEXT("OnClearLeaderboardReceived"));
+	void UWePlayVR_GameInstance::OnClearLeaderboardReceived()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_UWePlayVR_GameInstance_OnClearLeaderboardReceived),NULL);
+	}
 	static FName NAME_UWePlayVR_GameInstance_OnEndCommandReceived = FName(TEXT("OnEndCommandReceived"));
 	void UWePlayVR_GameInstance::OnEndCommandReceived()
 	{
@@ -69,6 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetProjectName", &UWePlayVR_GameInstance::execGetProjectName },
 			{ "GetProjectVersion", &UWePlayVR_GameInstance::execGetProjectVersion },
+			{ "SendClearLeaderboardResponse", &UWePlayVR_GameInstance::execSendClearLeaderboardResponse },
 			{ "SendEndCommandResponse", &UWePlayVR_GameInstance::execSendEndCommandResponse },
 			{ "SendLanguageChangeResponse", &UWePlayVR_GameInstance::execSendLanguageChangeResponse },
 			{ "SendScreenshotResponse", &UWePlayVR_GameInstance::execSendScreenshotResponse },
@@ -142,6 +150,29 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectVersion_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::Function_MetaDataParams[] = {
+		{ "Category", "CommandEvents" },
+		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnClearLeaderboardReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -280,6 +311,29 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Commands" },
+		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "SendClearLeaderboardResponse", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -534,11 +588,13 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWePlayVR_GameInstance_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectName, "GetProjectName" }, // 2132533486
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectVersion, "GetProjectVersion" }, // 2125303557
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived, "OnClearLeaderboardReceived" }, // 4272101931
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived, "OnEndCommandReceived" }, // 3985929265
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived, "OnLanguageChangeCommandReceived" }, // 61738297
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand, "OnLanguageDetailsGetCommand" }, // 1360719844
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived, "OnScreenShotCommandReceived" }, // 695021480
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived, "OnStartCommandReceived" }, // 1261319689
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse, "SendClearLeaderboardResponse" }, // 3274029198
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendEndCommandResponse, "SendEndCommandResponse" }, // 4129808075
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse, "SendLanguageChangeResponse" }, // 1941558536
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendScreenshotResponse, "SendScreenshotResponse" }, // 155755533
@@ -616,7 +672,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 3082524641);
+	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 4182077607);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UWePlayVR_GameInstance>()
 	{
 		return UWePlayVR_GameInstance::StaticClass();

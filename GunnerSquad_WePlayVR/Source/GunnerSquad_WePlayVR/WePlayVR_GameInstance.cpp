@@ -111,6 +111,52 @@ void UWePlayVR_GameInstance::ScreenshotCommandReceived()
 	OnScreenShotCommandReceived();
 }
 
+void UWePlayVR_GameInstance::ClearLeaderBoardCommandReceived()
+{
+	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] ClearLeaderboard Command Received, calling Blueprint event "));
+	OnClearLeaderboardReceived();
+}
+
+
+
+FString UWePlayVR_GameInstance::GetProjectName()
+{
+	FString ProjectName;
+	GConfig->GetString(
+		TEXT("/Script/EngineSettings.GeneralProjectSettings"),
+		TEXT("ProjectName"),
+		ProjectName,
+		GGameIni
+	);
+	return ProjectName;
+}
+
+FString UWePlayVR_GameInstance::GetProjectVersion()
+{
+	FString ProjectVersion;
+	GConfig->GetString(
+		TEXT("/Script/EngineSettings.GeneralProjectSettings"),
+		TEXT("ProjectVersion"),
+		ProjectVersion,
+		GGameIni
+	);
+	return ProjectVersion;
+}
+#pragma endregion
+
+
+#pragma region Ops_Wrapper_Method_Calls
+void UWePlayVR_GameInstance::SetSupportedLanguages(TArray<FString> a_arrLanguageNames)
+{
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SetSupportLanguages not called, reference to OPS lost"));
+		return;
+	}
+
+	m_refOpsManager->SetSupportedLanguages(a_arrLanguageNames, a_arrLanguageNames.Num());
+}
+
 void UWePlayVR_GameInstance::SendVRDeviceStatusUpdate()
 {
 	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] VR Device Update Command Received, calling VR Device Status Blueprint event "));
@@ -124,7 +170,7 @@ void UWePlayVR_GameInstance::SendStartRumbleCommand(FString a_strClipName, int a
 		return;
 	}
 
-	m_refOpsManager->SendStartRumble(a_strClipName, a_nVolume, a_bPlayOnce); 
+	m_refOpsManager->SendStartRumble(a_strClipName, a_nVolume, a_bPlayOnce);
 }
 
 void UWePlayVR_GameInstance::SendStopRumbleCommand()
@@ -160,45 +206,6 @@ void UWePlayVR_GameInstance::SendScreenshotResponse(TArray<uint8> a_arrImageData
 
 	m_refOpsManager->SendScreenshot(a_arrImageData);
 }
-
-FString UWePlayVR_GameInstance::GetProjectName()
-{
-	FString ProjectName;
-	GConfig->GetString(
-		TEXT("/Script/EngineSettings.GeneralProjectSettings"),
-		TEXT("ProjectName"),
-		ProjectName,
-		GGameIni
-	);
-	return ProjectName;
-}
-
-FString UWePlayVR_GameInstance::GetProjectVersion()
-{
-	FString ProjectVersion;
-	GConfig->GetString(
-		TEXT("/Script/EngineSettings.GeneralProjectSettings"),
-		TEXT("ProjectVersion"),
-		ProjectVersion,
-		GGameIni
-	);
-	return ProjectVersion;
-}
-
-#pragma endregion
-
-
-#pragma region Ops_Wrapper_Method_Calls
-void UWePlayVR_GameInstance::SetSupportedLanguages(TArray<FString> a_arrLanguageNames)
-{
-	if (m_refOpsManager == NULL)
-	{
-		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SetSupportLanguages not called, reference to OPS lost"));
-		return;
-	}
-
-	m_refOpsManager->SetSupportedLanguages(a_arrLanguageNames, a_arrLanguageNames.Num());
-}
 #pragma endregion
 
 
@@ -225,6 +232,16 @@ void UWePlayVR_GameInstance::SendEndCommandResponse()
 	}
 
 	m_refOpsManager->SendEndResponseToOPS();
+}
+
+void UWePlayVR_GameInstance::SendClearLeaderboardResponse()
+{
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendClearDataResponse not called, reference to OPS lost"));
+		return;
+	}
+	m_refOpsManager->SendClearDataResponse();
 }
 #pragma endregion
 

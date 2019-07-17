@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_USettingsData();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	UPackage* Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
+	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eInputNameType();
+	GUNNERSQUAD_WEPLAYVR_API UEnum* Z_Construct_UEnum_GunnerSquad_WePlayVR_eAttractionType();
 // End Cross Module References
 	void USettingsData::StaticRegisterNativesUSettingsData()
 	{
@@ -31,6 +33,28 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InputNameType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InputNameType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_InputNameType_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttractionType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_AttractionType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_AttractionType_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_iGamePlayTime_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_iGamePlayTime;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_iMaxPlayerCount_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_iMaxPlayerCount;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_iMinPlayerCount_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_m_iMinPlayerCount;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_strOpsIP_MetaData[];
 #endif
@@ -78,6 +102,43 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsData_Statics::NewProp_InputNameType_MetaData[] = {
+		{ "Category", "Settings Data Singleton" },
+		{ "ModuleRelativePath", "SettingsData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_InputNameType = { "InputNameType", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USettingsData, InputNameType), Z_Construct_UEnum_GunnerSquad_WePlayVR_eInputNameType, METADATA_PARAMS(Z_Construct_UClass_USettingsData_Statics::NewProp_InputNameType_MetaData, ARRAY_COUNT(Z_Construct_UClass_USettingsData_Statics::NewProp_InputNameType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_InputNameType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsData_Statics::NewProp_AttractionType_MetaData[] = {
+		{ "Category", "Settings Data Singleton" },
+		{ "ModuleRelativePath", "SettingsData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_AttractionType = { "AttractionType", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USettingsData, AttractionType), Z_Construct_UEnum_GunnerSquad_WePlayVR_eAttractionType, METADATA_PARAMS(Z_Construct_UClass_USettingsData_Statics::NewProp_AttractionType_MetaData, ARRAY_COUNT(Z_Construct_UClass_USettingsData_Statics::NewProp_AttractionType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_AttractionType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsData_Statics::NewProp_m_iGamePlayTime_MetaData[] = {
+		{ "Category", "Settings Data Singleton" },
+		{ "ModuleRelativePath", "SettingsData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_m_iGamePlayTime = { "m_iGamePlayTime", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USettingsData, m_iGamePlayTime), METADATA_PARAMS(Z_Construct_UClass_USettingsData_Statics::NewProp_m_iGamePlayTime_MetaData, ARRAY_COUNT(Z_Construct_UClass_USettingsData_Statics::NewProp_m_iGamePlayTime_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMaxPlayerCount_MetaData[] = {
+		{ "Category", "Settings Data Singleton" },
+		{ "ModuleRelativePath", "SettingsData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMaxPlayerCount = { "m_iMaxPlayerCount", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USettingsData, m_iMaxPlayerCount), METADATA_PARAMS(Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMaxPlayerCount_MetaData, ARRAY_COUNT(Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMaxPlayerCount_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMinPlayerCount_MetaData[] = {
+		{ "Category", "Settings Data Singleton" },
+		{ "ModuleRelativePath", "SettingsData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMinPlayerCount = { "m_iMinPlayerCount", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USettingsData, m_iMinPlayerCount), METADATA_PARAMS(Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMinPlayerCount_MetaData, ARRAY_COUNT(Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMinPlayerCount_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsData_Statics::NewProp_m_strOpsIP_MetaData[] = {
 		{ "Category", "Settings Data Singleton" },
@@ -144,6 +205,13 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_SettingsFilePath = { "SettingsFilePath", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USettingsData, SettingsFilePath), METADATA_PARAMS(Z_Construct_UClass_USettingsData_Statics::NewProp_SettingsFilePath_MetaData, ARRAY_COUNT(Z_Construct_UClass_USettingsData_Statics::NewProp_SettingsFilePath_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USettingsData_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_InputNameType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_InputNameType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_AttractionType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_AttractionType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_iGamePlayTime,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMaxPlayerCount,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMinPlayerCount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_strOpsIP,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_strGameName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_bTPCastEnabled,
@@ -179,7 +247,7 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USettingsData, 1788675021);
+	IMPLEMENT_CLASS(USettingsData, 1996869593);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<USettingsData>()
 	{
 		return USettingsData::StaticClass();

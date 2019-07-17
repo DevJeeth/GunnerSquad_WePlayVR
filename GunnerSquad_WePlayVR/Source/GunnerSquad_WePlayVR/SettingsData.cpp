@@ -6,5 +6,5 @@
 USettingsData::USettingsData(const FObjectInitializer& ObjectInitializer)
 	:Super(ObjectInitializer)
 {
-
+	//TODO: Set all values to all the variables here
 }

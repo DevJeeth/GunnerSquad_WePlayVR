@@ -678,40 +678,23 @@ void UOpsManager::CreateOPSClient()
 	FString strProjectName = m_refWePlayVR_GameInstance->GetProjectName();
 	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Name:,%s"), *strProjectName);
 
+	int iGamePlayTime = m_refWePlayVR_GameInstance->m_refSettingsData->m_iGamePlayTime;
+	int iMinPlayerCount = m_refWePlayVR_GameInstance->m_refSettingsData->m_iMinPlayerCount;
+	int iMaxPlayerCount = m_refWePlayVR_GameInstance->m_refSettingsData->m_iMaxPlayerCount;
+	eAttractionType attractionType = m_refWePlayVR_GameInstance->m_refSettingsData->AttractionType;
+	eInputNameType inputNameType = m_refWePlayVR_GameInstance->m_refSettingsData->InputNameType;
 	eBuildType eCurrentBuildType = bStreamerEnabled ? eBuildType::iStreamer : eBuildType::iGame;
 
 	int iBuildType = (int)(eCurrentBuildType);
-	m_funcCreateOPSClient(TCHAR_TO_ANSI(*strProjectName), "Clock Tower", TCHAR_TO_ANSI(*strProjectVersion), false, iBuildType, eAttractionType::iArena);//STREAMER MAKE THE LAST ON TRUE
-	////m_funcCreateOPSClient("Clocktower", "Clocktower", "1.0", false, temp_iBuildType);//STREAMER MAKE THE LAST ON TRUE
-
-	SetGameInformation(300, 1, 1, eInputNameType::None);
+	m_funcCreateOPSClient(TCHAR_TO_ANSI(*strProjectName), TCHAR_TO_ANSI(*strGameName), TCHAR_TO_ANSI(*strProjectVersion), false, iBuildType, attractionType);//STREAMER MAKE THE LAST ON TRUE
+	SetGameInformation(iGamePlayTime, iMinPlayerCount, iMaxPlayerCount, inputNameType);
 
 
-	arrLanguages = new const char*[3];
-
-	arrLanguages[0] = "English";
-	arrLanguages[1] = "French";
-	arrLanguages[2] = "Portugese";
+	//Getting language details through blueprint event if not implemented will send English only to OPS
+	m_refWePlayVR_GameInstance->LanguageDetailsCommand();
 
 
-	//m_funcSetSupportedLanguages(arrLanguages, 3);
-
-	//FIXME: Note sure what has been followed to implement supported language
-	//ClearSupportedLanguages();
-	//if (m_refVRGameInstance->m_arrSupportedLanguageNames.Num() > 0)
-	//{
-	//	//SetSupportedLanguages(m_refVRGameInstance->m_arrSupportedLanguageNames, m_refVRGameInstance->m_arrSupportedLanguageNames.Num());//PLEASE ADDED METHOSD TO FIND LENGHT!!!!
-	//	for (int i = 0; i < m_refVRGameInstance->m_arrSupportedLanguageNames.Num(); i++)
-	//	{
-	//		AddSupportedLanguage(m_refVRGameInstance->m_arrSupportedLanguageNames[i]);
-	//	}
-	//}
-	//else
-	//{
-	//	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:m_arrSupportedLanguageNames is EMPTY !!!!"));
-	//}
-
-
+	//Clearing Device update list and Updated with devices that need to be in the Arena Setup, by default all disconnected
 	ClearConnectedDevicesData();
 	AddConnecedDeviceToProfile(eDeviceType::iHMD, "Vive", "Main", eDeviceStatus::iNotConnected);
 	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0", "Left", eDeviceStatus::iNotConnected);
@@ -828,83 +811,79 @@ void UOpsManager::Tick(float DeltaTime)
 		m_bInitReceived = false;
 
 		
-		//UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
+		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
 		SendLighthouseStatus("A", eDeviceStatus::iNotConnected);
 		SendLighthouseStatus("B", eDeviceStatus::iNotConnected);
-		UE_LOG(LogTemp, Error, TEXT("UOpsManager:m_bInitReceived!!!"));
-		//TODO: Implement GameInstance
+
+		//TODO: Implement Device update
 		//if (m_refVRGameInstance != nullptr)
 		//{
 		//	m_refWePlayVR_GameInstance->SteamVRStatus->CheckForStatus();
 		//	m_refWePlayVR_GameInstance->CheckAndUpdateLightHouseStatus(true);
 		//	UE_LOG(LogTemp, Error, TEXT("UOpsManager:Inside m_bInitReceived:Sending Lighthouse status!"));
 		//}
+
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  Init Command Received"));
 	}
 	if (m_bOPSConfigurationReceived)
 	{
+		m_bOPSConfigurationReceived = false;
 
-		//TODO: Implement GameInstance
-		//UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
+		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
+
+		//TOOO: Implement Analytics
 		/*m_refVRGameInstance->InitializeAnalyticsData();
 		UE_LOG(LogTemp, Error, TEXT("UOpsManager:OPSConfigurationReceived!!! InitializeAnalyticsData as OPS configuration recieved!"));
 		m_refVRGameInstance->Settings->Physical_Props_Enabled = m_dataOPS_Configuration.UseVirtualProps;
 		UE_LOG(LogTemp, Error, TEXT("CPP: OPSConfigurationReceived!!! Settings object is Overwritten for PHyiscal prop! ,based on OPS.dll config!!!Value:%d"), m_dataOPS_Configuration.UseVirtualProps);
-*/
+		*/
 		SendOPSConfigResponse();
-		m_bOPSConfigurationReceived = false;
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  OPS Config Received"));
 	}
 	if (m_bStartReceived)
 	{
-
 		m_bStartReceived = false;
-
-		//SendStartResponseToOPS();
-		//Put onStartCommandReceived here...from game instance bcos of threading
-		//TODO: Implement GameInstance
-		/*UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
-		m_refVRGameInstance->onStartCommandReceived();
-		m_bStartReceived = false;*/
+		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
+		m_refWePlayVR_GameInstance->StartCommandReceived();
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  Start Command Received"));
 	}
 	if (m_bEndReceived)
 	{
-		//Put onm_bEndReceived here...from game instance bcos of threading
-		//SendEndResponseToOPS();
-		//TODO: Implement GameInstance
-		/*UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
-		m_refVRGameInstance->OnEndCommandReceived();
-		m_bEndReceived = false;*/
+		m_bEndReceived = false;
+		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
+		m_refWePlayVR_GameInstance->EndCommandReceived();
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  End Command Received"));
 	}
 
 	if (m_bLanguageChangeReceived)
 	{
-		UE_LOG(LogTemp, Error, TEXT("UOpsManager:m_bLanguageChangeReceived Called.NEED TO IMPLEMENT HEREafter knowing Struct required!"));
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Language Change"));
 		m_bLanguageChangeReceived = false;
 	}
 
 	if (m_bDeviceUpdate)
 	{
-		//TODO: Implement GameInstance
-		/*UE_LOG(LogTemp, Error, TEXT("UOpsManager:DeviceUpdate Called.!"));
-		UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
-		m_refVRGameInstance->CheckAndSendVRDeviceStatusFromOPSDLL();
-		m_bDeviceUpdate = false;*/
+		m_bDeviceUpdate = false;
+		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
+		//TODO: Implement DeviceUpdate
+		//m_refVRGameInstance->CheckAndSendVRDeviceStatusFromOPSDLL();
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  Device Update command Received"));
 	}
 	if (m_bScreenshot)
 	{
-		//TODO: Implement GameInstance
-		/*UE_LOG(LogTemp, Error, TEXT("UOpsManager:m_bScreenshot Called.!"));
-		UVRGameInstance* m_refVRGameInstance = Cast<UVRGameInstance>(GetWorld()->GetGameInstance());
-		m_refVRGameInstance->ScreenShotReceivedFromOPSDLL();
-		m_bScreenshot = false;*/
+		m_bScreenshot = false;
+		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
+		m_refWePlayVR_GameInstance->ScreenshotCommandReceived();
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Screenshot Command Received"));
 	}
-
 	if (m_bClearScoreData == true)
 	{
-		UE_LOG(LogTemp, Error, TEXT("UOpsManager:m_bClearScoreData Called.!"));
-		SendClearDataResponse();
-		m_bClearScoreData = false;
+		m_bClearScoreData = false;		
+		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
+		m_refWePlayVR_GameInstance->ClearLeaderBoardCommandReceived();
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Clear Score Data Command Received"));
 	}
 }
 
@@ -932,7 +911,7 @@ void UOpsManager::RegisterForLogs()
 {
 	if (m_funcRegisterForLogs == NULL)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Register for Logs function was not initialized"));
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Register for Logs function was not initialized"));
 		return;
 	}
 
@@ -962,7 +941,7 @@ void UOpsManager::CleanUpOPSClient()
 {
 	if (m_funcCloseAndCleanOPSClient == NULL)
 	{
-		UE_LOG(LogTemp, Error, TEXT("OPS Clean-up function was not initialized"));
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] OPS Clean-up function was not initialized"));
 		return;
 	}
 
@@ -973,30 +952,30 @@ void UOpsManager::SetIPForOPS(FString a_strOPSIP)
 {
 	if (m_funcSetOPSIP == NULL)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function was not initialized"));
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Set OPS IP function was not initialized"));
 		return;
 	}
 	
 	UWePlayVR_GameInstance* m_refVRGameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
-	//TODO: Implement Settings
-	//FString temp_strOPSIPFromSettings = m_refVRGameInstance->Settings->OPS_IP;
+
+	FString strOPSIPFromSettings = m_refVRGameInstance->m_refSettingsData->m_strOpsIP;
 
 	if (!m_refVRGameInstance->m_strOPSIP.IsEmpty())
 	{
 		m_funcSetOPSIP(TCHAR_TO_ANSI(*m_refVRGameInstance->m_strOPSIP));
-		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function called  as CMD line is not empty:%s"), *(m_refVRGameInstance->m_strOPSIP));
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Set OPS IP function called  as CMD line OPS IP has been set:%s"), *(m_refVRGameInstance->m_strOPSIP));
 
 	}
-	/*else if (!temp_strOPSIPFromSettings.IsEmpty())
+	else if (!strOPSIPFromSettings.IsEmpty())
 	{
-		m_funcSetOPSIP(TCHAR_TO_ANSI(*temp_strOPSIPFromSettings));
-		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function called  as SettingSOPS_IP is not empty:%s"), *temp_strOPSIPFromSettings);
+		m_funcSetOPSIP(TCHAR_TO_ANSI(*strOPSIPFromSettings));
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Set OPS IP function called  as Settings OPS IP has been set:%s"), *strOPSIPFromSettings);
 
-	}*/
+	}
 	else
 	{
-		UE_LOG(LogTemp, Error, TEXT("Set OPS IP function NOT called  as SettingSOPS_IP is  empty and no Cmd Line Ip given"));
+		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Set OPS IP function NOT called  as Settings OPS IP is  empty and no Cmd Line IP given"));
 	}
 
 }
@@ -1111,25 +1090,8 @@ void UOpsManager::SetSupportedLanguages(TArray<FString> a_strLanguageList, int a
 		arrLanguages[iLoop] = TCHAR_TO_ANSI(*strCurrentLanguage);
 		UE_LOG(LogTemp, Error, TEXT("SetSupportedLanguages;Index:%d , Value:%s"), iLoop, arrLanguages[iLoop]);
 	}
-	//m_funcSetSupportedLanguages(a_strLanguageList, a_nLength);
 	m_funcSetSupportedLanguages(arrLanguages, a_nLength);
 	UE_LOG(LogTemp, Error, TEXT("UOpsManager:SetSupportedLanguages:called in  OSP.dll through m_funcSetSupportedLanguages:Chk at OPS"));
-
-
-
-	/*
-	arrLanguages  = StringToCharArray(a_strLanguageList);
-
-	if (arrLanguages != NULL && arrLanguages[0] != '\0')
-	{
-		m_funcSetSupportedLanguages(arrLanguages, a_nLength);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("SetSupportedLanguages StringToCharArray is Null or empty"));
-	}
-	*/
-
 }
 
 
