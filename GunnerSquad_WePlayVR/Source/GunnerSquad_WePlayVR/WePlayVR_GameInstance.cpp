@@ -96,7 +96,7 @@ void UWePlayVR_GameInstance::EndCommandReceived()
 
 void UWePlayVR_GameInstance::LanguageChangeCommandReceived(FString a_strNewLanguage)
 {
-	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Language Change Command Received, calling EndCommand Blueprint event: %s ", a_strNewLanguage));
+	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Language Change Command Received, calling EndCommand Blueprint event:"));
 	OnLanguageChangeCommandReceived(a_strNewLanguage);
 }
 

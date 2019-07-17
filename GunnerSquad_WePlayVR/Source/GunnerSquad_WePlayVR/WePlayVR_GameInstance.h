@@ -75,6 +75,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendLanguageChangeResponse();
 
+#pragma region VRDevices_Update_Functionality
 	//TODO: Device Updates need to be looked into and implemented
 	//These do not to be exposed in the blueprint, DEVICE UPDATE SHOULD BE HANDLED BY OPS SYSTEM
 	UFUNCTION()
@@ -90,6 +91,20 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void CheckAndSendVRDeviceStatus();
 
+	UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
+		void CheckAndUpdateLightHouseStatus(bool a_bForceUpdate = false);
+
+	UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
+		bool IsLightHouseStatusChangedFor(FString a_strLightHouseName);
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LightHouse A Status")
+		bool m_bIsLightHouseAConnected = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LightHouse B Status")
+		bool m_bIsLightHouseBConnected = false;
+
+#pragma endregion
+
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendScreenshotResponse(TArray<uint8> a_arrImageData);
 
@@ -98,17 +113,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
 		FString GetProjectName();
-
-
-#pragma region
-	UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
-		void CheckAndUpdateLightHouseStatus(bool a_bForceUpdate = false);
-	UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
-		bool IsLightHouseStatusChangedFor(FString a_strLightHouseName);
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LightHouse A Status")
-		bool m_bIsLightHouseAConnected = false;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LightHouse B Status")
-		bool m_bIsLightHouseBConnected = false;
 
 	//OPS IP and command line data
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "OPS Command Data")

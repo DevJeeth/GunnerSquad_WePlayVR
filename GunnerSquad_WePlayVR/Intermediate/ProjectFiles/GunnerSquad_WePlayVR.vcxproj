@@ -75,7 +75,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{04588C6C-093C-4676-AB5E-550B5C5C4EDA}</ProjectGuid>
+    <ProjectGuid>{D1A571D1-1376-43C6-9409-3515F06FF1DA}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>GunnerSquad_WePlayVR</RootNamespace>
     <PlatformToolset>v141</PlatformToolset>
@@ -371,8 +371,6 @@
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
-    <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\CustomFileReadingLibrary.cpp"/>
-    <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\CustomFileReadingLibrary.h"/>
     <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\GameManager.cpp"/>
     <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\GameManager.h"/>
     <None Include="..\..\Source\GunnerSquad_WePlayVR\GunnerSquad_WePlayVR.Build.cs"/>
