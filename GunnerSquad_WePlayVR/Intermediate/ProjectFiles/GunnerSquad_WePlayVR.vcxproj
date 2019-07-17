@@ -75,7 +75,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D1A571D1-1376-43C6-9409-3515F06FF1DA}</ProjectGuid>
+    <ProjectGuid>{7091CC05-E0F8-4C32-9C58-BE2AD98E67ED}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>GunnerSquad_WePlayVR</RootNamespace>
     <PlatformToolset>v141</PlatformToolset>

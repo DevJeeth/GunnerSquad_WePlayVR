@@ -43,6 +43,7 @@ bool UOpsManager::ImportDLL(FString a_strFolderName, FString a_strDLLName)
 	return false;	// Return an error.
 }
 
+#pragma region ImportMethods_To_Create_Function_Pointers_To_The _DLL_Methods
 
 //Registers a delegate for logs
 bool UOpsManager::ImportMethodRegisterForLogs()
@@ -470,6 +471,9 @@ bool UOpsManager::ImportMethodSendConnectedDevicesUpdate()
 	}
 	return false;	// Return an error.
 }
+#pragma endregion
+
+#pragma region Call_Set_Pointer_Functions_To_DLL_Methods
 
 bool UOpsManager::ImportDLLMethods()
 {
@@ -632,7 +636,7 @@ bool UOpsManager::ImportDLLMethods()
 	}
 	return true;
 }
-
+#pragma endregion
 
 void UOpsManager::SendClearDataResponse()
 {

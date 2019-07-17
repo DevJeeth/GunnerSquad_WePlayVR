@@ -52,8 +52,9 @@ public:
 	virtual void BeginDestroy() override;
 	virtual void StartGameInstance() override;
 
-	UFUNCTION(BlueprintCallable, Category = "Commands")
-		void OnCommandReceived(FString a_strCommandData);
+	//COMMENT: Not sure if this is needed
+	/*UFUNCTION(BlueprintCallable, Category = "Commands")
+		void OnCommandReceived(FString a_strCommandData);*/
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendStartCommandResponse();
@@ -78,30 +79,30 @@ public:
 #pragma region VRDevices_Update_Functionality
 	//TODO: Device Updates need to be looked into and implemented
 	//These do not to be exposed in the blueprint, DEVICE UPDATE SHOULD BE HANDLED BY OPS SYSTEM
-	UFUNCTION()
-		void SendControllerStatus(int a_iIndex);
+	//UFUNCTION()
+	//	void SendControllerStatus(int a_iIndex);
 
-	UFUNCTION()
-		void SendHMDStatus();
+	//UFUNCTION()
+	//	void SendHMDStatus();
 
-	UFUNCTION()
-		void SendLightHouseStatus(FString a_strID);
+	//UFUNCTION()
+	//	void SendLightHouseStatus(FString a_strID);
 
-	//Master command to check and send the status of the VR devices
-	UFUNCTION(BlueprintCallable, Category = "Commands")
-		void CheckAndSendVRDeviceStatus();
+	////Master command to check and send the status of the VR devices
+	//UFUNCTION(BlueprintCallable, Category = "Commands")
+	//	void CheckAndSendVRDeviceStatus();
 
-	UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
-		void CheckAndUpdateLightHouseStatus(bool a_bForceUpdate = false);
+	//UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
+	//	void CheckAndUpdateLightHouseStatus(bool a_bForceUpdate = false);
 
-	UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
-		bool IsLightHouseStatusChangedFor(FString a_strLightHouseName);
+	//UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
+	//	bool IsLightHouseStatusChangedFor(FString a_strLightHouseName);
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LightHouse A Status")
-		bool m_bIsLightHouseAConnected = false;
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LightHouse A Status")
+	//	bool m_bIsLightHouseAConnected = false;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LightHouse B Status")
-		bool m_bIsLightHouseBConnected = false;
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "LightHouse B Status")
+	//	bool m_bIsLightHouseBConnected = false;
 
 #pragma endregion
 
