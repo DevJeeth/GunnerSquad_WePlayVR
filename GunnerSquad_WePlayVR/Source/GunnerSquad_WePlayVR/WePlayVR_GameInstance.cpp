@@ -13,6 +13,7 @@ UWePlayVR_GameInstance::UWePlayVR_GameInstance(const FObjectInitializer& ObjectI
 
 void UWePlayVR_GameInstance::Init()
 {
+	Super::Init();
 	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Init "));
 }
 
@@ -20,12 +21,31 @@ void UWePlayVR_GameInstance::StartGameInstance()
 {
 	UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance]STARTING WEPLAYVR GAME INSTANCE ,\npath = %s"), *GetPathName());
 	UEngine* const Engine = GetEngine();
-	LanguageDetailsCommand();
+
+	m_refSettingsData = NewObject<USettingsData>(this);
+
+	OnStart();
+
 }
 
 void UWePlayVR_GameInstance::OnStart()
 {
+	Super::OnStart();
 
+	if (m_refSettingsData == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SettingsData reference not found. Operation halted"))
+		return;
+	}
+
+	//TODO: SteamVR implementation
+
+	InitializeOPS();
+
+	//This is used to check if PLAY IN EDITOR is enabled
+	//if (GetWorld()->WorldType == EWorldType::PIE)
+	//{
+	//}
 }
 
 void UWePlayVR_GameInstance::Shutdown()
@@ -41,6 +61,13 @@ void UWePlayVR_GameInstance::BeginDestroy()
 
 void UWePlayVR_GameInstance::InitializeOPS()
 {
+
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features will not work"))
+			return;
+	}
+
 	m_refOpsManager = NewObject<UOpsManager>(this);
 	if (m_refOpsManager == NULL)
 	{
@@ -75,6 +102,12 @@ void UWePlayVR_GameInstance::InitializeOPS()
 #pragma region Ops_Blueprint_Intermediate_Methods
 void UWePlayVR_GameInstance::LanguageDetailsCommand()
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features LanguageDetails will not work"))
+			return;
+	}
+
 	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Start Command Received, calling StartCommand Blueprint event "));
 	TArray<FString> m_arrLanguageSupported  = OnLanguageDetailsGetCommand();
 
@@ -89,19 +122,19 @@ void UWePlayVR_GameInstance::LanguageDetailsCommand()
 
 void UWePlayVR_GameInstance::StartCommandReceived()
 {
-	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Start Command Received, calling StartCommand Blueprint event "));
+	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Start Command Received, calling Start Command Blueprint event "));
 	OnStartCommandReceived();
 }
 
 void UWePlayVR_GameInstance::EndCommandReceived()
 {
-	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] End Command Received, calling EndCommand Blueprint event "));
+	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] End Command Received, calling End Command Blueprint event "));
 	OnEndCommandReceived();
 }
 
 void UWePlayVR_GameInstance::LanguageChangeCommandReceived(FString a_strNewLanguage)
 {
-	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Language Change Command Received, calling EndCommand Blueprint event:"));
+	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] Language Change Command Received, calling Language Change Blueprint event:"));
 	OnLanguageChangeCommandReceived(a_strNewLanguage);
 }
 
@@ -148,6 +181,12 @@ FString UWePlayVR_GameInstance::GetProjectVersion()
 #pragma region Ops_Wrapper_Method_Calls
 void UWePlayVR_GameInstance::SetSupportedLanguages(TArray<FString> a_arrLanguageNames)
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features SetSupportedLanguages will not work"))
+			return;
+	}
+
 	if (m_refOpsManager == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SetSupportLanguages not called, reference to OPS lost"));
@@ -159,11 +198,23 @@ void UWePlayVR_GameInstance::SetSupportedLanguages(TArray<FString> a_arrLanguage
 
 void UWePlayVR_GameInstance::SendVRDeviceStatusUpdate()
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features SendVRDevicesStatusUpdate will not work"))
+			return;
+
+	}
 	UE_LOG(LogTemp, Log, TEXT("[WePlayVR_GameInstance] VR Device Update Command Received, calling VR Device Status Blueprint event "));
 }
 
 void UWePlayVR_GameInstance::SendStartRumbleCommand(FString a_strClipName, int a_nVolume, bool a_bPlayOnce)
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features SendStartRumble will not work"))
+			return;
+	}
+
 	if (m_refOpsManager == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendStartRumble not called, reference to OPS lost"));
@@ -175,6 +226,12 @@ void UWePlayVR_GameInstance::SendStartRumbleCommand(FString a_strClipName, int a
 
 void UWePlayVR_GameInstance::SendStopRumbleCommand()
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features SendStopRumble will not work"))
+			return;
+	}
+
 	if (m_refOpsManager == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendStopRumble not called, reference to OPS lost"));
@@ -187,6 +244,13 @@ void UWePlayVR_GameInstance::SendStopRumbleCommand()
 
 void UWePlayVR_GameInstance::SendLanguageChangeResponse()
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features Language change response will not work"))
+			return;
+	}
+
+
 	if (m_refOpsManager == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendLanguageChangeResponse not called, reference to OPS lost"));
@@ -198,6 +262,12 @@ void UWePlayVR_GameInstance::SendLanguageChangeResponse()
 
 void UWePlayVR_GameInstance::SendScreenshotResponse(TArray<uint8> a_arrImageData)
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features send screenshot will not work"))
+			return;
+	}
+
 	if (m_refOpsManager == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendLanguageChangeResponse not called, reference to OPS lost"));
@@ -213,6 +283,12 @@ void UWePlayVR_GameInstance::SendScreenshotResponse(TArray<uint8> a_arrImageData
 
 void UWePlayVR_GameInstance::SendStartCommandResponse()
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features Send Start Response will not work"))
+			return;
+	}
+
 	if (m_refOpsManager == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendStartResponseToOPS not called, reference to OPS lost"));
@@ -225,6 +301,12 @@ void UWePlayVR_GameInstance::SendStartCommandResponse()
 
 void UWePlayVR_GameInstance::SendEndCommandResponse()
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features End Response will not work"))
+			return;
+	}
+
 	if (m_refOpsManager == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendEndResponseToOPS not called, reference to OPS lost"));
@@ -236,6 +318,12 @@ void UWePlayVR_GameInstance::SendEndCommandResponse()
 
 void UWePlayVR_GameInstance::SendClearLeaderboardResponse()
 {
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features Clear Leaderboard will not work"))
+			return;
+	}
+
 	if (m_refOpsManager == NULL)
 	{
 		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendClearDataResponse not called, reference to OPS lost"));

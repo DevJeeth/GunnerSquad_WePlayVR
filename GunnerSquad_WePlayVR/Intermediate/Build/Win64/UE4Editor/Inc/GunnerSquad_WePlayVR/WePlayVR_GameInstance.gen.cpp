@@ -371,7 +371,6 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Commands" },
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
-		{ "ToolTip", "PLEASE NOTE SAME FUNC PRESENT IN OPS HENCE UNREAL RELATED HEADACHES..." },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "SendLanguageChangeResponse", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse_Statics::Function_MetaDataParams)) };
@@ -596,7 +595,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived, "OnStartCommandReceived" }, // 1261319689
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse, "SendClearLeaderboardResponse" }, // 3274029198
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendEndCommandResponse, "SendEndCommandResponse" }, // 4129808075
-		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse, "SendLanguageChangeResponse" }, // 1941558536
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse, "SendLanguageChangeResponse" }, // 292926020
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendScreenshotResponse, "SendScreenshotResponse" }, // 155755533
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse, "SendStartCommandResponse" }, // 66523464
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartRumbleCommand, "SendStartRumbleCommand" }, // 3163796962
@@ -672,7 +671,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 4182077607);
+	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 978651064);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UWePlayVR_GameInstance>()
 	{
 		return UWePlayVR_GameInstance::StaticClass();

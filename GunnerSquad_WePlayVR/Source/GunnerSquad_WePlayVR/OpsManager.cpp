@@ -847,6 +847,7 @@ void UOpsManager::Tick(float DeltaTime)
 		m_bStartReceived = false;
 		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 		m_refWePlayVR_GameInstance->StartCommandReceived();
+		StartCommandReceived();
 		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  Start Command Received"));
 	}
 	if (m_bEndReceived)

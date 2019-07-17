@@ -73,7 +73,7 @@ public:
 		void SendStopRumbleCommand();
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
-		void SetSupportedLanguages(TArray<FString> a_arrLanguageNames);//PLEASE NOTE SAME FUNC PRESENT IN OPS HENCE UNREAL RELATED HEADACHES...
+		void SetSupportedLanguages(TArray<FString> a_arrLanguageNames);
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendLanguageChangeResponse();

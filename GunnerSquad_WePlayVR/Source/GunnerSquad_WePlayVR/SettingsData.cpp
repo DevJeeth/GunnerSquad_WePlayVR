@@ -6,5 +6,14 @@
 USettingsData::USettingsData(const FObjectInitializer& ObjectInitializer)
 	:Super(ObjectInitializer)
 {
-	//TODO: Set all values to all the variables here
+	m_bOpsEnabled = false;
+	m_bStreamerEnabled = false;
+	m_bPhysicalPropsEnabled = false;
+	m_bTPCastEnabled = false;
+	m_strGameName = "Gunner Squad";
+	m_strOpsIP = "192.168.1.107";
+	m_iMinPlayerCount = m_iMaxPlayerCount = 1;
+	m_iGamePlayTime = 180;
+	AttractionType = eAttractionType::iArena;
+	InputNameType = eInputNameType::None;
 }
