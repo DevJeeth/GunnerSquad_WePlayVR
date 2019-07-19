@@ -50,7 +50,7 @@ void USteamVRStatus::CheckControllerStatus()
 	{
 		if (arrTrackedControllers.Num() > 2)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("[SteamVRStatus] MORE THAN TWO CONTROLLERS DETECTED."));
+			UE_LOG(LogTemp, Warning, TEXT("[SteamVRStatus] MORE THAN TWO CONTROLLERS DETECTED.  FIX THIS."));
 		}
 
 		m_bRightControllerConnected = GEngine->XRSystem->IsTracking(arrTrackedControllers[0]);
@@ -66,7 +66,35 @@ void USteamVRStatus::CheckControllerStatus()
 
 void USteamVRStatus::CheckLighthouseStatus()
 {
+	TArray<int32> arrTrackedLighthouses;
+	GEngine->XRSystem->EnumerateTrackedDevices(arrTrackedLighthouses, EXRTrackedDeviceType::TrackingReference);
 
+	if (arrTrackedLighthouses.Num() == 0)
+	{
+		m_bLighthouseAConnected = false;
+		m_bLighthouseBConnected = false;
+		UE_LOG(LogTemp, Log, TEXT("[SteamVRStatus] ZERO LIGHTHOUSE TRACKED"));
+		return;
+	}
+
+	if (arrTrackedLighthouses.Num() == 1)
+	{
+		m_bLighthouseAConnected = GEngine->XRSystem->IsTracking(arrTrackedLighthouses[0]);
+		m_bLighthouseBConnected = false;
+		UE_LOG(LogTemp, Log, TEXT("[SteamVRStatus] ONE LIGHTHOUSE TRACKED"));
+		return;
+	}
+	else
+	{
+		if (arrTrackedLighthouses.Num() > 2)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("MORE THAN TWO LIGHT HOUSE TRACK. FIX THIS."));
+		}
+
+		m_bLighthouseAConnected = GEngine->XRSystem->IsTracking(arrTrackedLighthouses[0]);
+		m_bLighthouseBConnected = GEngine->XRSystem->IsTracking(arrTrackedLighthouses[1]);
+		UE_LOG(LogTemp, Log, TEXT("[SteamVRStatus] TWO LIGHTHOUSE TRACKED"));
+	}
 }
 
 void USteamVRStatus::CheckForStatus()
