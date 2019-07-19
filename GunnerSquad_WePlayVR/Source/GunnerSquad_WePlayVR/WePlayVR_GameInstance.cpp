@@ -481,7 +481,6 @@ void UWePlayVR_GameInstance::SendUpdatedDeviceStatus()
 	{
 		m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, "0%", "Right", eDeviceStatus::iNotConnected);
 		m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0%", "Left", eDeviceStatus::iNotConnected);
-
 	}
 	else if (mapControllerStatus.Num() == 1)
 	{

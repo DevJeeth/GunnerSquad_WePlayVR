@@ -701,13 +701,11 @@ void UOpsManager::CreateOPSClient()
 	//Getting language details through blueprint event if not implemented will send English only to OPS
 	m_refWePlayVR_GameInstance->LanguageDetailsCommand();
 
-
 	//Clearing Device update list and Updated with devices that need to be in the Arena Setup, by default all disconnected
 	ClearConnectedDevicesData();
 	AddConnecedDeviceToProfile(eDeviceType::iHMD, "Vive", "Main", eDeviceStatus::iNotConnected);
 	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0%", "Left", eDeviceStatus::iNotConnected);
 	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, "0%", "Right", eDeviceStatus::iNotConnected);
-
 }
 
 void UOpsManager::RegisterForCommands()
