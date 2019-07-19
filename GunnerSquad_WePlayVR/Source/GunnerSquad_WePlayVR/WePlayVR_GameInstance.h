@@ -29,22 +29,22 @@ private:
 protected:
 	virtual void OnStart() override;
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "CommandEvents")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "CommandEvents")
 		void OnStartCommandReceived();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "CommandEvents")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "CommandEvents")
 		void OnEndCommandReceived();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "CommandEvents")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "CommandEvents")
 		void OnScreenShotCommandReceived();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "CommandEvents")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "CommandEvents")
 		void OnLanguageChangeCommandReceived(const FString& a_strLanguage);
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "CommandEvents")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "CommandEvents")
 		void OnClearLeaderboardReceived();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "CommandEvents")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "CommandEvents")
 		TArray<FString> OnLanguageDetailsGetCommand();
 
 public:
@@ -55,10 +55,6 @@ public:
 	virtual void Shutdown() override;
 	virtual void BeginDestroy() override;
 	virtual void StartGameInstance() override;
-
-	//COMMENT: Not sure if this is needed
-	/*UFUNCTION(BlueprintCallable, Category = "Commands")
-		void OnCommandReceived(FString a_strCommandData);*/
 
 	UFUNCTION(BlueprintCallable, Category = "Commands")
 		void SendStartCommandResponse();

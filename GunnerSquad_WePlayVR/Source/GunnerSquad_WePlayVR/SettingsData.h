@@ -37,6 +37,9 @@ public:
 		FString m_strGameName = "WePlayVR_Sample";
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton")
+		FString m_strGameInternalName = "WePlayVR_Sample";
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton")
 		FString	m_strOpsIP;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Settings Data Singleton") 

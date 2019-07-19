@@ -151,10 +151,10 @@ bool UOpsManager::ImportMethodClearConnectedDevicesData()
 {
 	if (v_dllHandle != NULL)
 	{
-		m_funcCreateOPSClient = NULL;
-		FString procName = "CreateOPSClient";	// Needs to be the exact name of the DLL method.
-		m_funcCreateOPSClient = (__CreateOPSClient)FPlatformProcess::GetDllExport(v_dllHandle, *procName);
-		if (m_funcCreateOPSClient != NULL)
+		m_funcClearConnectedDevicesData = NULL;
+		FString procName = "ClearConnectedDevicesData";	// Needs to be the exact name of the DLL method.
+		m_funcClearConnectedDevicesData = (__ClearConnectedDevicesData)FPlatformProcess::GetDllExport(v_dllHandle, *procName);
+		if (m_funcClearConnectedDevicesData != NULL)
 		{
 			return true;
 		}
@@ -471,6 +471,7 @@ bool UOpsManager::ImportMethodSendConnectedDevicesUpdate()
 	}
 	return false;	// Return an error.
 }
+
 #pragma endregion
 
 #pragma region Call_Set_Pointer_Functions_To_DLL_Methods
@@ -671,22 +672,29 @@ void UOpsManager::CreateOPSClient()
 	UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
 	FString strGameName = m_refWePlayVR_GameInstance->m_refSettingsData->m_strGameName;
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction: Game Name:,%s"), *strGameName);
 	bool bStreamerEnabled = m_refWePlayVR_GameInstance->m_refSettingsData->m_bStreamerEnabled;  
-	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Is it for Streamer??,%d"), bStreamerEnabled);
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Is it for Streamer??,%d"), bStreamerEnabled);
 	FString strProjectVersion = m_refWePlayVR_GameInstance->GetProjectVersion();
-	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Version:,%s"), *strProjectVersion);
-	FString strProjectName = m_refWePlayVR_GameInstance->GetProjectName();
-	UE_LOG(LogTemp, Error, TEXT("OPS ClientFunction:Project Name:,%s"), *strProjectName);
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Project Version:,%s"), *strProjectVersion);
+	FString strGameInternalName = m_refWePlayVR_GameInstance->m_refSettingsData->m_strGameInternalName;
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Internal Game Name:,%s"), *strGameInternalName);
 
 	int iGamePlayTime = m_refWePlayVR_GameInstance->m_refSettingsData->m_iGamePlayTime;
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Internal Gameplay Time:,%d"), iGamePlayTime);
 	int iMinPlayerCount = m_refWePlayVR_GameInstance->m_refSettingsData->m_iMinPlayerCount;
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Internal Min player count:,%d"), iMinPlayerCount);
 	int iMaxPlayerCount = m_refWePlayVR_GameInstance->m_refSettingsData->m_iMaxPlayerCount;
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Internal Max payer count:,%d"), iMaxPlayerCount);
 	eAttractionType attractionType = m_refWePlayVR_GameInstance->m_refSettingsData->AttractionType;
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Internal Attraction Type:,%d"), (int)attractionType);
 	eInputNameType inputNameType = m_refWePlayVR_GameInstance->m_refSettingsData->InputNameType;
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Internal input Name Type:,%d"), (int)inputNameType);
 	eBuildType eCurrentBuildType = bStreamerEnabled ? eBuildType::iStreamer : eBuildType::iGame;
+	UE_LOG(LogTemp, Warning, TEXT("OPS ClientFunction:Internal Build Type:,%d"), (int)eCurrentBuildType);
 
 	int iBuildType = (int)(eCurrentBuildType);
-	m_funcCreateOPSClient(TCHAR_TO_ANSI(*strProjectName), TCHAR_TO_ANSI(*strGameName), TCHAR_TO_ANSI(*strProjectVersion), false, iBuildType, attractionType);//STREAMER MAKE THE LAST ON TRUE
+	m_funcCreateOPSClient(TCHAR_TO_ANSI(*strGameInternalName), TCHAR_TO_ANSI(*strGameName), TCHAR_TO_ANSI(*strProjectVersion), false, iBuildType, attractionType);//STREAMER MAKE THE LAST ON TRUE
 	SetGameInformation(iGamePlayTime, iMinPlayerCount, iMaxPlayerCount, inputNameType);
 
 
@@ -807,9 +815,8 @@ void UOpsManager::Tick(float DeltaTime)
 
 	if (m_bInitReceived)
 	{
-		SendInitResponseToOPS();
 		m_bInitReceived = false;
-
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager]  Init Command Received"));
 		
 		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 
@@ -824,7 +831,8 @@ void UOpsManager::Tick(float DeltaTime)
 		//	UE_LOG(LogTemp, Error, TEXT("UOpsManager:Inside m_bInitReceived:Sending Lighthouse status!"));
 		//}
 
-		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  Init Command Received"));
+		SendInitResponseToOPS();
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager]  Sending Init  Response"));
 	}
 	if (m_bOPSConfigurationReceived)
 	{
@@ -840,7 +848,7 @@ void UOpsManager::Tick(float DeltaTime)
 		UE_LOG(LogTemp, Error, TEXT("CPP: OPSConfigurationReceived!!! Settings object is Overwritten for PHyiscal prop! ,based on OPS.dll config!!!Value:%d"), m_dataOPS_Configuration.UseVirtualProps);
 		*/
 		SendOPSConfigResponse();
-		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  OPS Config Received"));
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager]  OPS Config Received"));
 	}
 	if (m_bStartReceived)
 	{
@@ -848,19 +856,19 @@ void UOpsManager::Tick(float DeltaTime)
 		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 		m_refWePlayVR_GameInstance->StartCommandReceived();
 		StartCommandReceived();
-		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  Start Command Received"));
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager]  Start Command Received"));
 	}
 	if (m_bEndReceived)
 	{
 		m_bEndReceived = false;
 		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 		m_refWePlayVR_GameInstance->EndCommandReceived();
-		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  End Command Received"));
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager]  End Command Received"));
 	}
 
 	if (m_bLanguageChangeReceived)
 	{
-		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Language Change"));
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager] Language Change"));
 		m_bLanguageChangeReceived = false;
 	}
 
@@ -870,21 +878,21 @@ void UOpsManager::Tick(float DeltaTime)
 		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 		//TODO: Implement DeviceUpdate
 		//m_refVRGameInstance->CheckAndSendVRDeviceStatusFromOPSDLL();
-		UE_LOG(LogTemp, Error, TEXT("[UOpsManager]  Device Update command Received"));
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager]  Device Update command Received"));
 	}
 	if (m_bScreenshot)
 	{
 		m_bScreenshot = false;
 		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 		m_refWePlayVR_GameInstance->ScreenshotCommandReceived();
-		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Screenshot Command Received"));
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager] Screenshot Command Received"));
 	}
 	if (m_bClearScoreData == true)
 	{
 		m_bClearScoreData = false;		
 		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
 		m_refWePlayVR_GameInstance->ClearLeaderBoardCommandReceived();
-		UE_LOG(LogTemp, Error, TEXT("[UOpsManager] Clear Score Data Command Received"));
+		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager] Clear Score Data Command Received"));
 	}
 }
 

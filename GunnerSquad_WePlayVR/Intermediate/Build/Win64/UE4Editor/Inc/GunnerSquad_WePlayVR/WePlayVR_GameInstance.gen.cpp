@@ -166,7 +166,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnClearLeaderboardReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnClearLeaderboardReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -189,7 +189,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnEndCommandReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnEndCommandReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -226,7 +226,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnLanguageChangeCommandReceived", sizeof(WePlayVR_GameInstance_eventOnLanguageChangeCommandReceived_Parms), Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnLanguageChangeCommandReceived", sizeof(WePlayVR_GameInstance_eventOnLanguageChangeCommandReceived_Parms), Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -258,7 +258,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnLanguageDetailsGetCommand", sizeof(WePlayVR_GameInstance_eventOnLanguageDetailsGetCommand_Parms), Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnLanguageDetailsGetCommand", sizeof(WePlayVR_GameInstance_eventOnLanguageDetailsGetCommand_Parms), Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -281,7 +281,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnScreenShotCommandReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnScreenShotCommandReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -304,7 +304,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnStartCommandReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "OnStartCommandReceived", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C080800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -430,7 +430,6 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Commands" },
 		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
-		{ "ToolTip", "UFUNCTION(BlueprintCallable, Category = \"Commands\")\n               void OnCommandReceived(FString a_strCommandData);" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "SendStartCommandResponse", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse_Statics::Function_MetaDataParams)) };
@@ -587,17 +586,17 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWePlayVR_GameInstance_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectName, "GetProjectName" }, // 2132533486
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectVersion, "GetProjectVersion" }, // 2125303557
-		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived, "OnClearLeaderboardReceived" }, // 4272101931
-		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived, "OnEndCommandReceived" }, // 3985929265
-		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived, "OnLanguageChangeCommandReceived" }, // 61738297
-		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand, "OnLanguageDetailsGetCommand" }, // 1360719844
-		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived, "OnScreenShotCommandReceived" }, // 695021480
-		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived, "OnStartCommandReceived" }, // 1261319689
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived, "OnClearLeaderboardReceived" }, // 2312667390
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnEndCommandReceived, "OnEndCommandReceived" }, // 3115631430
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageChangeCommandReceived, "OnLanguageChangeCommandReceived" }, // 1581713082
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnLanguageDetailsGetCommand, "OnLanguageDetailsGetCommand" }, // 3249551411
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnScreenShotCommandReceived, "OnScreenShotCommandReceived" }, // 3559064202
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnStartCommandReceived, "OnStartCommandReceived" }, // 3870452979
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendClearLeaderboardResponse, "SendClearLeaderboardResponse" }, // 3274029198
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendEndCommandResponse, "SendEndCommandResponse" }, // 4129808075
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendLanguageChangeResponse, "SendLanguageChangeResponse" }, // 292926020
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendScreenshotResponse, "SendScreenshotResponse" }, // 155755533
-		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse, "SendStartCommandResponse" }, // 66523464
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse, "SendStartCommandResponse" }, // 764887699
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartRumbleCommand, "SendStartRumbleCommand" }, // 3163796962
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStopRumbleCommand, "SendStopRumbleCommand" }, // 122441423
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SetSupportedLanguages, "SetSupportedLanguages" }, // 817154689
@@ -671,7 +670,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 978651064);
+	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 592349311);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UWePlayVR_GameInstance>()
 	{
 		return UWePlayVR_GameInstance::StaticClass();

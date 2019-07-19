@@ -60,6 +60,10 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_m_strOpsIP;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_strGameInternalName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_m_strGameInternalName;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_m_strGameName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStrPropertyParams NewProp_m_strGameName;
@@ -147,6 +151,13 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_m_strOpsIP = { "m_strOpsIP", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USettingsData, m_strOpsIP), METADATA_PARAMS(Z_Construct_UClass_USettingsData_Statics::NewProp_m_strOpsIP_MetaData, ARRAY_COUNT(Z_Construct_UClass_USettingsData_Statics::NewProp_m_strOpsIP_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsData_Statics::NewProp_m_strGameInternalName_MetaData[] = {
+		{ "Category", "Settings Data Singleton" },
+		{ "ModuleRelativePath", "SettingsData.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_USettingsData_Statics::NewProp_m_strGameInternalName = { "m_strGameInternalName", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USettingsData, m_strGameInternalName), METADATA_PARAMS(Z_Construct_UClass_USettingsData_Statics::NewProp_m_strGameInternalName_MetaData, ARRAY_COUNT(Z_Construct_UClass_USettingsData_Statics::NewProp_m_strGameInternalName_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USettingsData_Statics::NewProp_m_strGameName_MetaData[] = {
 		{ "Category", "Settings Data Singleton" },
 		{ "ModuleRelativePath", "SettingsData.h" },
@@ -213,6 +224,7 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMaxPlayerCount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_iMinPlayerCount,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_strOpsIP,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_strGameInternalName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_strGameName,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_bTPCastEnabled,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USettingsData_Statics::NewProp_m_bPhysicalPropsEnabled,
@@ -247,7 +259,7 @@ void EmptyLinkFunctionForGeneratedCodeSettingsData() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USettingsData, 1996869593);
+	IMPLEMENT_CLASS(USettingsData, 2238984759);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<USettingsData>()
 	{
 		return USettingsData::StaticClass();
