@@ -31,8 +31,8 @@ void EmptyLinkFunctionForGeneratedCodeGunnerSquad_WePlayVR_init() {}
 				SingletonFuncArray,
 				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xD6C49E03,
-				0x59234901,
+				0xAD4FEE39,
+				0xAF278502,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

@@ -383,8 +383,10 @@
     <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\OpsManager.cpp" />
     <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\OpsManager.h" />
     <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\SettingsData.cpp" />
+    <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\SteamVRStatus.cpp" />
     <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\WePlayVR_GameInstance.cpp" />
     <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\SettingsData.h" />
+    <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\SteamVRStatus.h" />
     <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\WePlayVR_GameInstance.h" />
   </ItemGroup>
   <PropertyGroup>

@@ -73,9 +73,15 @@
     <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\SettingsData.h">
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GunnerSquad_WePlayVR\SteamVRStatus.h">
+      <Filter>Source\GunnerSquad_WePlayVR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\SettingsData.cpp">
+      <Filter>Source\GunnerSquad_WePlayVR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GunnerSquad_WePlayVR\SteamVRStatus.cpp">
       <Filter>Source\GunnerSquad_WePlayVR</Filter>
     </ClCompile>
   </ItemGroup>
