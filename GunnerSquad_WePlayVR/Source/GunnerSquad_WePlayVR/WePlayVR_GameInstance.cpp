@@ -39,7 +39,8 @@ void UWePlayVR_GameInstance::OnStart()
 	}
 
 	//TODO: SteamVR implementation
-
+	m_refSteamVRStatus = NewObject<USteamVRStatus>(this);
+	m_refSteamVRStatus->CheckForStatus();
 	InitializeOPS();
 
 	//This is used to check if PLAY IN EDITOR is enabled

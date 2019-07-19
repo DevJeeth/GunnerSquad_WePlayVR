@@ -88,7 +88,7 @@ void USteamVRStatus::CheckLighthouseStatus()
 	{
 		if (arrTrackedLighthouses.Num() > 2)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("MORE THAN TWO LIGHT HOUSE TRACK. FIX THIS."));
+			UE_LOG(LogTemp, Warning, TEXT("[SteamVRStatus] MORE THAN TWO LIGHT HOUSE TRACK. FIX THIS."));
 		}
 
 		m_bLighthouseAConnected = GEngine->XRSystem->IsTracking(arrTrackedLighthouses[0]);
@@ -99,11 +99,35 @@ void USteamVRStatus::CheckLighthouseStatus()
 
 void USteamVRStatus::CheckForStatus()
 {
+	if (!GEngine)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[SteamVRStatus] Engine is not initialized; Skipping the status check for Steam VR objects"));
+		return;
+	}
 
+
+	if (!GEngine->XRSystem.IsValid())
+	{
+		UE_LOG(LogTemp, Error, TEXT("[SteamVRStatus] XR System is not initialized; Skipping the status check for Steam VR objects"));
+		return;
+	}
+
+
+	CheckHMDStatus();
+	CheckControllerStatus();
+	CheckLighthouseStatus();
 }
 
 float USteamVRStatus::GetControllerBatteryPercentage(int a_iDeviceID)
 {
-	//TODO: Implement this
-	return 1.0;
+	vr::IVRSystem* SteamVRSystem = ISteamVRPlugin::Get().GetVRSystem();
+	vr::ETrackedDeviceProperty SteamPropId = vr::ETrackedDeviceProperty::Prop_DeviceBatteryPercentage_Float;
+	vr::ETrackedPropertyError pError;
+	float fBatteryPercentage = SteamVRSystem->GetFloatTrackedDeviceProperty(a_iDeviceID, SteamPropId, &pError) * 100.0f;
+	if (pError != vr::TrackedPropertyError::TrackedProp_Success)
+	{
+		UE_LOG(LogTemp, Log, TEXT("CP::INSIDE:***CPP:Controller Status*** Error getting the battery status"));
+		fBatteryPercentage = 0.0f;
+	}
+	return fBatteryPercentage;
 }

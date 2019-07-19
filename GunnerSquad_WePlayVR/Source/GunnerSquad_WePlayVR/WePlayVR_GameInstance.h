@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "SteamVRStatus.h"
 #include "OpsManager.h"
 #include "SettingsData.h"
 #include "CoreMinimal.h"
@@ -80,6 +81,8 @@ public:
 	UPROPERTY()
 		USettingsData* m_refSettingsData; 
 
+	UPROPERTY()
+		USteamVRStatus* m_refSteamVRStatus;
 #pragma region VRDevices_Update_Functionality
 	//TODO: Device Updates need to be looked into and implemented
 	//These not to be exposed in the blueprint, DEVICE UPDATE SHOULD BE HANDLED BY OPS SYSTEM

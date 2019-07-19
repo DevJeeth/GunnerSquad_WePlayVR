@@ -31,7 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeGunnerSquad_WePlayVR_init() {}
 				SingletonFuncArray,
 				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xAD4FEE39,
+				0xD12853CD,
 				0xAF278502,
 				METADATA_PARAMS(nullptr, 0)
 			};
