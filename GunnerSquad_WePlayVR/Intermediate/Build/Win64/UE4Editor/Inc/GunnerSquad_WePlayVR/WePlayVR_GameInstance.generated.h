@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+ 
 #ifdef GUNNERSQUAD_WEPLAYVR_WePlayVR_GameInstance_generated_h
 #error "WePlayVR_GameInstance.generated.h already included, missing '#pragma once' in WePlayVR_GameInstance.h"
 #endif
@@ -37,6 +38,38 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SendScreenshotResponse(Z_Param_a_arrImageData); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendUpdatedDeviceStatus) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendUpdatedDeviceStatus(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetControllerStatus) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TMap<bool,float>*)Z_Param__Result=P_THIS->GetControllerStatus(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetLightHouseStatus) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TMap<FString,bool>*)Z_Param__Result=P_THIS->GetLightHouseStatus(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetHMDStatus) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetHMDStatus(); \
 		P_NATIVE_END; \
 	} \
  \
@@ -125,6 +158,38 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		P_THIS->SendScreenshotResponse(Z_Param_a_arrImageData); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execSendUpdatedDeviceStatus) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->SendUpdatedDeviceStatus(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetControllerStatus) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TMap<bool,float>*)Z_Param__Result=P_THIS->GetControllerStatus(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetLightHouseStatus) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(TMap<FString,bool>*)Z_Param__Result=P_THIS->GetLightHouseStatus(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetHMDStatus) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=P_THIS->GetHMDStatus(); \
 		P_NATIVE_END; \
 	} \
  \

@@ -101,6 +101,15 @@ void UWePlayVR_GameInstance::InitializeOPS()
 	m_refOpsManager->CreateOPSClient();
 	m_refOpsManager->RegisterForCommands();
 	m_refOpsManager->Connect();
+
+	SendUpdatedDeviceStatus();
+	//if (m_refWePlayVR_GameInstance != nullptr)
+	//{
+	//	m_refWePlayVR_GameInstance->SteamVRStatus->CheckForStatus();
+	//	m_refWePlayVR_GameInstance->CheckAndUpdateLightHouseStatus(true);
+	//	UE_LOG(LogTemp, Error, TEXT("UOpsManager:Inside m_bInitReceived:Sending Lighthouse status!"));
+	//}
+
 	m_refOpsManager->SendProfileToOPS();
 
 	UE_LOG(LogTemp, Warning, TEXT("[WePlayVR_GameInstance] Connection has been extablished and profile has been sent"));
@@ -409,6 +418,121 @@ void UWePlayVR_GameInstance::SendClearLeaderboardResponse()
 }
 #pragma endregion
 
+bool UWePlayVR_GameInstance::GetHMDStatus() 
+{
+	m_refSteamVRStatus->CheckForStatus();
+	bool bHmdStatus = m_refSteamVRStatus->m_bHMDConnected;
+
+	return bHmdStatus;
+}
+
+TMap<FString,bool> UWePlayVR_GameInstance:: GetLightHouseStatus() 
+{
+	m_refSteamVRStatus->CheckForStatus();
+	TMap<FString,bool> mapLighousesConnected;
+	mapLighousesConnected.Add(TEXT("A"),m_refSteamVRStatus->m_bLighthouseAConnected);
+	mapLighousesConnected.Add(TEXT("B"),m_refSteamVRStatus->m_bLighthouseBConnected);
+
+	return mapLighousesConnected;
+}
+
+TMap<bool, float> UWePlayVR_GameInstance::GetControllerStatus()
+{
+
+	m_refSteamVRStatus->CheckForStatus();
+	TMap<bool, float> mapControllerStatus;
+	mapControllerStatus.Add(m_refSteamVRStatus->m_bRightControllerConnected, m_refSteamVRStatus->m_fRightControllerBatteryPercentage);
+	mapControllerStatus.Add(m_refSteamVRStatus->m_bLeftControllerConnected, m_refSteamVRStatus->m_fLeftControllerBatteryPercentage);
+
+	return mapControllerStatus;
+}
+
+void UWePlayVR_GameInstance::SendUpdatedDeviceStatus()
+{
+	if (m_refSettingsData == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] m_refSettingsData reference lost will hault SendUpdatedDeviceStatus process"))
+		return;
+	}
+
+	if (!m_refSettingsData->m_bOpsEnabled)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] OPS is disabled, OPS features SendUpdatedDeviceStatus will not work"))
+		return;
+	}
+
+	if (m_refOpsManager == NULL)
+	{
+		UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] SendUpdatedDeviceStatus not called, reference to OPS lost"));
+		return;
+	}
+
+	FString strValue = "";
+	bool bconnected = false;
+	int iIndex = 0;
+	m_refOpsManager->ClearConnectedDevicesData();
+
+	//HMD Device status update
+	m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iHMD, "Vive", "Main", GetHMDStatus() ? eDeviceStatus::iConnected : eDeviceStatus::iNotConnected);
+
+	//Controller Connection/Battery status Update 
+	TMap<bool, float> mapControllerStatus = GetControllerStatus();
+	if (mapControllerStatus.Num() <= 0)
+	{
+		m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, "0%", "Right", eDeviceStatus::iNotConnected);
+		m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0%", "Left", eDeviceStatus::iNotConnected);
+
+	}
+	else if (mapControllerStatus.Num() == 1)
+	{
+		for (auto Item = mapControllerStatus.CreateConstIterator(); Item; ++Item)
+		{
+			bconnected = Item.Key();
+			FString strValue = FString::SanitizeFloat(Item.Value());
+			if(strValue.IsEmpty())
+			{
+				UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] Battery value of controller is empty, settings DISCONNECTED"));
+				//If the battery value is empty set it as connected but 0% battery
+				m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, "0%", "Right", bconnected ? eDeviceStatus::iConnected : eDeviceStatus::iNotConnected);
+			}
+			else
+			{
+				strValue += "%";
+				m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, TCHAR_TO_ANSI(*strValue), "Right", bconnected ? eDeviceStatus::iConnected : eDeviceStatus::iNotConnected);
+			}
+		}
+		m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0%", "Left", bconnected ? eDeviceStatus::iConnected : eDeviceStatus::iNotConnected);
+	}
+	else
+	{
+		for (auto Item = mapControllerStatus.CreateConstIterator(); Item; ++Item)
+		{
+			iIndex++;
+			bconnected = Item.Key();
+			FString strValue = FString::SanitizeFloat(Item.Value());
+			if (strValue.IsEmpty())
+			{
+				UE_LOG(LogTemp, Error, TEXT("[WePlayVR_GameInstance] Battery value of controller is empty, settings DISCONNECTED %d"),iIndex);
+
+				if (iIndex == 1)
+				{
+					//If the battery value is empty set it as connected but 0% battery
+					m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, "0%", "Right", bconnected ? eDeviceStatus::iConnected : eDeviceStatus::iNotConnected);
+				}
+				else
+				{
+					//If the battery value is empty set it as connected but 0% battery
+					m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0%", "Left", bconnected ? eDeviceStatus::iConnected : eDeviceStatus::iNotConnected);
+				}
+			}
+			else
+			{
+				strValue += "%";
+				m_refOpsManager->AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, TCHAR_TO_ANSI(*strValue), iIndex==1?"Right":"Left", bconnected ? eDeviceStatus::iConnected : eDeviceStatus::iNotConnected);
+			}
+		}
+	}
+}
 
 void UWePlayVR_GameInstance::CleanUp()
 {

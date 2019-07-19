@@ -705,8 +705,8 @@ void UOpsManager::CreateOPSClient()
 	//Clearing Device update list and Updated with devices that need to be in the Arena Setup, by default all disconnected
 	ClearConnectedDevicesData();
 	AddConnecedDeviceToProfile(eDeviceType::iHMD, "Vive", "Main", eDeviceStatus::iNotConnected);
-	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0", "Left", eDeviceStatus::iNotConnected);
-	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, "0", "Right", eDeviceStatus::iNotConnected);
+	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Left, "0%", "Left", eDeviceStatus::iNotConnected);
+	AddConnecedDeviceToProfile(eDeviceType::iVive_Controller_Right, "0%", "Right", eDeviceStatus::iNotConnected);
 
 }
 
@@ -823,14 +823,6 @@ void UOpsManager::Tick(float DeltaTime)
 		SendLighthouseStatus("A", eDeviceStatus::iNotConnected);
 		SendLighthouseStatus("B", eDeviceStatus::iNotConnected);
 
-		//TODO: Implement Device update
-		//if (m_refVRGameInstance != nullptr)
-		//{
-		//	m_refWePlayVR_GameInstance->SteamVRStatus->CheckForStatus();
-		//	m_refWePlayVR_GameInstance->CheckAndUpdateLightHouseStatus(true);
-		//	UE_LOG(LogTemp, Error, TEXT("UOpsManager:Inside m_bInitReceived:Sending Lighthouse status!"));
-		//}
-
 		SendInitResponseToOPS();
 		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager]  Sending Init  Response"));
 	}
@@ -876,8 +868,7 @@ void UOpsManager::Tick(float DeltaTime)
 	{
 		m_bDeviceUpdate = false;
 		UWePlayVR_GameInstance* m_refWePlayVR_GameInstance = Cast<UWePlayVR_GameInstance>(GetWorld()->GetGameInstance());
-		//TODO: Implement DeviceUpdate
-		//m_refVRGameInstance->CheckAndSendVRDeviceStatusFromOPSDLL();
+		m_refWePlayVR_GameInstance->SendUpdatedDeviceStatus();
 		UE_LOG(LogTemp, Warning, TEXT("[UOpsManager]  Device Update command Received"));
 	}
 	if (m_bScreenshot)
@@ -1183,30 +1174,6 @@ void UOpsManager::AddConnecedDeviceToProfile(eDeviceType a_enumType, FString a_s
 	m_funcAddConnectedDeviceToProfile(a_enumType, TCHAR_TO_ANSI(*a_strValue), TCHAR_TO_ANSI(*a_strID), a_enumStatus);
 }
 
-/*Need More clarity on what this does*/
-//void UOpsManager::ClearSupportedLanguages()
-//{
-//	if (m_funcClearSupportedLanguages == NULL)
-//	{
-//		UE_LOG(LogTemp, Error, TEXT("m_funcClearSupportedLanguages was not initialized"));
-//		return;
-//	}
-//
-//	m_funcClearSupportedLanguages();
-//}
-//
-//void UOpsManager::AddSupportedLanguage(FString a_strLanguageName)
-//{
-//	if (m_funcAddSupportedLanguage == NULL)
-//	{
-//		UE_LOG(LogTemp, Error, TEXT("m_funcAddSupportedLanguage was not initialized"));
-//		return;
-//	}
-//
-//	m_funcAddSupportedLanguage(TCHAR_TO_ANSI(*a_strLanguageName));
-//}
-//
-/*************************************/
 
 void UOpsManager::SendConnectedDevicesUpdate()
 {

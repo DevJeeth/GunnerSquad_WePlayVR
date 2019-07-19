@@ -89,15 +89,18 @@ public:
 	//UFUNCTION()
 	//	void SendControllerStatus(int a_iIndex);
 
-	//UFUNCTION()
-	//	void SendHMDStatus();
+	UFUNCTION()
+		bool GetHMDStatus(); 
 
-	//UFUNCTION()
-	//	void SendLightHouseStatus(FString a_strID);
+	UFUNCTION()
+		TMap<FString,bool> GetLightHouseStatus(); 
 
-	////Master command to check and send the status of the VR devices
-	//UFUNCTION(BlueprintCallable, Category = "Commands")
-	//	void CheckAndSendVRDeviceStatus();
+	UFUNCTION()
+		TMap<bool, float> GetControllerStatus();
+
+	//Master command to check and send the status of the VR devices
+	UFUNCTION(BlueprintCallable, Category = "Commands")
+		void SendUpdatedDeviceStatus();
 
 	//UFUNCTION(BlueprintCallable, Category = "VRGameInstance")
 	//	void CheckAndUpdateLightHouseStatus(bool a_bForceUpdate = false);

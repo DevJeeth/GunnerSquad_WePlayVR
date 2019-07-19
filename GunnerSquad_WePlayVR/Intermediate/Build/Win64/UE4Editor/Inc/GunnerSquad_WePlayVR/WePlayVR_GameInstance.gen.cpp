@@ -17,6 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_UWePlayVR_GameInstance();
 	ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
 	UPackage* Z_Construct_UPackage__Script_GunnerSquad_WePlayVR();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectName();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectVersion();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived();
@@ -32,6 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartRumbleCommand();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendStopRumbleCommand();
+	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus();
 	GUNNERSQUAD_WEPLAYVR_API UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SetSupportedLanguages();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_USteamVRStatus_NoRegister();
 	GUNNERSQUAD_WEPLAYVR_API UClass* Z_Construct_UClass_USettingsData_NoRegister();
@@ -75,6 +79,9 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 	{
 		UClass* Class = UWePlayVR_GameInstance::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetControllerStatus", &UWePlayVR_GameInstance::execGetControllerStatus },
+			{ "GetHMDStatus", &UWePlayVR_GameInstance::execGetHMDStatus },
+			{ "GetLightHouseStatus", &UWePlayVR_GameInstance::execGetLightHouseStatus },
 			{ "GetProjectName", &UWePlayVR_GameInstance::execGetProjectName },
 			{ "GetProjectVersion", &UWePlayVR_GameInstance::execGetProjectVersion },
 			{ "SendClearLeaderboardResponse", &UWePlayVR_GameInstance::execSendClearLeaderboardResponse },
@@ -84,9 +91,124 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 			{ "SendStartCommandResponse", &UWePlayVR_GameInstance::execSendStartCommandResponse },
 			{ "SendStartRumbleCommand", &UWePlayVR_GameInstance::execSendStartRumbleCommand },
 			{ "SendStopRumbleCommand", &UWePlayVR_GameInstance::execSendStopRumbleCommand },
+			{ "SendUpdatedDeviceStatus", &UWePlayVR_GameInstance::execSendUpdatedDeviceStatus },
 			{ "SetSupportedLanguages", &UWePlayVR_GameInstance::execSetSupportedLanguages },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics
+	{
+		struct WePlayVR_GameInstance_eventGetControllerStatus_Parms
+		{
+			TMap<bool,float> ReturnValue;
+		};
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue_Key_KeyProp;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue_ValueProp;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WePlayVR_GameInstance_eventGetControllerStatus_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::NewProp_ReturnValue_Key_KeyProp = { "ReturnValue_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::NewProp_ReturnValue_ValueProp = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::NewProp_ReturnValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::NewProp_ReturnValue_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::NewProp_ReturnValue_ValueProp,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "GetControllerStatus", sizeof(WePlayVR_GameInstance_eventGetControllerStatus_Parms), Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics
+	{
+		struct WePlayVR_GameInstance_eventGetHMDStatus_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((WePlayVR_GameInstance_eventGetHMDStatus_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(WePlayVR_GameInstance_eventGetHMDStatus_Parms), &Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
+		{ "ToolTip", "TODO: Device Updates need to be looked into and implemented\nThese not to be exposed in the blueprint, DEVICE UPDATE SHOULD BE HANDLED BY OPS SYSTEM\nUFUNCTION()\n       void SendControllerStatus(int a_iIndex);" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "GetHMDStatus", sizeof(WePlayVR_GameInstance_eventGetHMDStatus_Parms), Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics
+	{
+		struct WePlayVR_GameInstance_eventGetLightHouseStatus_Parms
+		{
+			TMap<FString,bool> ReturnValue;
+		};
+		static const UE4CodeGen_Private::FMapPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ReturnValue_Key_KeyProp;
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue_ValueProp;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FMapPropertyParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(WePlayVR_GameInstance_eventGetLightHouseStatus_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::NewProp_ReturnValue_Key_KeyProp = { "ReturnValue_Key", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::NewProp_ReturnValue_ValueProp = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::NewProp_ReturnValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::NewProp_ReturnValue_Key_KeyProp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::NewProp_ReturnValue_ValueProp,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "GetLightHouseStatus", sizeof(WePlayVR_GameInstance_eventGetLightHouseStatus_Parms), Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectName_Statics
 	{
@@ -512,6 +634,30 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Commands" },
+		{ "ModuleRelativePath", "WePlayVR_GameInstance.h" },
+		{ "ToolTip", "Master command to check and send the status of the VR devices" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWePlayVR_GameInstance, nullptr, "SendUpdatedDeviceStatus", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UWePlayVR_GameInstance_SetSupportedLanguages_Statics
 	{
 		struct WePlayVR_GameInstance_eventSetSupportedLanguages_Parms
@@ -589,6 +735,9 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_GunnerSquad_WePlayVR,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UWePlayVR_GameInstance_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetControllerStatus, "GetControllerStatus" }, // 4045004245
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetHMDStatus, "GetHMDStatus" }, // 4280329207
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetLightHouseStatus, "GetLightHouseStatus" }, // 3962909161
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectName, "GetProjectName" }, // 2132533486
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_GetProjectVersion, "GetProjectVersion" }, // 2125303557
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_OnClearLeaderboardReceived, "OnClearLeaderboardReceived" }, // 2312667390
@@ -604,6 +753,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartCommandResponse, "SendStartCommandResponse" }, // 764887699
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStartRumbleCommand, "SendStartRumbleCommand" }, // 3163796962
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendStopRumbleCommand, "SendStopRumbleCommand" }, // 122441423
+		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SendUpdatedDeviceStatus, "SendUpdatedDeviceStatus" }, // 1677154463
 		{ &Z_Construct_UFunction_UWePlayVR_GameInstance_SetSupportedLanguages, "SetSupportedLanguages" }, // 817154689
 	};
 #if WITH_METADATA
@@ -682,7 +832,7 @@ void EmptyLinkFunctionForGeneratedCodeWePlayVR_GameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 804280449);
+	IMPLEMENT_CLASS(UWePlayVR_GameInstance, 2882184781);
 	template<> GUNNERSQUAD_WEPLAYVR_API UClass* StaticClass<UWePlayVR_GameInstance>()
 	{
 		return UWePlayVR_GameInstance::StaticClass();
